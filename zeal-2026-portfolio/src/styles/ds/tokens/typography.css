@@ -1,0 +1,60 @@
+:root {
+    /* --- Base Families --- */
+    --ds-f-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    --ds-f-serif: var(--font-playfair), serif;
+
+    /* --- Type Scale --- */
+    --ds-fs-h1: 6rem;
+    /* 96px */
+    --ds-fs-h2: 4.5rem;
+    /* 72px */
+    --ds-fs-h3: 2.25rem;
+    /* 36px */
+    --ds-fs-h4: 1.5rem;
+    /* 24px */
+    --ds-fs-b1: 1.125rem;
+    /* 18px */
+    --ds-fs-b2: 1rem;
+    /* 16px */
+    --ds-fs-c1: 0.875rem;
+    /* 14px */
+    --ds-fs-c2: 0.75rem;
+    /* 12px */
+    --ds-fs-c3: 0.625rem;
+    /* 10px */
+
+    /* --- Line Heights --- */
+    --ds-lh-flat: 0.9;
+    --ds-lh-tight: 1.1;
+    --ds-lh-snug: 1.2;
+    --ds-lh-base: 1.5;
+    --ds-lh-relaxed: 1.6;
+
+    /* --- Letter Spacing (Tracking) --- */
+    --ds-tr-tight: -0.02em;
+    --ds-tr-normal: 0;
+    --ds-tr-wide: 0.1em;
+    --ds-tr-widest: 0.3em;
+    --ds-tr-hero: 0.5em;
+
+    /* --- Display Scale --- */
+    --ds-fs-display-2xl: 10rem;
+    --ds-fs-display-xl: 7rem;
+
+    /* --- Semantic Typography --- */
+
+    /* Headings */
+    --ds-h1: 700 var(--ds-fs-h1)/var(--ds-lh-tight) var(--ds-f-serif);
+    --ds-h2: 700 var(--ds-fs-h2)/var(--ds-lh-snug) var(--ds-f-serif);
+    --ds-h3: 700 var(--ds-fs-h3)/var(--ds-lh-snug) var(--ds-f-serif);
+    --ds-h4: 600 var(--ds-fs-h4)/var(--ds-lh-snug) var(--ds-f-sans);
+
+    /* Body */
+    --ds-body-1: 400 var(--ds-fs-b1)/var(--ds-lh-base) var(--ds-f-sans);
+    --ds-body-2: 400 var(--ds-fs-b2)/var(--ds-lh-base) var(--ds-f-sans);
+
+    /* Captions */
+    --ds-caption-1: 500 var(--ds-fs-c1)/var(--ds-lh-snug) var(--ds-f-sans);
+    --ds-caption-2: 500 var(--ds-fs-c2)/var(--ds-lh-snug) var(--ds-f-sans);
+    --ds-caption-3: 400 var(--ds-fs-c3)/var(--ds-lh-snug) var(--ds-f-sans);
+}
