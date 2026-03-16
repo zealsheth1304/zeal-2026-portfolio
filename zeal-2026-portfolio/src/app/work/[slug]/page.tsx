@@ -1,3 +1,4 @@
+import React from 'react';
 import { getProjectBySlug, getProjectSlugs } from "@/lib/mdx";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -8,19 +9,38 @@ import { ImagePlaceholder, VideoPlaceholder, CaseStudyImage } from "@/components
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import { ProjectMeta } from "@/components/ui/ProjectMeta";
 
+const extractText = (children: any): string => {
+    return React.Children.toArray(children)
+        .map(child => {
+            if (typeof child === 'string') return child;
+            if (typeof child === 'object' && child && 'props' in (child as any)) {
+                return extractText((child as any).props.children);
+            }
+            return '';
+        })
+        .join('');
+};
+
 const components = {
     ImagePlaceholder,
     VideoPlaceholder,
     CaseStudyImage,
     ImageCarousel,
     ProjectMeta,
-    h1: (props: any) => (
-        <h1
-            id={props.children?.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}
-            className="text-4xl font-bold mb-8 mt-16 scroll-mt-32"
-            {...props}
-        />
-    ),
+    h1: (props: any) => {
+        const text = extractText(props.children);
+        const id = text.toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w-]/g, '');
+
+        return (
+            <h1
+                id={id}
+                className="text-4xl font-bold mb-8 mt-16 scroll-mt-32"
+                {...props}
+            />
+        );
+    },
     h2: (props: any) => <h2 className="text-2xl font-bold mb-6 mt-12 scroll-mt-32" {...props} />,
 };
 
@@ -40,20 +60,20 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <article className="pt-40 pb-20 px-12 md:px-16 max-w-7xl mx-auto">
                 <Link
                     href="/#work"
-                    className="inline-flex items-center gap-2 text-text-muted hover:text-text-main transition-colors mb-16 text-xs uppercase tracking-widest font-bold"
+                    className="inline-flex items-center gap-2 text-muted hover:text-main transition-colors mb-16 text-xs uppercase tracking-widest font-bold"
                 >
                     <ArrowLeft size={14} /> Back to Portfolio
                 </Link>
 
                 <header className="mb-24">
-                    <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 block">Case Study</span>
-                    <h1 className="text-5xl md:text-6xl font-bold tracking-tighter text-text-main mb-8 leading-[1.1] max-w-5xl">
+                    <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 block">Case Study | CLIENT: {metadata.company}</span>
+                    <h1 className="text-5xl md:text-6xl font-semibold tracking-tighter text-main mb-8 leading-[1.1] max-w-5xl">
                         {metadata.title.split(' ').map((word, i) => (
                             <span key={i}>
                                 {i === 0 ? (
                                     <span>{word}</span>
                                 ) : (
-                                    <span className="high-status-heading italic font-light">
+                                    <span>
                                         {word}
                                     </span>
                                 )}
@@ -61,7 +81,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             </span>
                         ))}
                     </h1>
-                    <p className="text-xl md:text-2xl text-text-muted mb-12 max-w-4xl leading-relaxed font-medium">
+                    <p className="text-xl md:text-2xl text-muted mb-12 max-w-4xl leading-relaxed font-medium">
                         {metadata.description}
                     </p>
                     <div className="flex flex-wrap gap-4">
@@ -75,18 +95,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                 <div className={`aspect-[21/9] rounded-3xl relative group ${metadata.duration ? "" : "mb-32"}`}>
                     {metadata.heroImage ? (
-                        <Image
+                        <CaseStudyImage
                             src={metadata.heroImage}
-                            alt={metadata.title}
-                            fill
-                            className="object-contain transition-transform duration-700 group-hover:scale-101"
-                            priority
+                            label={""}
                         />
                     ) : (
                         <>
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5" />
                             <div className="w-full h-full flex items-center justify-center">
-                                <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-text-muted opacity-30">Featured Case Preview</span>
+                                <span className="text-[10px] uppercase tracking-[0.5em] font-bold text-muted opacity-30">Featured Case Preview</span>
                             </div>
                         </>
                     )}
@@ -108,10 +125,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                     <div className="flex-1 max-w-3xl">
                         <div className="prose prose-invert prose-lg max-w-none 
-                            prose-headings:text-text-main
-                            prose-p:text-text-muted prose-p:leading-relaxed 
-                            prose-strong:text-text-main prose-strong:font-bold [&_hr]:border-t-border-strong/50 [&_hr]:border-t
-                            prose-blockquote:border-border-strong/50 prose-blockquote:text-text-main prose-blockquote:italic
+                            prose-headings:text-main
+                            prose-p:text-muted prose-p:leading-relaxed 
+                            prose-strong:text-main prose-strong:font-bold [&_hr]:border-t-border-strong/50 [&_hr]:border-t
+                            prose-blockquote:border-border-strong/50 prose-blockquote:text-main prose-blockquote:italic
                             dark:prose-invert text-ds-b1">
                             <MDXRemote source={content} components={components} />
                         </div>

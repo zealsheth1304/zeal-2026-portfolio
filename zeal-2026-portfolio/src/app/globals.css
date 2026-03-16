@@ -16,6 +16,11 @@
   --color-background: var(--ds-bg-main);
   --color-foreground: var(--ds-txt-main);
 
+  /* Clean Semantic Colors (Tailwind 4 will generate text-main, text-muted, etc.) */
+  --color-main: var(--ds-txt-main);
+  --color-muted: var(--ds-txt-muted);
+  --color-primary-text: var(--ds-txt-primary);
+
   /* Borders */
   --color-border-strong: var(--ds-border-strong);
   --color-border-subtle: var(--ds-border-subtle);

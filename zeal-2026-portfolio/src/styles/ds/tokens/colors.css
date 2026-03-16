@@ -27,6 +27,7 @@
 
     --ds-txt-main: var(--ds-clr-slate-900);
     --ds-txt-muted: var(--ds-clr-slate-500);
+    --ds-txt-primary: var(--ds-clr-indigo-500);
     --ds-txt-inverse: var(--ds-clr-white);
 
     --ds-border-subtle: var(--ds-clr-slate-200);
@@ -45,6 +46,7 @@
 
     --ds-txt-main: var(--ds-clr-slate-300);
     --ds-txt-muted: var(--ds-clr-slate-600);
+    --ds-txt-primary: var(--ds-clr-indigo-400);
     --ds-txt-inverse: var(--ds-clr-black);
 
     --ds-border-subtle: rgba(255, 255, 255, 0.05);

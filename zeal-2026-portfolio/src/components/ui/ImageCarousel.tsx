@@ -110,7 +110,7 @@ export function ImageCarousel({ images: rawImages, className }: ImageCarouselPro
                         }}
                         className="absolute inset-0 flex items-center justify-center px-8 md:px-16 py-4"
                     >
-                        {images[currentIndex].src ? (
+                        {images.length > 0 && images[currentIndex].src ? (
                             <div className="relative w-full h-full flex items-center justify-center cursor-zoom-in" onClick={() => setIsOpen(true)}>
                                 <motion.img
                                     layoutId={`carousel-${images[currentIndex].src}`}
@@ -121,8 +121,8 @@ export function ImageCarousel({ images: rawImages, className }: ImageCarouselPro
                                 />
                             </div>
                         ) : (
-                            <div className="text-center text-text-muted flex flex-col items-center gap-4">
-                                <span className="uppercase tracking-[0.3em] font-bold block mb-2 text-ds-c1 text-text-main">Visual Asset</span>
+                            <div className="text-center text-muted flex flex-col items-center gap-4">
+                                <span className="uppercase tracking-[0.3em] font-bold block mb-2 text-ds-c1 text-main">Visual Asset</span>
                                 <span className="italic opacity-80">{images[currentIndex].label}</span>
                             </div>
                         )}
@@ -161,10 +161,10 @@ export function ImageCarousel({ images: rawImages, className }: ImageCarouselPro
                                 setCurrentIndex(index);
                             }}
                             className={cn(
-                                "w-2 h-2 rounded-full transition-all duration-300",
+                                "rounded-full transition-all duration-300",
                                 index === currentIndex
-                                    ? "bg-primary opacity-100 scale-115"
-                                    : "bg-primary opacity-25 hover:opacity-60"
+                                    ? "w-6 h-2 bg-primary opacity-100 scale-115"
+                                    : "w-2 h-2 bg-primary opacity-25 hover:opacity-60"
                             )}
                             aria-label={`Go to slide ${index + 1}`}
                         />
@@ -174,7 +174,7 @@ export function ImageCarousel({ images: rawImages, className }: ImageCarouselPro
 
             {/* Caption */}
             <div className="mt-6 px-2">
-                <span className="text-ds-c1 text-text-muted opacity-60 font-medium italic block text-center transition-all">
+                <span className="text-ds-c1 text-muted opacity-60 font-medium italic block text-center transition-all">
                     {images[currentIndex].label}
                 </span>
             </div>

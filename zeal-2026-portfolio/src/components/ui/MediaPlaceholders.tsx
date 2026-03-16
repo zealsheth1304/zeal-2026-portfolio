@@ -53,7 +53,7 @@ export function MediaPlaceholder({ src, label, type }: MediaPlaceholderProps) {
                         </div>
                     ) : (
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 group-hover:from-primary/10 group-hover:to-secondary/10 transition-colors duration-500 flex flex-col items-center justify-center gap-4">
-                            <div className="w-12 h-12 rounded-full border border-border-strong/50 flex items-center justify-center text-text-muted group-hover:scale-110 group-hover:border-primary group-hover:text-primary transition-all duration-500 shadow-xl bg-background/20">
+                            <div className="w-12 h-12 rounded-full border border-border-strong/50 flex items-center justify-center text-muted group-hover:scale-110 group-hover:border-primary group-hover:text-primary transition-all duration-500 shadow-xl bg-background/20">
                                 {type === "video" ? (
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -68,10 +68,10 @@ export function MediaPlaceholder({ src, label, type }: MediaPlaceholderProps) {
                             </div>
 
                             <div className="text-center px-6">
-                                <span className="text-ds-c1 uppercase tracking-[0.3em] font-bold text-text-main block mb-1">
+                                <span className="text-ds-c1 uppercase tracking-[0.3em] font-bold text-main block mb-1">
                                     {type === "image" ? "Visual Asset" : "Interactive Reel"}
                                 </span>
-                                <span className="text-ds-c1 text-text-muted opacity-80 font-medium italic">
+                                <span className="text-ds-c1 text-muted opacity-80 font-medium italic">
                                     {label}
                                 </span>
                             </div>
@@ -82,7 +82,7 @@ export function MediaPlaceholder({ src, label, type }: MediaPlaceholderProps) {
                 {/* Caption */}
                 {label && src && (
                     <div className="mt-4 px-2">
-                        <span className="text-ds-c1 text-text-muted opacity-60 font-medium italic block text-center">
+                        <span className="text-ds-c1 text-muted opacity-60 font-medium italic block text-center">
                             {label}
                         </span>
                     </div>

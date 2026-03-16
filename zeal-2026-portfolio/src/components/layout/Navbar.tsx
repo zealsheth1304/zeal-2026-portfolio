@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
@@ -15,7 +16,15 @@ const navLinks = [
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [mounted, setMounted] = useState(false);
+    const { theme } = useTheme();
     const pathname = usePathname();
+
+    useEffect(() => setMounted(true), []);
+
+    const logoSrc = mounted && theme === "dark"
+        ? "/assets/WebsiteLogo_Favicon/ZealWebsiteLogo_DarkMode.svg"
+        : "/assets/WebsiteLogo_Favicon/ZealWebsiteLogo_LightMode.svg";
 
     // Detect if we're on a case study page
     const isCaseStudy = pathname.startsWith("/work/");
@@ -75,7 +84,7 @@ export default function Navbar() {
                                         className="relative"
                                     >
                                         <Image
-                                            src="/assets/LandingPage/ZealFaviconWebsite.svg"
+                                            src={logoSrc}
                                             alt="Zeal Portfolio"
                                             fill
                                             className="object-contain"
@@ -98,7 +107,7 @@ export default function Navbar() {
                                                 >
                                                     <Link
                                                         href={link.href}
-                                                        className="text-xs uppercase tracking-widest font-semibold text-text-muted hover:text-text-main transition-colors whitespace-nowrap"
+                                                        className="text-xs uppercase tracking-widest font-semibold text-muted hover:text-main transition-colors whitespace-nowrap"
                                                     >
                                                         {link.name}
                                                     </Link>

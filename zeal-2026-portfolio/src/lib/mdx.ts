@@ -11,7 +11,8 @@ export interface ProjectMetadata {
   thumbnail: string;
   tags: string[];
   slug: string;
-  heroImage?: string;
+  heroImage: string;
+  company?: string;
   role?: string;
   duration?: string;
   tools?: string;

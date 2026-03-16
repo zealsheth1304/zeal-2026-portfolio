@@ -19,6 +19,7 @@ export default function ThemeToggle() {
         <div
             className="relative flex items-center p-1 cursor-pointer w-16 h-9 rounded-full bg-slate-200 dark:bg-slate-800 transition-colors duration-500 shadow-inner"
             onClick={() => setTheme(isDark ? "light" : "dark")}
+            suppressHydrationWarning
         >
             {/* Background Icons */}
             <div className="absolute inset-x-0 px-2 flex justify-between items-center pointer-events-none opacity-40">

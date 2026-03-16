@@ -98,7 +98,7 @@ export function TestimonialCarousel({ testimonials, autoPlayMs = 6000 }: Props) 
                                     <span className="text-sm font-bold text-text-main tracking-tight">
                                         {current.name}
                                     </span>
-                                    <span className="text-[11px] uppercase tracking-widest font-semibold text-text-muted">
+                                    <span className="text-[11px] uppercase tracking-widest font-semibold text-muted">
                                         {current.role}
                                     </span>
                                     <span className="text-[11px] text-primary font-semibold">
