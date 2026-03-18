@@ -8,7 +8,7 @@ interface MetaItemProps {
 
 const MetaItem = ({ label, value }: MetaItemProps) => (
     <div className="flex flex-col gap-1">
-        <span className="text-ds-c2 uppercase tracking-widest font-bold text-muted/60">
+        <span className="text-ds-c2 uppercase tracking-widest font-bold text-muted/80">
             {label}
         </span>
         <span className="text-ds-c1 font-medium text-main leading-snug">

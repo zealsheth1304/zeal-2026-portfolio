@@ -13,9 +13,10 @@ interface CarouselImage {
 interface ImageCarouselProps {
     images: CarouselImage[] | string;
     className?: string;
+    rounded?: string;
 }
 
-export function ImageCarousel({ images: rawImages, className }: ImageCarouselProps) {
+export function ImageCarousel({ images: rawImages, className, rounded = "rounded-2xl" }: ImageCarouselProps) {
     let images: CarouselImage[] = [];
     if (typeof rawImages === "string") {
         try {
@@ -116,7 +117,7 @@ export function ImageCarousel({ images: rawImages, className }: ImageCarouselPro
                                     layoutId={`carousel-${images[currentIndex].src}`}
                                     src={images[currentIndex].src}
                                     alt={images[currentIndex].label}
-                                    className="max-w-full max-h-full object-contain rounded-lg"
+                                    className={cn("max-w-full max-h-full object-contain", rounded)}
                                     draggable={false}
                                 />
                             </div>

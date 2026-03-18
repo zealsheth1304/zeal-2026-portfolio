@@ -5,7 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { ArrowLeft, MoveRight } from "lucide-react";
 import { TableOfContents } from "@/components/ui/TableOfContents";
-import { ImagePlaceholder, VideoPlaceholder, CaseStudyImage } from "@/components/ui/MediaPlaceholders";
+import { ImagePlaceholder, VideoPlaceholder, CaseStudyImage, Video, VideoEmbed, FigmaEmbed, Embed } from "@/components/ui/MediaPlaceholders";
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import { ProjectMeta } from "@/components/ui/ProjectMeta";
 
@@ -25,6 +25,10 @@ const components = {
     ImagePlaceholder,
     VideoPlaceholder,
     CaseStudyImage,
+    Video,
+    VideoEmbed,
+    FigmaEmbed,
+    Embed,
     ImageCarousel,
     ProjectMeta,
     h1: (props: any) => {
@@ -98,6 +102,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <CaseStudyImage
                             src={metadata.heroImage}
                             label={""}
+                            className="my-16"
                         />
                     ) : (
                         <>

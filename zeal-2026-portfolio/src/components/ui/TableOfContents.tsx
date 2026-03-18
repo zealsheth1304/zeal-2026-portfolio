@@ -57,7 +57,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
                             "text-left text-xs uppercase tracking-ds-tight font-semibold transition-all duration-300 relative pl-6 py-2",
                             activeId === item.id
                                 ? "text-primary opacity-100"
-                                : "text-muted opacity-40 hover:opacity-100 hover:text-main"
+                                : "text-muted opacity-70 hover:opacity-80 hover:text-main"
                         )}
                     >
                         {activeId === item.id && (

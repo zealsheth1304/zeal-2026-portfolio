@@ -9,9 +9,12 @@ interface MediaPlaceholderProps {
     src?: string;
     label: string;
     type: "image" | "video";
+    rounded?: string;
+    className?: string;
+    aspectRatio?: string;
 }
 
-export function MediaPlaceholder({ src, label, type }: MediaPlaceholderProps) {
+export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", className, aspectRatio }: MediaPlaceholderProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     // Close on escape key
@@ -34,22 +37,39 @@ export function MediaPlaceholder({ src, label, type }: MediaPlaceholderProps) {
 
     return (
         <>
-            <div className="my-16 group">
+            <div className={cn("group", className)}>
                 {/* Visual Container */}
                 <div className={cn(
                     "rounded-2xl relative",
                     !src ? "aspect-video bg-slate-100 dark:bg-slate-950 border border-border-strong/50 shadow-sm overflow-hidden cursor-default" : "bg-transparent border-none shadow-none overflow-visible cursor-zoom-in"
                 )}
+                    style={src && aspectRatio ? { aspectRatio } : undefined}
                     onClick={() => src && setIsOpen(true)}
                 >
                     {src ? (
                         <div className="relative w-full">
-                            <motion.img
-                                layoutId={`media-${src}`}
-                                src={src}
-                                alt={label}
-                                className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.01]"
-                            />
+                            {type === "image" ? (
+                                <motion.img
+                                    layoutId={`media-${src}`}
+                                    src={src}
+                                    alt={label}
+                                    className={cn(
+                                        "w-full h-auto block transition-transform duration-700 group-hover:scale-[1.01]",
+                                        rounded
+                                    )}
+                                />
+                            ) : (
+                                <div className={cn("relative w-full overflow-hidden", rounded)} style={aspectRatio ? { aspectRatio } : undefined}>
+                                    <video
+                                        src={src}
+                                        className={cn("w-full h-auto block", aspectRatio && "h-full object-cover")}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                    />
+                                </div>
+                            )}
                         </div>
                     ) : (
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 group-hover:from-primary/10 group-hover:to-secondary/10 transition-colors duration-500 flex flex-col items-center justify-center gap-4">
@@ -105,13 +125,30 @@ export function MediaPlaceholder({ src, label, type }: MediaPlaceholderProps) {
                             className="relative z-10 max-w-[90vw] max-h-[90vh] w-full h-full flex items-center justify-center p-4 cursor-zoom-out"
                             onClick={() => setIsOpen(false)}
                         >
-                            <motion.img
-                                layoutId={`media-${src}`}
-                                src={src}
-                                alt={label}
-                                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-                                transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            />
+                            {type === "image" ? (
+                                <motion.img
+                                    layoutId={`media-${src}`}
+                                    src={src}
+                                    alt={label}
+                                    className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                                />
+                            ) : (
+                                <motion.div
+                                    layoutId={`media-${src}`}
+                                    className="max-w-full max-h-full aspect-video rounded-lg shadow-2xl overflow-hidden bg-black"
+                                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                                >
+                                    <video
+                                        src={src}
+                                        className="w-full h-full object-contain"
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                    />
+                                </motion.div>
+                            )}
                         </div>
                     </div>
                 )}
@@ -124,14 +161,104 @@ export function ImagePlaceholder({ src, label }: { src?: string; label: string }
     return <MediaPlaceholder src={src} label={label} type="image" />;
 }
 
-export function VideoPlaceholder({ src, label }: { src?: string; label: string }) {
-    return <MediaPlaceholder src={src} label={label} type="video" />;
+export function VideoPlaceholder({ src, label, aspectRatio }: { src?: string; label: string; aspectRatio?: string }) {
+    return <MediaPlaceholder src={src} label={label} type="video" aspectRatio={aspectRatio} />;
 }
 
-export function CaseStudyImage({ src, label, fullWidth = true }: { src?: string; label: string; fullWidth?: boolean }) {
+export function CaseStudyImage({ src, label, fullWidth = true, rounded, className }: { src?: string; label: string; fullWidth?: boolean; rounded?: string; className?: string }) {
     return (
-        <figure className={cn("my-16", fullWidth ? "w-full" : "max-w-3xl mx-auto")}>
-            <MediaPlaceholder src={src} label={label} type="image" />
+        <figure className={cn(fullWidth ? "w-full" : "max-w-3xl mx-auto", className)}>
+            <MediaPlaceholder src={src} label={label} type="image" rounded={rounded} />
+        </figure>
+    );
+}
+
+export function Video({ src, label, fullWidth = true, rounded, className, aspectRatio }: { src?: string; label: string; fullWidth?: boolean; rounded?: string; className?: string; aspectRatio?: string }) {
+    return (
+        <figure className={cn(fullWidth ? "w-full" : "max-w-3xl mx-auto", className)}>
+            <MediaPlaceholder src={src} label={label} type="video" rounded={rounded} aspectRatio={aspectRatio} />
+        </figure>
+    );
+}
+
+export function VideoEmbed({ url, label, fullWidth = true, rounded = "rounded-2xl", className }: { url: string; label?: string; fullWidth?: boolean; rounded?: string; className?: string }) {
+    // Helper to get embed URL
+    const getEmbedUrl = (url: string) => {
+        if (url.includes('youtube.com') || url.includes('youtu.be')) {
+            const id = url.split('v=')[1] || url.split('/').pop();
+            return `https://www.youtube.com/embed/${id}`;
+        }
+        if (url.includes('vimeo.com')) {
+            const id = url.split('/').pop();
+            return `https://player.vimeo.com/video/${id}`;
+        }
+        return url;
+    };
+
+    return (
+        <figure className={cn(fullWidth ? "w-full" : "max-w-3xl mx-auto", className)}>
+            <div className={cn("relative w-full aspect-video overflow-hidden shadow-sm border border-border-strong/50", rounded)}>
+                <iframe
+                    src={getEmbedUrl(url)}
+                    title={label || "Video content"}
+                    className="absolute inset-0 w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                />
+            </div>
+            {label && (
+                <figcaption className="mt-4 px-2 text-ds-c1 text-muted opacity-60 font-medium italic text-center">
+                    {label}
+                </figcaption>
+            )}
+        </figure>
+    );
+}
+
+export function FigmaEmbed({ url, label, fullWidth = true, rounded = "rounded-2xl", className, height = "450px" }: { url: string; label?: string; fullWidth?: boolean; rounded?: string; className?: string; height?: string }) {
+    const embedUrl = `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`;
+
+    return (
+        <figure className={cn(fullWidth ? "w-full" : "max-w-3xl mx-auto", className)}>
+            <div className={cn("relative w-full overflow-hidden shadow-sm border border-border-strong/50 bg-slate-50 dark:bg-slate-900/50", rounded)} style={{ height }}>
+                <iframe
+                    src={embedUrl}
+                    title={label || "Figma content"}
+                    className="absolute inset-0 w-full h-full"
+                    allowFullScreen
+                />
+            </div>
+            {label && (
+                <figcaption className="mt-4 px-2 text-ds-c1 text-muted opacity-60 font-medium italic text-center">
+                    {label}
+                </figcaption>
+            )}
+        </figure>
+    );
+}
+
+export function Embed({ url, label, fullWidth = true, rounded = "rounded-2xl", className, height = "450px", aspectRatio }: { url: string; label?: string; fullWidth?: boolean; rounded?: string; className?: string; height?: string; aspectRatio?: string }) {
+    return (
+        <figure className={cn(fullWidth ? "w-full" : "max-w-3xl mx-auto", className)}>
+            <div 
+                className={cn("relative w-full overflow-hidden shadow-sm border border-border-strong/50 bg-slate-50 dark:bg-slate-900/50", rounded)} 
+                style={{ 
+                    height: aspectRatio ? 'auto' : height,
+                    aspectRatio: aspectRatio 
+                }}
+            >
+                <iframe
+                    src={url}
+                    title={label || "Embedded content"}
+                    className="absolute inset-0 w-full h-full"
+                    allowFullScreen
+                />
+            </div>
+            {label && (
+                <figcaption className="mt-4 px-2 text-ds-c1 text-muted opacity-60 font-medium italic text-center">
+                    {label}
+                </figcaption>
+            )}
         </figure>
     );
 }
