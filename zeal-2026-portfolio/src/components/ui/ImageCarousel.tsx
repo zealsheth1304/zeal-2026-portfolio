@@ -14,9 +14,17 @@ interface ImageCarouselProps {
     images: CarouselImage[] | string;
     className?: string;
     rounded?: string;
+    aspectRatio?: string;
+    maxWidth?: string;
 }
 
-export function ImageCarousel({ images: rawImages, className, rounded = "rounded-2xl" }: ImageCarouselProps) {
+export function ImageCarousel({ 
+    images: rawImages, 
+    className, 
+    rounded = "rounded-2xl",
+    aspectRatio,
+    maxWidth = "max-w-5xl"
+}: ImageCarouselProps) {
     let images: CarouselImage[] = [];
     if (typeof rawImages === "string") {
         try {
@@ -83,8 +91,8 @@ export function ImageCarousel({ images: rawImages, className, rounded = "rounded
     };
 
     return (
-        <div className={cn("relative w-full max-w-5xl mx-auto my-16 group", className)}>
-            <div className="relative aspect-[16/9] md:aspect-[21/9] dark:bg-slate-950">
+        <div className={cn("relative w-full mx-auto my-16 group", maxWidth, className)}>
+            <div className={cn("relative dark:bg-slate-950", aspectRatio || "aspect-[16/9] md:aspect-[21/9]")}>
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.div
                         key={currentIndex}
