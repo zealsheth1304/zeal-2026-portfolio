@@ -91,7 +91,7 @@ export function ImageCarousel({
     };
 
     return (
-        <div className={cn("relative w-full mx-auto my-16 group", maxWidth, className)}>
+        <div className={cn("relative w-full mx-auto group", maxWidth, className)}>
             <div className={cn("relative dark:bg-slate-950", aspectRatio || "aspect-[16/9] md:aspect-[21/9]")}>
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.div

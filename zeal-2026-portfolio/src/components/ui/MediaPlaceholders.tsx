@@ -12,9 +12,10 @@ interface MediaPlaceholderProps {
     rounded?: string;
     className?: string;
     aspectRatio?: string;
+    objectFit?: "cover" | "contain";
 }
 
-export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", className, aspectRatio }: MediaPlaceholderProps) {
+export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", className, aspectRatio, objectFit = "cover" }: MediaPlaceholderProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     // Close on escape key
@@ -41,20 +42,22 @@ export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", c
                 {/* Visual Container */}
                 <div className={cn(
                     "rounded-2xl relative",
-                    !src ? "aspect-video bg-slate-100 dark:bg-slate-950 border border-border-strong/50 shadow-sm overflow-hidden cursor-default" : "bg-transparent border-none shadow-none overflow-visible cursor-zoom-in"
+                    !src ? "aspect-video bg-slate-100 dark:bg-slate-950 border border-border-strong/50 shadow-sm overflow-hidden cursor-default" : cn("bg-transparent border-none shadow-none cursor-zoom-in", aspectRatio ? "overflow-hidden" : "overflow-visible")
                 )}
                     style={src && aspectRatio ? { aspectRatio } : undefined}
                     onClick={() => src && setIsOpen(true)}
                 >
                     {src ? (
-                        <div className="relative w-full">
+                        <div className={cn("relative w-full", aspectRatio ? "h-full" : "h-auto")}>
                             {type === "image" ? (
                                 <motion.img
                                     layoutId={`media-${src}`}
                                     src={src}
                                     alt={label}
                                     className={cn(
-                                        "w-full h-auto block transition-transform duration-700 group-hover:scale-[1.01]",
+                                        "w-full block transition-transform duration-700 group-hover:scale-[1.01]",
+                                        aspectRatio ? "h-full" : "h-auto",
+                                        aspectRatio && objectFit === "cover" ? "object-cover" : "object-contain",
                                         rounded
                                     )}
                                 />
@@ -165,10 +168,10 @@ export function VideoPlaceholder({ src, label, aspectRatio }: { src?: string; la
     return <MediaPlaceholder src={src} label={label} type="video" aspectRatio={aspectRatio} />;
 }
 
-export function CaseStudyImage({ src, label, fullWidth = true, rounded, className }: { src?: string; label: string; fullWidth?: boolean; rounded?: string; className?: string }) {
+export function CaseStudyImage({ src, label, fullWidth = true, rounded, className, aspectRatio, objectFit }: { src?: string; label: string; fullWidth?: boolean; rounded?: string; className?: string; aspectRatio?: string; objectFit?: "cover" | "contain" }) {
     return (
         <figure className={cn(fullWidth ? "w-full" : "max-w-3xl mx-auto", className)}>
-            <MediaPlaceholder src={src} label={label} type="image" rounded={rounded} />
+            <MediaPlaceholder src={src} label={label} type="image" rounded={rounded} aspectRatio={aspectRatio} objectFit={objectFit} />
         </figure>
     );
 }
