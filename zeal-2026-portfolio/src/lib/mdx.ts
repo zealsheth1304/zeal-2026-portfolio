@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 const contentDirectory = path.join(process.cwd(), 'content/projects');
+const multimediaDirectory = path.join(process.cwd(), 'content/multimedia');
 
 export interface ProjectMetadata {
   title: string;
@@ -12,6 +13,7 @@ export interface ProjectMetadata {
   tags: string[];
   slug: string;
   heroImage: string;
+  heroVideo?: string;
   company?: string;
   role?: string;
   duration?: string;
@@ -53,4 +55,40 @@ export function getAllProjects() {
     .map((slug) => getProjectBySlug(slug).metadata)
     .sort((a, b) => (new Date(b.date) > new Date(a.date) ? 1 : -1));
   return projects;
+}
+
+export function getMultimediaSlugs() {
+  if (!fs.existsSync(multimediaDirectory)) return [];
+  return fs.readdirSync(multimediaDirectory).filter((file) => file.endsWith('.mdx'));
+}
+
+export function getMultimediaBySlug(slug: string) {
+  const realSlug = slug.replace(/\.mdx$/, '');
+  const fullPath = path.join(multimediaDirectory, `${realSlug}.mdx`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const { data, content } = matter(fileContents);
+
+  const headingRegex = /^#\s+(.+)$/gm;
+  const headings: { id: string; title: string }[] = [];
+  let match;
+
+  while ((match = headingRegex.exec(content)) !== null) {
+    const title = match[1];
+    const id = title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+    headings.push({ id, title });
+  }
+
+  return {
+    metadata: { ...data, slug: realSlug } as ProjectMetadata,
+    content,
+    headings,
+  };
+}
+
+export function getAllMultimedia() {
+  const slugs = getMultimediaSlugs();
+  const results = slugs
+    .map((slug) => getMultimediaBySlug(slug).metadata)
+    .sort((a, b) => (new Date(b.date) > new Date(a.date) ? 1 : -1));
+  return results;
 }

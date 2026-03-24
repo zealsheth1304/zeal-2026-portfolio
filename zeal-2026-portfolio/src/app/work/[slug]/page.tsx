@@ -48,6 +48,7 @@ const components = {
         );
     },
     h2: (props: any) => <h2 className="text-2xl font-bold mb-6 mt-12 scroll-mt-32" {...props} />,
+    a: (props: any) => <a target="_blank" rel="noopener noreferrer" {...props} />,
 };
 
 export async function generateStaticParams() {
@@ -87,7 +88,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             </span>
                         ))}
                     </h1>
-                    <p className="text-xl md:text-2xl text-muted mb-12 max-w-4xl leading-relaxed font-medium">
+                    <p className="text-ds-b1 text-muted mb-12 max-w-4xl leading-relaxed font-medium">
                         {metadata.description}
                     </p>
                     <div className="flex flex-wrap gap-4">
