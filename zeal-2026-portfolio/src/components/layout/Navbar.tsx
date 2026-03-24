@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navLinks = [
-    { name: "Work", href: "/#work" },
+    { name: "ux", href: "/#ux" },
     { name: "Multimedia", href: "/multimedia" },
     { name: "About", href: "/#about" },
     { name: "Contact", href: "/#contact" },
@@ -28,7 +28,7 @@ export default function Navbar() {
         : "/assets/WebsiteLogo_Favicon/ZealWebsiteLogo_LightMode.svg";
 
     // Detect if we're on a case study page
-    const isCaseStudy = pathname.startsWith("/work/");
+    const isCaseStudy = pathname.startsWith("/ux/");
 
     useEffect(() => {
         const handleScroll = () => {

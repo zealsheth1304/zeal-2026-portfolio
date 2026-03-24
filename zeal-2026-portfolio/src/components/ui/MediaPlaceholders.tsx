@@ -8,15 +8,29 @@ import { cn } from "@/lib/utils";
 
 interface MediaPlaceholderProps {
     src?: string;
-    label: string;
+    label?: string;
+    alt?: string;
     type: "image" | "video";
     rounded?: string;
     className?: string;
     aspectRatio?: string;
     objectFit?: "cover" | "contain";
+    width?: string;
+    height?: string;
 }
 
-export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", className, aspectRatio, objectFit = "cover" }: MediaPlaceholderProps) {
+export function MediaPlaceholder({
+    src,
+    label,
+    alt,
+    type,
+    rounded = "rounded-none",
+    className,
+    aspectRatio,
+    objectFit = "cover",
+    width,
+    height
+}: MediaPlaceholderProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     // Close on escape key
@@ -39,34 +53,37 @@ export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", c
 
     return (
         <>
-            <div className={cn("group", className)}>
+            <div className={cn("group relative", className)} style={{ width, height }}>
                 {/* Visual Container */}
                 <div className={cn(
-                    "rounded-2xl relative",
-                    !src ? "aspect-video bg-slate-100 dark:bg-slate-950 border border-border-strong/50 shadow-sm overflow-hidden cursor-default" : cn("bg-transparent border-none shadow-none cursor-zoom-in", aspectRatio ? "overflow-hidden" : "overflow-visible")
+                    "relative overflow-hidden",
+                    rounded,
+                    !src ? "aspect-video bg-slate-100 dark:bg-slate-950 border border-border-strong/50 shadow-sm cursor-default" : cn("bg-transparent border-none shadow-none cursor-zoom-in", aspectRatio ? "" : "")
                 )}
-                    style={src && aspectRatio ? { aspectRatio } : undefined}
+                    style={{
+                        aspectRatio: src && aspectRatio ? aspectRatio : undefined,
+                        width: "100%",
+                        height: "100%"
+                    }}
                     onClick={() => src && setIsOpen(true)}
                 >
                     {src ? (
-                        <div className={cn("relative w-full", aspectRatio ? "h-full" : "h-auto")}>
+                        <div className={cn("relative w-full h-full", aspectRatio ? "" : "")}>
                             {type === "image" ? (
                                 <motion.img
                                     layoutId={`media-${src}`}
                                     src={src}
-                                    alt={label}
+                                    alt={alt || label || ""}
                                     className={cn(
-                                        "w-full block transition-transform duration-700 group-hover:scale-[1.01]",
-                                        aspectRatio ? "h-full" : "h-auto",
-                                        aspectRatio && objectFit === "cover" ? "object-cover" : "object-contain",
-                                        rounded
+                                        "w-full h-full block transition-transform duration-700 group-hover:scale-[1.01]",
+                                        objectFit === "cover" ? "object-cover" : "object-contain"
                                     )}
                                 />
                             ) : (
-                                <div className={cn("relative w-full overflow-hidden", rounded)} style={aspectRatio ? { aspectRatio } : undefined}>
+                                <div className={cn("relative w-full h-full")}>
                                     <video
                                         src={src}
-                                        className={cn("w-full h-auto block", aspectRatio && "h-full object-cover")}
+                                        className={cn("w-full h-full block object-cover")}
                                         autoPlay
                                         loop
                                         muted
@@ -91,14 +108,16 @@ export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", c
                                 )}
                             </div>
 
-                            <div className="text-center px-6">
-                                <span className="text-ds-c1 uppercase tracking-[0.3em] font-bold text-main block mb-1">
-                                    {type === "image" ? "Visual Asset" : "Interactive Reel"}
-                                </span>
-                                <span className="text-ds-c1 text-muted opacity-80 font-medium italic">
-                                    {label}
-                                </span>
-                            </div>
+                            {label && (
+                                <div className="text-center px-6">
+                                    <span className="text-ds-c1 uppercase tracking-[0.3em] font-bold text-main block mb-1">
+                                        {type === "image" ? "Visual Asset" : "Interactive Reel"}
+                                    </span>
+                                    <span className="text-ds-c1 text-muted opacity-80 font-medium italic">
+                                        {label}
+                                    </span>
+                                </div>
+                            )}
                         </div>
                     )}
                 </div>
@@ -133,7 +152,7 @@ export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", c
                                 <motion.img
                                     layoutId={`media-${src}`}
                                     src={src}
-                                    alt={label}
+                                    alt={alt || label || ""}
                                     className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
                                     transition={{ type: "spring", damping: 25, stiffness: 200 }}
                                 />
@@ -161,8 +180,8 @@ export function MediaPlaceholder({ src, label, type, rounded = "rounded-none", c
     );
 }
 
-export function ImagePlaceholder({ src, label }: { src?: string; label: string }) {
-    return <MediaPlaceholder src={src} label={label} type="image" />;
+export function ImagePlaceholder({ src, label, alt, width, height, radius, className }: { src?: string; label?: string; alt?: string; width?: string; height?: string; radius?: string; className?: string }) {
+    return <MediaPlaceholder src={src} label={label} alt={alt} type="image" width={width} height={height} rounded={radius} className={className} />;
 }
 
 export function VideoPlaceholder({ src, label, aspectRatio }: { src?: string; label: string; aspectRatio?: string }) {

@@ -6,7 +6,7 @@ export default function MultimediaPage() {
   const projects = getAllMultimedia();
 
   return (
-    <div className="pt-40 pb-20 px-ds-6 max-w-7xl mx-auto">
+    <div className="pt-40 pb-20 px-12 md:px-16 max-w-7xl mx-auto">
       <header className="mb-ds-24 max-w-4xl">
         <span className="text-ds-c1 uppercase tracking-ds-normal font-bold text-primary mb-ds-6 block">
           Exploring Digital Horizons
@@ -14,7 +14,7 @@ export default function MultimediaPage() {
         <h1 className="text-ds-h2 md:text-ds-h1 font-bold tracking-ds-tight text-main mb-ds-8">
           Multimedia <span className="high-status-heading italic text-primary">Design.</span>
         </h1>
-        <p className="text-ds-b1 text-muted max-w-2xl leading-relaxed font-medium">
+        <p className="text-ds-b1 text-muted max-w-3xl leading-relaxed font-medium">
           A collection of experimental projects spanning motion design, interactive installations, and digital storytelling.
         </p>
       </header>
@@ -26,7 +26,7 @@ export default function MultimediaPage() {
             href={`/multimedia/${project.slug}`}
             className="group block transition-all duration-500"
           >
-            <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-slate-100 dark:bg-slate-900 pb-ds-8 mb-ds-8">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-slate-100 dark:bg-slate-900 mb-ds-8">
               <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
                 {project.heroVideo ? (
                   <video
@@ -35,14 +35,14 @@ export default function MultimediaPage() {
                     loop
                     muted
                     playsInline
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                   />
                 ) : (
                   <Image
                     src={project.thumbnail || project.heroImage}
                     alt={project.title}
                     fill
-                    className="object-cover py-4"
+                    className="object-cover"
                     unoptimized={project.thumbnail?.endsWith('.gif')}
                   />
                 )}
@@ -57,7 +57,7 @@ export default function MultimediaPage() {
 
             <div className="flex flex-col gap-ds-3 w-full px-2">
               {/*<span className="text-[10px] font-mono text-muted opacity-40">M0{idx + 1}</span>*/}
-              <h3 className="text-3xl font-semibold text-main group-hover:text-primary transition-colors duration-300 w-full min-w-0 break-words">
+              <h3 className="text-3xl font-semibold text-main group-hover:text-main transition-colors duration-300 w-full min-w-0 break-words">
                 {project.title}
               </h3>
               <p className="text-ds-c1 text-muted font-medium w-full break-words leading-relaxed">{project.description}</p>

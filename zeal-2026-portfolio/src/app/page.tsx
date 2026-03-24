@@ -2,43 +2,10 @@ import HeroScene from "@/components/three/HeroScene";
 import { getAllProjects } from "@/lib/mdx";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
-import { TestimonialCarousel, type Testimonial } from "@/components/ui/TestimonialCarousel";
+import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
 import Image from 'next/image';
-
-const TESTIMONIALS: Testimonial[] = [
-  {
-    name: "Priya Sharma",
-    role: "Head of Product Design",
-    company: "XiPhi Technologies",
-    initials: "PS",
-    feedback:
-      "Zeal brought an exceptional level of clarity and craft to our AI assistant design. Their ability to translate complex AI behaviors into intuitive flows — while keeping accessibility at the forefront — was truly impressive. One of the most thoughtful designers I've collaborated with.",
-  },
-  {
-    name: "Marcus Chen",
-    role: "VP of Engineering",
-    company: "Eventz.ai",
-    initials: "MC",
-    feedback:
-      "Working with Zeal was seamless. They have a rare gift for bridging the gap between design and engineering — their specs were pixel-perfect, their edge-case thinking saved us countless hours in QA, and their energy elevated the whole team.",
-  },
-  {
-    name: "Aisha Okafor",
-    role: "Chief Product Officer",
-    company: "Google Developer Ecosystem",
-    initials: "AO",
-    feedback:
-      "Zeal's systems-level mindset is what sets them apart. They don't just design screens — they design outcomes. The design system they built for us scaled beautifully across three product lines and three months ahead of schedule.",
-  },
-  {
-    name: "Daniel Torres",
-    role: "Lead UX Researcher",
-    company: "Freelance Collaboration",
-    initials: "DT",
-    feedback:
-      "Zeal has an exceptional ear for user insights. They synthesised our research findings into design decisions faster than anyone I've worked with, and always backed their choices with data. A true strategic partner.",
-  },
-];
+import { ImagePlaceholder } from "@/components/ui/MediaPlaceholders";
+import { TESTIMONIALS } from "@/data/testimonials";
 
 export default function Home() {
   const projects = getAllProjects();
@@ -46,53 +13,58 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden px-ds-6 pt-ds-20">
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden px-12 md:px-16 pt-ds-20">
         <HeroScene />
 
-        <div className="max-w-7xl mx-auto w-full z-10">
+        <div className="max-w-7xl mx-auto w-full z-10 pb-24">
           <div className="max-w-4xl">
-            <header className="mb-ds-12 overflow-hidden">
-              <span className="inline-block text-ds-c1 uppercase tracking-ds-normal font-bold text-primary mb-ds-6 animate-reveal">
-                AI-First Product Designer & Strategist
-              </span>
-              <h1 className="text-ds-h2 md:text-ds-h1 leading-ds-flat font-bold tracking-ds-tight text-main mb-ds-12">
-                Designing intuitive <br />
-                <span className="high-status-heading italic text-primary">experiences.</span>
-              </h1>
+            <header className="mb-ds-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-24">
+              <ImagePlaceholder width="12rem" height="12rem" radius="rounded-full" src="/assets/LandingPage/ZealShethDP.jpg" alt="Zeal" />
+              <div className="flex flex-col items-center md:items-start gap-2 mt-4">
+                <h1 className="text-ds-h2 md:text-ds-h2 leading-ds-flat font-bold tracking-ds-tight text-main mb-4">
+                  Hi, I am Zeal!
+                </h1>
+                <p className="text-ds-b3 md:text-ds-b3 text-primary max-w-2xl font-bold uppercase tracking-ds-normal">
+                  AI-First Product Designer and Strategist
+                </p>
+              </div>
             </header>
-
+            <hr className="border-border-strong/20 my-10 max-w-3xl border-t" />
             <div className="flex flex-col md:flex-row gap-12 items-start md:items-center">
-              <p className="text-ds-b2 md:text-ds-b1 text-main max-w-xl leading-relaxed font-medium">
-                Hi, I am Zeal, an AI-first Product Designer with a systems-level mindset. My 4+ years of experience
-                in product design backed by 5+ years experience across engineering and multimedia allows me to translate
+              <p className="text-ds-b2 md:text-ds-b1 text-main max-w-3xl leading-relaxed font-medium">
+                I am a Product Designer with a systems-level mindset. My 4+ years of experience in product design backed by 5+ years experience across engineering and multimedia allows me to translate
                 complex concepts into tangible outcomes. I specialize in designing data-driven solutions that are that are
                 strategically sound, beautiful, functional and technically robust.
               </p>
-
-              <div className="flex gap-ds-6 items-center">
-                <Link
-                  href="#work"
-                  className="group flex items-center gap-4 text-xs uppercase tracking-widest font-black"
-                >
-                  <span className="w-ds-12 h-ds-12 rounded-ds-full border border-border-strong flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-500">
-                    <MoveRight size={16} />
-                  </span>
-                  Explore Work
-                </Link>
-              </div>
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-16 right-10 md:right-20 hidden md:block rotate-90 origin-right">
+        <div className="absolute bottom-16 right-10 md:right-30 hidden md:block rotate-90 origin-right">
           <span className="text-ds-c2 uppercase tracking-ds-widest font-bold text-muted opacity-50">
             Scroll to discover →
           </span>
         </div>
       </section>
 
-      {/* Work Section */}
-      <section id="work" className="py-ds-32 px-ds-6 max-w-7xl mx-auto">
+      {/* Companies Worked With */}
+      <section className="pt-10 pb-16 px-12 md:px-16 max-w-7xl mx-auto bg-main/2">
+        <div className="flex flex-col items-center gap-8">
+          <span className="text-ds-c2 uppercase tracking-[0.3em] font-bold text-muted/50 text-center">Trusted By</span>
+          <div className="w-full max-w-5xl px-4">
+            <Image
+              src="/assets/LandingPage/CompaniesWorked.svg"
+              alt="Companies I have worked with"
+              width={1200}
+              height={80}
+              className="w-full h-auto opacity-100 dark:opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* UX Section */}
+      <section id="ux" className="py-ds-32 px-12 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-ds-24 gap-ds-8">
           <div>
             <span className="text-ds-c2 uppercase tracking-[0.3em] font-bold text-muted mb-ds-4 block">Selected Archive</span>
@@ -107,7 +79,7 @@ export default function Home() {
           {projects.map((project, idx) => (
             <Link
               key={project.slug}
-              href={`/work/${project.slug}`}
+              href={`/ux/${project.slug}`}
               className={`group block transition-all duration-500 ${idx % 2 !== 0 ? 'md:mt-40' : ''}`}
             >
               <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-slate-100 dark:bg-slate-900 pb-ds-8 mb-ds-8 px-ds-8">
@@ -152,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-ds-32 px-ds-6 max-w-7xl mx-auto">
+      <section className="py-ds-32 px-12 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-ds-20 gap-ds-8">
           <div>
             <span className="text-ds-c2 uppercase tracking-[0.3em] font-bold text-muted mb-ds-4 block">Kind Words</span>

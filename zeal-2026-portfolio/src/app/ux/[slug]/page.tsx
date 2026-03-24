@@ -66,7 +66,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="relative min-h-screen">
             <article className="pt-40 pb-20 px-12 md:px-16 max-w-7xl mx-auto">
                 <Link
-                    href="/#work"
+                    href="/#ux"
                     className="inline-flex items-center gap-2 text-muted hover:text-main transition-colors mb-16 text-xs uppercase tracking-widest font-bold"
                 >
                     <ArrowLeft size={14} /> Back to Portfolio

@@ -10,7 +10,7 @@ export interface Testimonial {
     name: string;
     role: string;
     company: string;
-    photo?: string;
+    profileImage?: string;
     initials?: string;
     feedback: string;
 }
@@ -47,7 +47,7 @@ export function TestimonialCarousel({ testimonials, autoPlayMs = 6000 }: Props) 
     }, [autoPlayMs, paginate]);
 
     return (
-        <div className="relative w-full">
+        <div className="relative w-full ">
             {/* Card */}
             <div className="relative overflow-hidden min-h-[280px] flex items-center">
                 <AnimatePresence custom={dir} mode="wait">
@@ -61,7 +61,7 @@ export function TestimonialCarousel({ testimonials, autoPlayMs = 6000 }: Props) 
                         transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
                         className="w-full"
                     >
-                        <div className="glass rounded-ds-2xl border border-border-subtle px-10 py-10 md:px-16 md:py-14 flex flex-col gap-8">
+                        <div className="rounded-ds-2xl bg-main/2 border border-border-subtle px-10 py-10 md:px-16 md:py-14 flex flex-col gap-8">
                             {/* Quote icon */}
                             <Quote
                                 size={32}
@@ -70,17 +70,17 @@ export function TestimonialCarousel({ testimonials, autoPlayMs = 6000 }: Props) 
                             />
 
                             {/* Feedback */}
-                            <p className="text-ds-b1 font-serif italic font-light text-text-main leading-relaxed max-w-3xl">
+                            <p className="text-ds-b1 font-sans italic font-regular text-main leading-relaxed max-w-3xl">
                                 "{current.feedback}"
                             </p>
 
                             {/* Person */}
                             <div className="flex items-center gap-5 mt-2">
                                 {/* Avatar */}
-                                {current.photo ? (
+                                {current.profileImage ? (
                                     <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-primary/20">
                                         <Image
-                                            src={current.photo}
+                                            src={current.profileImage}
                                             alt={current.name}
                                             fill
                                             className="object-cover"
