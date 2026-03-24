@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { FileText, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface MediaPlaceholderProps {
@@ -243,11 +244,11 @@ export function FigmaEmbed({ url, label, fullWidth = true, rounded = "rounded-2x
 export function Embed({ url, label, fullWidth = true, rounded = "rounded-2xl", className, height = "450px", aspectRatio }: { url: string; label?: string; fullWidth?: boolean; rounded?: string; className?: string; height?: string; aspectRatio?: string }) {
     return (
         <figure className={cn(fullWidth ? "w-full" : "max-w-3xl mx-auto", className)}>
-            <div 
-                className={cn("relative w-full overflow-hidden shadow-sm border border-border-strong/50 bg-slate-50 dark:bg-slate-900/50", rounded)} 
-                style={{ 
+            <div
+                className={cn("relative w-full overflow-hidden shadow-sm border border-border-strong/50 bg-slate-50 dark:bg-slate-900/50", rounded)}
+                style={{
                     height: aspectRatio ? 'auto' : height,
-                    aspectRatio: aspectRatio 
+                    aspectRatio: aspectRatio
                 }}
             >
                 <iframe
@@ -263,5 +264,74 @@ export function Embed({ url, label, fullWidth = true, rounded = "rounded-2xl", c
                 </figcaption>
             )}
         </figure>
+    );
+}
+
+export function PDFLink({ url, label, description, className }: { url: string; label: string; description?: string; className?: string }) {
+    return (
+        <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+                "group flex items-center gap-6 p-6 rounded-2xl border border-border-strong/50 bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all duration-300 my-8",
+                className
+            )}
+        >
+            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                <FileText size={28} />
+            </div>
+            <div className="flex-1">
+                <h4 className="text-lg font-bold text-main mb-1 group-hover:text-primary transition-colors">{label}</h4>
+                {description && <p className="text-sm text-muted">{description}</p>}
+            </div>
+            <div className="text-muted group-hover:text-primary transition-colors">
+                <ExternalLink size={20} />
+            </div>
+        </a>
+    );
+}
+
+export function PDFEmbed({ url, label, aspectRatio = "16/9", totalPages = 10 }: { url: string; label?: string; aspectRatio?: string; totalPages?: number | string }) {
+    const [currentPage, setCurrentPage] = useState(1);
+    const total = typeof totalPages === "string" ? parseInt(totalPages, 10) : totalPages;
+
+    return (
+        <div className="w-full my-12 tracking-normal group/pdf">
+            <div className={cn("relative w-full overflow-hidden rounded-none border border-border-strong/50 shadow-sm bg-slate-50 dark:bg-slate-900/50")} style={{ aspectRatio }}>
+                <iframe
+                    key={currentPage}
+                    src={`${url}#page=${currentPage}&view=FitH&toolbar=0&navpanes=0`}
+                    title={label || "PDF Document"}
+                    className="absolute inset-0 w-full h-full"
+                    allowFullScreen
+                />
+
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-background/80 backdrop-blur-md border border-border-strong/50 px-4 py-2 rounded-full shadow-xl opacity-0 group-hover/pdf:opacity-100 transition-opacity duration-300">
+                    <button
+                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                        disabled={currentPage === 1}
+                        className="p-1 hover:text-primary disabled:text-muted/30 transition-colors"
+                    >
+                        <ChevronLeft size={24} />
+                    </button>
+                    <span className="text-sm font-bold min-w-[3rem] text-center select-none">
+                        {currentPage} / {total}
+                    </span>
+                    <button
+                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, total))}
+                        disabled={currentPage === total}
+                        className="p-1 hover:text-primary disabled:text-muted/30 transition-colors"
+                    >
+                        <ChevronRight size={24} />
+                    </button>
+                </div>
+            </div>
+            {label && (
+                <p className="mt-4 text-ds-c1 text-muted opacity-60 font-medium italic text-center">
+                    {label}
+                </p>
+            )}
+        </div>
     );
 }
