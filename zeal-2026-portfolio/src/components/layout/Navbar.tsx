@@ -200,7 +200,7 @@ export default function Navbar() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
-                                className="fixed inset-x-0 top-[90px] mx-6 md:hidden glass rounded-3xl border border-border-subtle shadow-2xl overflow-hidden z-[49]"
+                                className="fixed inset-x-0 top-[120px] mx-6 md:hidden bg-main-10/50 backdrop-blur-2xl rounded-3xl border border-border-subtle shadow-2xl overflow-hidden z-[49]"
                             >
                                 <nav className="flex flex-col p-6 gap-6">
                                     {navLinks.map((link) => (
@@ -210,7 +210,7 @@ export default function Navbar() {
                                                 href={link.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-lg font-bold text-main hover:text-primary transition-colors flex items-center justify-between"
+                                                className="text-ds-b2 uppercase font-bold text-main hover:text-primary transition-colors flex items-center justify-between"
                                             >
                                                 {link.name}
                                                 <span className="text-[10px] uppercase tracking-widest bg-primary/10 text-primary px-2 py-1 rounded-full">External</span>
@@ -219,23 +219,23 @@ export default function Navbar() {
                                             <Link
                                                 key={link.name}
                                                 href={link.href}
-                                                className="text-lg font-bold text-main hover:text-primary transition-colors"
+                                                className="text-ds-b2 uppercase font-bold text-main hover:text-primary transition-colors"
                                             >
                                                 {link.name}
                                             </Link>
                                         )
                                     ))}
-                                    
+
                                     <div className="h-px bg-border-subtle my-2" />
-                                    
+
                                     <div className="flex items-center gap-6 pt-2">
-                                        <a href="mailto:zealsheth13@gmail.com" className="text-muted hover:text-primary transition-colors">
+                                        <a href="mailto:zealsheth13@gmail.com" className="text-main md:text-muted hover:text-primary transition-colors">
                                             <Mail size={22} />
                                         </a>
-                                        <a href="https://www.linkedin.com/in/zeal-sheth-9ab1b0180/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                                        <a href="https://www.linkedin.com/in/zeal-sheth-9ab1b0180/" target="_blank" rel="noopener noreferrer" className="text-main md:text-muted hover:text-primary transition-colors">
                                             <Linkedin size={22} />
                                         </a>
-                                        <a href="https://www.instagram.com/zeal.sheth.art/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                                        <a href="https://www.instagram.com/zeal.sheth.art/" target="_blank" rel="noopener noreferrer" className="text-main md:text-muted hover:text-primary transition-colors">
                                             <Instagram size={22} />
                                         </a>
                                     </div>
