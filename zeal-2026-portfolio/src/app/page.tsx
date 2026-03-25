@@ -8,7 +8,7 @@ import { ImagePlaceholder } from "@/components/ui/MediaPlaceholders";
 import { TESTIMONIALS } from "@/data/testimonials";
 
 export default function Home() {
-  const projects = getAllProjects();
+  const projects = getAllProjects().slice(0, 6);
 
   return (
 
@@ -45,7 +45,7 @@ export default function Home() {
       </div>
 
       {/* Companies Worked With */}
-      <section className="pt-10 pb-16 px-12 md:px-16 max-w-7xl mx-auto bg-main/2">
+      <section className="pt-10 pb-16 px-12 md:px-16 max-w-7xl mx-auto bg-main/3">
         <div className="flex flex-col items-center gap-8">
           <span className="text-ds-c2 uppercase tracking-[0.3em] font-bold text-muted/50 text-center">Trusted By</span>
           <div className="w-full max-w-5xl px-4">
@@ -63,7 +63,7 @@ export default function Home() {
 
 
       {/* UX Section */}
-      <section id="ux" className="py-ds-32 px-12 md:px-16 max-w-7xl mx-auto">
+      <section id="ux" className="py-ds-32 px-12 md:px-16 max-w-7xl mx-auto border-b border-main/5">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-ds-24 gap-ds-8">
           <div>
             <span className="text-ds-c2 uppercase tracking-[0.3em] font-bold text-muted mb-ds-4 block">Selected Archive</span>
@@ -74,14 +74,14 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-12 gap-y-ds-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-16 gap-y-ds-12">
           {projects.map((project, idx) => (
             <Link
               key={project.slug}
               href={`/ux/${project.slug}`}
               className={`group block transition-all duration-500 ${idx % 2 !== 0 ? 'mt-8 md:mt-16' : 'mt-8 md:mt-16'}`}
             >
-              <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-slate-100 dark:bg-slate-900 pb-ds-8 mb-ds-8 px-ds-8">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-main/5 dark:bg-slate-900 pb-ds-8 mb-ds-8 px-ds-8">
 
                 {/* THE IMAGE (Contained with Padding) */}
                 <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">

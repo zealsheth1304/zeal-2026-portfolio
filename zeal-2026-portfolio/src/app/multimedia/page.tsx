@@ -19,7 +19,7 @@ export default function MultimediaPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-12 gap-y-ds-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-16 gap-y-ds-32">
         {projects.map((project, idx) => (
           <Link
             key={project.slug}

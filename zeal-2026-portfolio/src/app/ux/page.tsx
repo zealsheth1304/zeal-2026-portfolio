@@ -19,14 +19,14 @@ export default function UXPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-12 gap-y-ds-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-16 gap-y-ds-32">
         {projects.map((project, idx) => (
           <Link
             key={project.slug}
             href={`/ux/${project.slug}`}
             className="group block transition-all duration-500"
           >
-            <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-slate-100 dark:bg-slate-900 mb-ds-8 px-ds-8">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-main/5 dark:bg-slate-900 mb-ds-8 px-ds-8">
               <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
                 {project.heroVideo ? (
                   <video

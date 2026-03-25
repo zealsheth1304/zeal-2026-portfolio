@@ -23,7 +23,7 @@ export function VisualGrid({ items }: VisualGridProps) {
 
   return (
     <>
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
         {displayItems.map((item) => (
           <motion.div
             key={item.id}
@@ -36,7 +36,7 @@ export function VisualGrid({ items }: VisualGridProps) {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 z-10 flex items-center justify-center">
               <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={24} />
             </div>
-            
+
             {/* Using a regular img here to avoid next/image issues during development if files are missing, 
                 but keeping Next Image commented out for final use. */}
             <img
@@ -82,7 +82,7 @@ export function VisualGrid({ items }: VisualGridProps) {
                 alt={selectedImage.alt}
                 className="max-w-full max-h-[85vh] object-contain shadow-2xl"
                 onError={(e) => {
-                   (e.target as HTMLImageElement).src = "https://placehold.co/1200x800/1a1a1a/ffffff?text=Visual+Preview";
+                  (e.target as HTMLImageElement).src = "https://placehold.co/1200x800/1a1a1a/ffffff?text=Visual+Preview";
                 }}
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
