@@ -55,7 +55,7 @@ export default function UXPage() {
             </div>
 
             <div className="flex flex-col gap-ds-3 w-full px-2">
-              <span className="text-[10px] font-mono text-muted opacity-40">0{idx + 1}</span>
+              {/* <span className="text-[10px] font-mono text-muted opacity-40">0{idx + 1}</span> */}
               <h3 className="text-3xl font-semibold text-main group-hover:text-main transition-colors duration-300 w-full min-w-0 break-words">
                 {project.title.split(' ').map((word, i) => (
                   <span key={i}>{i === 0 ? word : <><span> </span><span /* className="high-status-heading italic font-light"*/>{word}</span></>}</span>

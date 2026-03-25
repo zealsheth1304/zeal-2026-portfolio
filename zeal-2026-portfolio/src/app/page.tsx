@@ -14,7 +14,7 @@ export default function Home() {
 
     <div className="relative">
 
-      <div className="relative min-h-screen pt-40 pb-20 px-12 md:px-20 max-w-7xl mx-auto">
+      <div className="relative min-h-screen pt-36 pb-16 px-12 md:px-20 max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="mt-32 mb-16">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
@@ -32,7 +32,7 @@ export default function Home() {
 
             <div className="flex-1 text-center md:text-left">
               <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 block">The Designer Behind the Craft</span>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-main mb-8 leading-[1.1]">
+              <h1 className="text-5xl md:text-ds-h1 font-bold tracking-tight text-main mb-8 leading-[1.1]">
                 Hi, I'm <span className="high-status-heading italic text-primary font-normal">Zeal.</span>
               </h1>
               <p className="text-ds-b1 text-main max-w-3xl text-left leading-relaxed font-medium">
@@ -74,12 +74,12 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-12 gap-y-ds-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-ds-12 gap-y-ds-12">
           {projects.map((project, idx) => (
             <Link
               key={project.slug}
               href={`/ux/${project.slug}`}
-              className={`group block transition-all duration-500 ${idx % 2 !== 0 ? 'md:mt-40' : ''}`}
+              className={`group block transition-all duration-500 ${idx % 2 !== 0 ? 'mt-8 md:mt-16' : 'mt-8 md:mt-16'}`}
             >
               <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-slate-100 dark:bg-slate-900 pb-ds-8 mb-ds-8 px-ds-8">
 
@@ -102,7 +102,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-ds-3 w-full">
-                <span className="text-[10px] font-mono text-muted opacity-40">0{idx + 1}</span>
+                {/*<span className="text-[10px] font-mono text-muted opacity-40">0{idx + 1}</span>*/}
                 <h3 className="text-3xl font-semibold text-main group-hover:text-main transition-colors duration-300 w-full min-w-0 break-words">
                   {project.title.split(' ').map((word, i) => (
                     <span key={i}>{i === 0 ? word : <><span> </span><span /* className="high-status-heading italic font-light"*/>{word}</span></>}</span>

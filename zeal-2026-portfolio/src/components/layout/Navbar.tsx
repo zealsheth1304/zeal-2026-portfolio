@@ -182,7 +182,7 @@ export default function Navbar() {
                                     <ThemeToggle />
                                     <button
                                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                        className="p-2 text-main bg-main/5 rounded-full hover:bg-main/10 transition-colors"
+                                        className="p-2 text-muted bg-main/5 rounded-full hover:bg-main/10 transition-colors"
                                         aria-label="Toggle Menu"
                                     >
                                         {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}

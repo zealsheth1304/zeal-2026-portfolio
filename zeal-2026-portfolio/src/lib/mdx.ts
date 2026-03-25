@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const contentDirectory = path.join(process.cwd(), 'content/projects');
+const contentDirectory = path.join(process.cwd(), 'content/ux');
 const multimediaDirectory = path.join(process.cwd(), 'content/multimedia');
 
 export interface ProjectMetadata {
@@ -12,6 +12,7 @@ export interface ProjectMetadata {
   thumbnail: string;
   tags: string[];
   slug: string;
+  order?: number;
   heroImage: string;
   heroVideo?: string;
   company?: string;
@@ -53,7 +54,14 @@ export function getAllProjects() {
   const slugs = getProjectSlugs();
   const projects = slugs
     .map((slug) => getProjectBySlug(slug).metadata)
-    .sort((a, b) => (new Date(b.date) > new Date(a.date) ? 1 : -1));
+    .sort((a, b) => {
+      if (a.order !== undefined && b.order !== undefined) {
+        return a.order - b.order;
+      }
+      if (a.order !== undefined) return -1;
+      if (b.order !== undefined) return 1;
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
   return projects;
 }
 
@@ -89,6 +97,13 @@ export function getAllMultimedia() {
   const slugs = getMultimediaSlugs();
   const results = slugs
     .map((slug) => getMultimediaBySlug(slug).metadata)
-    .sort((a, b) => (new Date(b.date) > new Date(a.date) ? 1 : -1));
+    .sort((a, b) => {
+      if (a.order !== undefined && b.order !== undefined) {
+        return a.order - b.order;
+      }
+      if (a.order !== undefined) return -1;
+      if (b.order !== undefined) return 1;
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
   return results;
 }

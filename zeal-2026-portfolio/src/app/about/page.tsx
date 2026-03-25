@@ -22,7 +22,7 @@ export default function AboutPage() {
 
           <div className="flex-1 text-center md:text-left">
             <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 block">The Impact-Driven Value Creator</span>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-main mb-8 leading-[1.1]">
+            <h1 className="text-5xl md:text-ds-h1 font-bold tracking-tight text-main mb-8 leading-[1.1]">
               Hi, <span className="high-status-heading italic text-primary font-normal">Again!</span>
             </h1>
             <p className="text-ds-b1 text-main max-w-2xl leading-relaxed font-medium">
