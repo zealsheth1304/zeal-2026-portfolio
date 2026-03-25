@@ -7,13 +7,14 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import { Mail, Linkedin, Instagram, Menu, X } from "lucide-react";
 
 const navLinks = [
-    { name: "ux", href: "/#ux" },
+    { name: "ux", href: "/ux" },
     { name: "Multimedia", href: "/multimedia" },
     { name: "Visual", href: "/visual" },
-    { name: "About", href: "/#about" },
-    { name: "Contact", href: "/#contact" },
+    { name: "About", href: "/about" },
+    { name: "Resume", href: "/assets/LandingPage/Resume/ZealShethResume.pdf", isExternal: true },
 ];
 
 export default function Navbar() {
@@ -21,6 +22,12 @@ export default function Navbar() {
     const [mounted, setMounted] = useState(false);
     const { theme } = useTheme();
     const pathname = usePathname();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    // Close mobile menu when pathname changes
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+    }, [pathname]);
 
     useEffect(() => setMounted(true), []);
 
@@ -63,7 +70,7 @@ export default function Navbar() {
                         <motion.nav
                             layout
                             animate={{
-                                maxWidth: scrolled ? 680 : 1200,
+                                maxWidth: scrolled ? 480 : 1200,
                             }}
                             transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                             className="w-full glass rounded-full border border-border-subtle shadow-xl shadow-black/5"
@@ -107,29 +114,135 @@ export default function Navbar() {
                                                     transition={{ duration: 0.3 }}
                                                     className="overflow-hidden"
                                                 >
-                                                    <Link
-                                                        href={link.href}
-                                                        className="text-xs uppercase tracking-widest font-semibold text-muted hover:text-main transition-colors whitespace-nowrap"
-                                                    >
-                                                        {link.name}
-                                                    </Link>
+                                                    {link.isExternal ? (
+                                                        <a
+                                                            href={link.href}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-xs uppercase tracking-widest font-semibold text-muted hover:text-main transition-colors whitespace-nowrap"
+                                                        >
+                                                            {link.name}
+                                                        </a>
+                                                    ) : (
+                                                        <Link
+                                                            href={link.href}
+                                                            className="text-xs uppercase tracking-widest font-semibold text-muted hover:text-main transition-colors whitespace-nowrap"
+                                                        >
+                                                            {link.name}
+                                                        </Link>
+                                                    )}
                                                 </motion.div>
                                             ))}
                                     </AnimatePresence>
 
                                     <div className="flex items-center gap-4 pl-4 border-l border-border-subtle">
                                         <ThemeToggle />
-                                        <Link
-                                            href="/#contact"
-                                            className="px-5 py-2 rounded-full bg-btn-primary-bg text-btn-primary-text text-xs uppercase tracking-wide font-bold hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
-                                        >
-                                            Contact
-                                        </Link>
+                                        <AnimatePresence>
+                                            {!scrolled && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, x: 20 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    exit={{ opacity: 0, x: 20 }}
+                                                    transition={{ duration: 0.3 }}
+                                                    className="flex items-center gap-3 ml-2 border-l border-border-subtle pl-4"
+                                                >
+                                                    <a
+                                                        href="mailto:zealsheth13@gmail.com"
+                                                        className="text-muted hover:text-primary transition-colors p-1"
+                                                        title="Email"
+                                                    >
+                                                        <Mail size={18} />
+                                                    </a>
+                                                    <a
+                                                        href="https://www.linkedin.com/in/zeal-sheth-9ab1b0180/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-muted hover:text-primary transition-colors p-1"
+                                                        title="LinkedIn"
+                                                    >
+                                                        <Linkedin size={18} />
+                                                    </a>
+                                                    <a
+                                                        href="https://www.instagram.com/zeal.sheth.art/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-muted hover:text-primary transition-colors p-1"
+                                                        title="Instagram"
+                                                    >
+                                                        <Instagram size={18} />
+                                                    </a>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </div>
+                                </div>
+
+                                {/* Mobile Menu Toggle */}
+                                <div className="md:hidden flex items-center gap-4">
+                                    <ThemeToggle />
+                                    <button
+                                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                        className="p-2 text-main bg-main/5 rounded-full hover:bg-main/10 transition-colors"
+                                        aria-label="Toggle Menu"
+                                    >
+                                        {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                                    </button>
                                 </div>
                             </motion.div>
                         </motion.nav>
                     </motion.div>
+
+                    {/* Mobile Menu Overlay */}
+                    <AnimatePresence>
+                        {isMobileMenuOpen && (
+                            <motion.div
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                className="fixed inset-x-0 top-[90px] mx-6 md:hidden glass rounded-3xl border border-border-subtle shadow-2xl overflow-hidden z-[49]"
+                            >
+                                <nav className="flex flex-col p-6 gap-6">
+                                    {navLinks.map((link) => (
+                                        link.isExternal ? (
+                                            <a
+                                                key={link.name}
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-lg font-bold text-main hover:text-primary transition-colors flex items-center justify-between"
+                                            >
+                                                {link.name}
+                                                <span className="text-[10px] uppercase tracking-widest bg-primary/10 text-primary px-2 py-1 rounded-full">External</span>
+                                            </a>
+                                        ) : (
+                                            <Link
+                                                key={link.name}
+                                                href={link.href}
+                                                className="text-lg font-bold text-main hover:text-primary transition-colors"
+                                            >
+                                                {link.name}
+                                            </Link>
+                                        )
+                                    ))}
+                                    
+                                    <div className="h-px bg-border-subtle my-2" />
+                                    
+                                    <div className="flex items-center gap-6 pt-2">
+                                        <a href="mailto:zealsheth13@gmail.com" className="text-muted hover:text-primary transition-colors">
+                                            <Mail size={22} />
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/zeal-sheth-9ab1b0180/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                                            <Linkedin size={22} />
+                                        </a>
+                                        <a href="https://www.instagram.com/zeal.sheth.art/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                                            <Instagram size={22} />
+                                        </a>
+                                    </div>
+                                </nav>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </motion.header>
             )}
         </AnimatePresence>

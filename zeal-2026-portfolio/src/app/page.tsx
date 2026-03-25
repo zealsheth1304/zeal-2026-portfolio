@@ -11,41 +11,38 @@ export default function Home() {
   const projects = getAllProjects();
 
   return (
-    <div className="relative">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden px-12 md:px-16 pt-ds-20">
-        <HeroScene />
 
-        <div className="max-w-7xl mx-auto w-full z-10 pb-24">
-          <div className="max-w-4xl">
-            <header className="mb-ds-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-24">
-              <ImagePlaceholder width="12rem" height="12rem" radius="rounded-full" src="/assets/LandingPage/ZealShethDP.jpg" alt="Zeal" />
-              <div className="flex flex-col items-center md:items-start gap-2 mt-4">
-                <h1 className="text-ds-h2 md:text-ds-h2 leading-ds-flat font-bold tracking-ds-tight text-main mb-4">
-                  Hi, I am Zeal!
-                </h1>
-                <p className="text-ds-b3 md:text-ds-b3 text-primary max-w-2xl font-bold uppercase tracking-ds-normal">
-                  AI-First Product Designer and Strategist
-                </p>
+    <div className="relative">
+
+      <div className="relative min-h-screen pt-40 pb-20 px-12 md:px-20 max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <section className="mt-32 mb-16">
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 shrink-0">
+              <div className="absolute inset-0 rounded-2xl border border-primary/20 -rotate-6 scale-105" />
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border-subtle shadow-2xl">
+                <Image
+                  src="/assets/LandingPage/ZealShethDP.jpg"
+                  alt="Zeal Sheth"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            </header>
-            <hr className="border-border-strong/20 my-10 max-w-3xl border-t" />
-            <div className="flex flex-col md:flex-row gap-12 items-start md:items-center">
-              <p className="text-ds-b2 md:text-ds-b1 text-main max-w-3xl leading-relaxed font-medium">
-                I am a Product Designer with a systems-level mindset. My 4+ years of experience in product design backed by 5+ years experience across engineering and multimedia allows me to translate
-                complex concepts into tangible outcomes. I specialize in designing data-driven solutions that are that are
-                strategically sound, beautiful, functional and technically robust.
+            </div>
+
+            <div className="flex-1 text-center md:text-left">
+              <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 block">The Designer Behind the Craft</span>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-main mb-8 leading-[1.1]">
+                Hi, I'm <span className="high-status-heading italic text-primary font-normal">Zeal.</span>
+              </h1>
+              <p className="text-ds-b1 text-main max-w-3xl text-left leading-relaxed font-medium">
+                I am an <span className="font-bold">AI-First Product Designer and Strategist</span> with a systems-level mindset. I specialize in designing data-driven solutions that are
+                strategically sound, beautiful, functional and technically robust. With a background in semiconductors, engineering, and multimedia, I approach problems with technical precision and aesthetic excellence to design outcomes that scale.
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-16 right-10 md:right-30 hidden md:block rotate-90 origin-right">
-          <span className="text-ds-c2 uppercase tracking-ds-widest font-bold text-muted opacity-50">
-            Scroll to discover →
-          </span>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Companies Worked With */}
       <section className="pt-10 pb-16 px-12 md:px-16 max-w-7xl mx-auto bg-main/2">
@@ -62,6 +59,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
       {/* UX Section */}
       <section id="ux" className="py-ds-32 px-12 md:px-16 max-w-7xl mx-auto">
@@ -90,7 +89,7 @@ export default function Home() {
                     src={project.heroImage}
                     alt={project.title}
                     fill
-                    className="object-contain py-4" // Ensures the whole image is visible
+                    className="object-contain py-8" // Ensures the whole image is visible
                   />
                 </div>
 

@@ -18,14 +18,14 @@ export default function VisualPage() {
         {VISUAL_CONTENT.map((category) => (
           <section key={category.id} id={category.id} className="scroll-mt-32">
             <div className="mb-12">
-               <h2 className="text-3xl md:text-4xl font-semibold text-main mb-4 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold text-main mb-8 tracking-tight">
                 {category.title}
               </h2>
               <p className="text-muted text-sm md:text-base max-w-2xl leading-relaxed">
                 {category.description}
               </p>
             </div>
-            
+
             <VisualGrid items={category.items} />
           </section>
         ))}
