@@ -20,6 +20,7 @@
   --color-main: var(--ds-txt-main);
   --color-muted: var(--ds-txt-muted);
   --color-primary-text: var(--ds-txt-primary);
+  --color-inverse: var(--ds-txt-inverse);
 
   /* Borders */
   --color-border-strong: var(--ds-border-strong);

@@ -5,6 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import PageTransition from "@/components/layout/PageTransition";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 
+import Footer from "@/components/layout/Footer";
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -24,14 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
-      <body className="antialiased selection:bg-primary/30">
+      <body className="antialiased selection:bg-primary/30 min-h-screen flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Navbar />
-          <main className="min-h-screen">
+          <main className="flex-1">
             <PageTransition>
               {children}
             </PageTransition>
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
