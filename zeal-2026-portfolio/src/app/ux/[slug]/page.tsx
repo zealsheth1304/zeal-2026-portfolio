@@ -1,5 +1,5 @@
 import React from 'react';
-import { getProjectBySlug, getProjectSlugs } from "@/lib/mdx";
+import { getProjectBySlug, getProjectSlugs, getAllProjects } from "@/lib/mdx";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
@@ -144,13 +144,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 <footer className="mt-40 pt-16 border-t border-border-strong/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-
-                    <Link href="/" className="group flex items-center gap-4 text-xs uppercase tracking-widest font-black">
-                        Next Project
-                        <span className="w-10 h-10 rounded-full border border-border-strong/50 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
-                            <MoveRight size={14} />
-                        </span>
-                    </Link>
+                    {(() => {
+                        const allProjects = getAllProjects();
+                        const currentIndex = allProjects.findIndex((p: any) => p.slug === slug);
+                        const nextIndex = (currentIndex + 1) % allProjects.length;
+                        const nextProject = allProjects[nextIndex];
+                        return (
+                            <Link href={`/ux/${nextProject.slug}`} className="group flex flex-col md:items-end md:ml-auto gap-2">
+                                <div className="flex items-center gap-4 text-xs sentence-case tracking-normal font-bold">
+                                    <div className='flex flex-col gap-2'>
+                                        <span className="text-[10px] uppercase tracking-widest font-bold text-muted text-left md:text-right">Next Project</span>
+                                        <span className="text-sm md:text-base text-main text-left md:text-right">{nextProject.title}</span>
+                                    </div>
+                                    <span className="w-10 h-10 shrink-0 rounded-full border border-border-strong/50 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
+                                        <MoveRight size={14} />
+                                    </span>
+                                </div>
+                            </Link>
+                        );
+                    })()}
                 </footer>
             </article>
         </div>

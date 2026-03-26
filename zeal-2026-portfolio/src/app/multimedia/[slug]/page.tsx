@@ -1,5 +1,5 @@
 import React from 'react';
-import { getMultimediaBySlug, getMultimediaSlugs } from "@/lib/mdx";
+import { getMultimediaBySlug, getMultimediaSlugs, getAllMultimedia } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { ArrowLeft, MoveRight } from "lucide-react";
@@ -126,13 +126,26 @@ export default async function MultimediaProjectPage({ params }: { params: Promis
                     </div>
                 </div>
 
-                <footer className="mt-40 pt-16 border-t border-border-strong/50 flex justify-between items-center">
-                    <Link href="/multimedia" className="group flex items-center gap-4 text-xs uppercase tracking-widest font-black">
-                        Explore More
-                        <span className="w-10 h-10 rounded-full border border-border-strong/50 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
-                            <MoveRight size={14} />
-                        </span>
-                    </Link>
+                <footer className="mt-40 pt-16 border-t border-border-strong/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                    {(() => {
+                        const allProjects = getAllMultimedia();
+                        const currentIndex = allProjects.findIndex((p: any) => p.slug === slug);
+                        const nextIndex = (currentIndex + 1) % allProjects.length;
+                        const nextProject = allProjects[nextIndex];
+                        return (
+                            <Link href={`/multimedia/${nextProject.slug}`} className="group flex flex-col md:items-end md:ml-auto gap-2">
+                                <div className="flex items-end gap-4 text-xs sentence-case tracking-normal font-bold">
+                                    <div className="flex flex-col gap-2">
+                                        <span className="text-[10px] uppercase tracking-widest font-bold text-muted text-left md:text-right">Next Project</span>
+                                        <span className="text-sm md:text-base text-main text-left md:text-right">{nextProject.title}</span>
+                                    </div>
+                                    <span className="w-10 h-10 shrink-0 rounded-full border border-border-strong/50 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
+                                        <MoveRight size={14} />
+                                    </span>
+                                </div>
+                            </Link>
+                        );
+                    })()}
                 </footer>
             </article>
         </div>
