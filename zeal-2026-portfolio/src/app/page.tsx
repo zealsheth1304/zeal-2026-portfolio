@@ -14,7 +14,7 @@ export default function Home() {
 
     <div className="relative">
 
-      <div className="relative min-h-screen pt-36 pb-16 px-12 md:px-20 max-w-7xl mx-auto">
+      <div className="relative min-h-screen pt-24 md:pt-36 pb-16 px-12 md:px-20 max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="mt-32 mb-16">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
@@ -31,7 +31,7 @@ export default function Home() {
             </div>
 
             <div className="flex-1 text-center md:text-left">
-              <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 block">The Designer Behind the Craft</span>
+              <span className="text-xs uppercase tracking-widest font-bold text-primary mt-6 md:mt-0 mb-6 block">The Designer Behind the Craft</span>
               <h1 className="text-5xl md:text-ds-h1 font-bold tracking-tight text-main mb-8 leading-[1.1]">
                 Hi, I'm <span className="high-status-heading italic text-primary font-normal">Zeal.</span>
               </h1>
@@ -48,7 +48,7 @@ export default function Home() {
       <section className="pt-10 pb-16 px-12 md:px-16 max-w-7xl mx-auto bg-main/3 dark:bg-bg-inverse/4">
         <div className="flex flex-col items-center gap-8">
           <span className="text-ds-c2 uppercase tracking-[0.3em] font-bold text-muted/50 text-center">Trusted By</span>
-          <div className="w-full max-w-5xl px-4">
+          <div className="w-full max-w-5xl px-0 md:px-4">
             {/* Light Mode Image */}
             <img
               src="/assets/LandingPage/CompaniesWorked.svg"

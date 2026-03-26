@@ -11,7 +11,7 @@ export default function MultimediaPage() {
         <span className="text-ds-c1 uppercase tracking-ds-normal font-bold text-primary mb-ds-6 block">
           Exploring Digital Horizons
         </span>
-        <h1 className="text-ds-h2 md:text-ds-h1 font-bold tracking-ds-tight text-main mb-ds-8">
+        <h1 className="text-7xl md:text-ds-h1 font-bold tracking-ds-tight text-main mb-ds-8">
           Multimedia <span className="high-status-heading italic text-primary">Design.</span>
         </h1>
         <p className="text-ds-b1 text-muted max-w-3xl leading-relaxed font-medium">

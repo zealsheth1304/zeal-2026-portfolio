@@ -21,11 +21,11 @@ export default function AboutPage() {
           </div>
 
           <div className="flex-1 text-center md:text-left">
-            <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 block">The Impact-Driven Value Creator</span>
+            <span className="text-xs uppercase tracking-widest font-bold text-primary mb-6 mt-6 md:mt-0 block">The Impact-Driven Value Creator</span>
             <h1 className="text-5xl md:text-ds-h1 font-bold tracking-tight text-main mb-8 leading-[1.1]">
               Hi, <span className="high-status-heading italic text-primary font-normal">Again!</span>
             </h1>
-            <p className="text-ds-b1 text-main max-w-2xl leading-relaxed font-medium">
+            <p className="text-ds-b1 text-left text-main max-w-2xl leading-relaxed font-medium">
               Thank you for exploring my work. I blend strategy, tech, and design to solve complex problems. For me, it’s all about creating tangible value and outcomes that stick. If you have an interesting project on the horizon, let’s connect.
             </p>
           </div>
