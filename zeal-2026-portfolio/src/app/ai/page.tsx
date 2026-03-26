@@ -38,13 +38,17 @@ export default function AIPage() {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <Image
-                    src={project.thumbnail || project.heroImage || "/assets/placeholder.png"}
-                    alt={project.title}
-                    fill
-                    className="object-contain py-12 px-12 rounded-2xl md:rounded-[2rem]"
-                    unoptimized={project.thumbnail?.endsWith('.gif')}
-                  />
+                  <div className="absolute inset-0 p-8 md:p-12">
+                    <div className="relative w-full h-full rounded-md md:rounded-md overflow-hidden shadow-lg border border-border-strong/20 bg-white dark:bg-slate-900">
+                      <Image
+                        src={project.thumbnail || project.heroImage || "/assets/placeholder.png"}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                        unoptimized={project.thumbnail?.endsWith('.gif')}
+                      />
+                    </div>
+                  </div>
                 )}
               </div>
 
