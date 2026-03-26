@@ -311,12 +311,12 @@ export function PDFLink({ url, label, description, className }: { url: string; l
     );
 }
 
-export function PDFEmbed({ url, label, aspectRatio = "16/9", totalPages = 10 }: { url: string; label?: string; aspectRatio?: string; totalPages?: number | string }) {
+export function PDFEmbed({ url, label, aspectRatio = "16/9", totalPages = 10, width }: { url: string; label?: string; aspectRatio?: string; totalPages?: number | string; width?: string }) {
     const [currentPage, setCurrentPage] = useState(1);
     const total = typeof totalPages === "string" ? parseInt(totalPages, 10) : totalPages;
 
     return (
-        <div className="w-full my-12 tracking-normal group/pdf">
+        <div className={cn("my-12 tracking-normal group/pdf mx-auto", !width && "w-full")} style={{ width }}>
             <div className={cn("relative w-full overflow-hidden rounded-none border border-border-strong/50 shadow-sm bg-slate-50 dark:bg-slate-900/50")} style={{ aspectRatio }}>
                 <iframe
                     key={currentPage}

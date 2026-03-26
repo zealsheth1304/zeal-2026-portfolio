@@ -13,6 +13,7 @@ const navLinks = [
     { name: "ux", href: "/ux" },
     { name: "Multimedia", href: "/multimedia" },
     { name: "Visual", href: "/visual" },
+    { name: "AI", href: "/ai" },
     { name: "About", href: "/about" },
     { name: "Resume", href: "/assets/LandingPage/Resume/ZealShethResume.pdf", isExternal: true },
 ];

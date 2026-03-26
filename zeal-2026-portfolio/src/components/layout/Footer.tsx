@@ -11,6 +11,7 @@ export default function Footer() {
                     <Link href="/ux" className="hover:text-inverse dark:hover:text-main transition-colors">UX</Link>
                     <Link href="/multimedia" className="hover:text-inverse dark:hover:text-main transition-colors">Multimedia</Link>
                     <Link href="/visual" className="hover:text-inverse dark:hover:text-main transition-colors">Visual</Link>
+                    <Link href="/ai" className="hover:text-inverse dark:hover:text-main transition-colors">AI</Link>
                     <Link href="/about" className="hover:text-inverse dark:hover:text-main transition-colors">About</Link>
                     <a href="/assets/LandingPage/Resume/ZealShethResume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-inverse dark:hover:text-main transition-colors flex items-center gap-1">
                         Resume
@@ -36,7 +37,7 @@ export default function Footer() {
                 {/* Signature Text */}
                 <div className="text-center">
                     <p className="text-ds-b1 font-medium text-primary-inverse dark:text-primary">
-                        Vibe-coding with ❤️ by Zeal Sheth. Spreading Good Vibes Only 😊.
+                        Vibe-coded with ❤️ by Zeal Sheth. Spreading Good Vibes Only 😊.
                     </p>
                 </div>
 

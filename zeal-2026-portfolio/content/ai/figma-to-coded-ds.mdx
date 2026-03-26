@@ -1,0 +1,104 @@
+---
+title: "Figma to Coded Design System in under 20 minutes"
+description: "Make the production ready scalable design system components from the Figma file in under 20 minutes."
+date: "2026-03-26"
+heroImage: "/assets/AI/1_FigmatoCodedDS/Coverpage_FigmatoCodedDS.webp"
+tags: ["AI Agents", "Design Systems", "Design-to-Dev"]
+order: 1
+tools: "Google Antigravity, Figma, Next.js"
+---
+
+
+{/* 
+  Section I: Overview
+  Purpose: Instant context for recruiters. 
+*/}
+
+# Overview
+
+<div className="text-ds-body-1 font-sans text-main mt-8">
+    <p className="mb-4"> <span className="font-semibold">Goal:</span> Reducing design-to-dev debt while scaling design systems.</p>
+    <p className="mb-4"> <span className="font-semibold">Process:</span> Leveraging agentic AI like Google Antigravity can bridge the gap between design and development. By connecting Antigravity to the Figma MCP, we can automate the extraction of design tokens directly from Figma files into structured JSON. 
+    This workflow enables the AI to generate a three-tier token system - primitive, semantic, and component-specific; ensuring scalability. From there, we can prompt Antigravity to "vibe-code" a Storybook-style preview to document states and behaviors, eventually exporting a production-ready Next.js application. </p>
+    <p className="mb-4"><span className="font-semibold">Impact:</span> Designers can directly contribute to the production-ready design system, maintain single source of truth and reduce the design-to-dev debt.</p>
+    <p className="mb-4 italic text-muted">(I am focusing on using free tools such as Antigravity to ensure this workflow is open to every designer, regardless of budget. You can follow a similar workflow on Cursor or Claude Code too.)</p>
+</div>
+
+<div className="flex justify-center items-center md:max-w-[80%] mx-auto w-full">
+    <PDFEmbed url="/assets/AI/1_FigmatoCodedDS/Post1.pdf" title="Figma to Coded Design System" totalPages="18" aspectRatio="1/1"/>
+</div>
+
+
+
+{/* 
+  Section II: Important Tips
+  Purpose: Quick wins and best practices.
+*/}
+
+# Important Tips
+
+<div className="text-ds-body-1 font-sans text-main mt-8">
+    <p>To ensure precision, you can implement specific Logic Rules and Skills:</p>
+    <ul className="mt-4">
+        <li><strong>Logic Enforcement:</strong> If the agent detects a hex code (e.g., #FFFFFF), it must pause and require a token replacement from <code>src/styles/tokens.json</code>.</li>
+        <li><strong>Targeted Skills:</strong> When running accessibility checks, the agent can be instructed to exclude specific directories, like <code>/components/ui/</code>, to preserve the visual integrity of core design system components.</li>
+        <li><strong>Automated Workflows:</strong> A "Ship Component" workflow can automate the entire lifecycle, from token extraction to final code.</li>
+    </ul>
+</div>
+
+
+
+{/* 
+  Section III: Step-by-Step Process
+  Purpose: Detailed instructions for recruiters.
+*/}
+
+# Step-by-Step Process
+
+<div className="text-ds-body-1 font-sans text-main mt-8">
+    <div className="flex flex-col gap-8 items-start bg-slate-50 dark:bg-slate-300/10 p-8 rounded-2xl border border-border-subtle px-8 py-12 my-12">
+        <p className="font-semibold"> Step 1: Create Design Tokens in Figma</p>
+        <p> Run free Figma Plugin 'Tokens Studio for Figma' to Export Styles and Colors into tokens.json file</p>
+        <CaseStudyImage src="/assets/AI/1_FigmatoCodedDS/DesignTokens.webp" label="Figma Tokens" className="mt-8 pb-8 max-w-sm" />
+        <p className="font-medium"> Reduce Design-to-Dev Debt by organizing tokens into 3 levels:</p>
+        <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Global Tokens:</strong> Raw values (e.g., blue-500: #3b82f6).</li>
+            <li><strong>Alias/Semantic Tokens:</strong> How the color is used (e.g., brand-primary: {colors.blue-500}).</li>
+            <li><strong>Component Tokens:</strong> (Optional) Specific to a component (e.g., button-bg: {brand-primary}).</li>
+        </ul>
+        <p className="mb-4"> Use the "+" icon in the plugin and using curly braces {} to reference other tokens.</p>
+    </div>
+
+    <div className="flex flex-col gap-8 items-start bg-slate-50 dark:bg-slate-300/10 p-8 rounded-2xl border border-border-subtle px-8 py-12 my-12">
+        <p className="font-semibold"> Step 2: Connect Antigravity to Figma MCP</p>
+        <CaseStudyImage src="/assets/AI/1_FigmatoCodedDS/MCPServer.webp" label="Figma MCP" className="mt-8 pb-8 max-w-sm" />
+    </div>
+
+    <div className="flex flex-col gap-8 items-start bg-slate-50 dark:bg-slate-300/10 p-8 rounded-2xl border border-border-subtle px-8 py-12 my-12">
+        <p className="mb-4 font-semibold"> Step 3: Generate Storybook-like preview with Antigravity</p>
+        <p className="font-semibold"> Prompting Agent to create Coded Design System Interface:</p>
+        <p className="mb-4 italic text-muted"> Create a new Next.js project using the App Router, TypeScript, and Tailwind CSS. Ensure the folder structure is optimized for a Design System (e.g. /components/ui, /styles/tokens)</p>
+        <p className="font-semibold"> Automated Syncing of Design Tokens:</p>
+        <p className=" "> Copy tokens.json file into /styles/tokens/folder. Give prompt to Google Antigravity Agent <span className="italic text-muted">"Analyze the tokens.json file. Update the tailwind.config.ts to extend the theme with these specific values for colors, font sizes, and spacing. Create a vars.css file in /styles that maps these tokens t o CSS variables for maximum flexibility"</span></p>
+        <CaseStudyImage src="/assets/AI/1_FigmatoCodedDS/CodedTokens.webp" label="Coded Tokens" className="mt-8 pb-8 max-w-md" />
+    </div>
+
+    <div className="flex flex-col gap-8 items-start bg-slate-50 dark:bg-slate-300/10 p-8 rounded-2xl border border-border-subtle px-8 py-12 my-12">
+        <p className="mb-4 font-semibold"> Step 4: Build Components</p>
+        <p className="font-semibold"> Prompting Agent to create Components:</p>
+        <p className="italic text-muted"> "Build a React component for a 'Primary Button' in /components/ui/Button.tsx. Use Next.js 14+ standards and Tailwind CSS. Reference the theme values we just added to the tailwind config. Ensure it is accessible (ARIA labels), supports multiple states (hover, active, disabled), and is responsive. Run a local dev server and use the integrated browser to verify the visual fidelity of the generated components against the Figma design. Create a Storybook-style Preview' page at /design-system to showcase all components."</p>
+        <CaseStudyImage src="/assets/AI/1_FigmatoCodedDS/DS1.webp" label="Coded Design System" className="mt-8 pb-8 border border-border-subtle max-w-md" />
+        <CaseStudyImage src="/assets/AI/1_FigmatoCodedDS/DS2.webp" label="Coded Design System" className="my-8 pb-8 border border-border-subtle max-w-md" />
+    </div>
+
+    <div className="flex flex-col gap-8 items-start bg-slate-50 dark:bg-slate-300/10 p-8 rounded-2xl border border-border-subtle px-8 py-12 my-12">
+        <p className="font-semibold"> Step 5: Manual Verification Check</p>
+        <ul className="list-disc pl-6 space-y-2">
+            <li><strong>For accessibility</strong> - Visual Readability,</li>
+            <li><strong>Component Accuracy</strong> - States and Interaction, Visual, Variants</li>
+            <li><strong>Webapp Interaction</strong></li>
+        </ul>
+    </div>
+
+</div>
+
