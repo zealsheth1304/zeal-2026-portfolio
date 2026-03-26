@@ -45,16 +45,21 @@ export default function Home() {
       </div>
 
       {/* Companies Worked With */}
-      <section className="pt-10 pb-16 px-12 md:px-16 max-w-7xl mx-auto bg-main/3">
+      <section className="pt-10 pb-16 px-12 md:px-16 max-w-7xl mx-auto bg-main/3 dark:bg-bg-inverse/4">
         <div className="flex flex-col items-center gap-8">
           <span className="text-ds-c2 uppercase tracking-[0.3em] font-bold text-muted/50 text-center">Trusted By</span>
           <div className="w-full max-w-5xl px-4">
-            <Image
+            {/* Light Mode Image */}
+            <img
               src="/assets/LandingPage/CompaniesWorked.svg"
-              alt="Companies I have worked with"
-              width={1200}
-              height={80}
-              className="w-full h-auto opacity-100 dark:opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+              alt="Companies"
+              className="block dark:hidden w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+            />
+            {/* Dark Mode Image */}
+            <img
+              src="/assets/LandingPage/CompaniesWorked_DarkMode.svg"
+              alt="Companies"
+              className="hidden dark:block w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
           </div>
         </div>
@@ -81,7 +86,7 @@ export default function Home() {
               href={`/ux/${project.slug}`}
               className={`group block transition-all duration-500 ${idx % 2 !== 0 ? 'mt-8 md:mt-16' : 'mt-8 md:mt-16'}`}
             >
-              <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-main/5 dark:bg-slate-900 pb-ds-8 mb-ds-8 px-ds-8">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-main/5 dark:bg-main/10 pb-ds-8 mb-ds-8 px-ds-8">
 
                 {/* THE IMAGE (Contained with Padding) */}
                 <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
@@ -108,7 +113,7 @@ export default function Home() {
                     <span key={i}>{i === 0 ? word : <><span> </span><span /* className="high-status-heading italic font-light"*/>{word}</span></>}</span>
                   ))}
                 </h3>
-                <p className="text-ds-c1 text-main font-medium w-full break-words">{project.description}</p>
+                <p className="text-ds-c1 text-main dark:text-muted font-medium w-full break-words">{project.description}</p>
                 <div className="flex flex-wrap gap-x-ds-4 gap-y-ds-2 mt-ds-1">
                   {project.tags.map((tag) => (
                     <span key={tag} className="text-[9px] uppercase tracking-widest font-semibold text-primary-text bg-primary/10 rounded-ds-full px-ds-3 py-ds-1">

@@ -119,14 +119,14 @@ export default function Navbar() {
                                                             href={link.href}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="text-xs uppercase tracking-widest font-semibold text-muted hover:text-main transition-colors whitespace-nowrap"
+                                                            className="text-xs uppercase tracking-widest font-semibold text-muted dark:text-main/70 hover:text-main transition-colors whitespace-nowrap"
                                                         >
                                                             {link.name}
                                                         </a>
                                                     ) : (
                                                         <Link
                                                             href={link.href}
-                                                            className="text-xs uppercase tracking-widest font-semibold text-muted hover:text-main transition-colors whitespace-nowrap"
+                                                            className="text-xs uppercase tracking-widest font-semibold text-muted dark:text-main/70 hover:text-main transition-colors whitespace-nowrap"
                                                         >
                                                             {link.name}
                                                         </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
                                                 >
                                                     <a
                                                         href="mailto:zealsheth13@gmail.com"
-                                                        className="text-muted hover:text-primary transition-colors p-1"
+                                                        className="text-muted dark:text-main/70 hover:text-main transition-colors p-1"
                                                         title="Email"
                                                     >
                                                         <Mail size={18} />
@@ -157,7 +157,7 @@ export default function Navbar() {
                                                         href="https://www.linkedin.com/in/zeal-sheth-9ab1b0180/"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="text-muted hover:text-primary transition-colors p-1"
+                                                        className="text-muted dark:text-main/70 hover:text-main transition-colors p-1"
                                                         title="LinkedIn"
                                                     >
                                                         <Linkedin size={18} />
@@ -166,7 +166,7 @@ export default function Navbar() {
                                                         href="https://www.instagram.com/zeal.sheth.art/"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="text-muted hover:text-primary transition-colors p-1"
+                                                        className="text-muted dark:text-main/70 hover:text-main transition-colors p-1"
                                                         title="Instagram"
                                                     >
                                                         <Instagram size={18} />
@@ -182,7 +182,7 @@ export default function Navbar() {
                                     <ThemeToggle />
                                     <button
                                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                        className="p-2 text-muted bg-main/5 rounded-full hover:bg-main/10 transition-colors"
+                                        className="p-2 text-muted dark:text-main/70 bg-main/5 rounded-full hover:bg-main/10 transition-colors"
                                         aria-label="Toggle Menu"
                                     >
                                         {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -210,16 +210,16 @@ export default function Navbar() {
                                                 href={link.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-ds-b2 uppercase font-bold text-main hover:text-primary transition-colors flex items-center justify-between"
+                                                className="text-ds-b2 uppercase font-bold text-main dark:text-main/70 hover:text-main transition-colors flex items-center justify-between"
                                             >
                                                 {link.name}
-                                                <span className="text-[10px] uppercase tracking-widest bg-primary/10 text-primary px-2 py-1 rounded-full">External</span>
+                                                <span className="text-[10px] uppercase tracking-widest bg-primary/10 dark:bg-bg-inverse/20 text-main dark:text-main px-2 py-1 rounded-full">External</span>
                                             </a>
                                         ) : (
                                             <Link
                                                 key={link.name}
                                                 href={link.href}
-                                                className="text-ds-b2 uppercase font-bold text-main hover:text-primary transition-colors"
+                                                className="text-ds-b2 uppercase font-bold text-main dark:text-main/70 hover:text-main transition-colors"
                                             >
                                                 {link.name}
                                             </Link>
@@ -229,13 +229,13 @@ export default function Navbar() {
                                     <div className="h-px bg-border-subtle my-2" />
 
                                     <div className="flex items-center gap-6 pt-2">
-                                        <a href="mailto:zealsheth13@gmail.com" className="text-main md:text-muted hover:text-primary transition-colors">
+                                        <a href="mailto:zealsheth13@gmail.com" className="text-main md:text-muted dark:text-main/70 hover:text-main transition-colors">
                                             <Mail size={22} />
                                         </a>
-                                        <a href="https://www.linkedin.com/in/zeal-sheth-9ab1b0180/" target="_blank" rel="noopener noreferrer" className="text-main md:text-muted hover:text-primary transition-colors">
+                                        <a href="https://www.linkedin.com/in/zeal-sheth-9ab1b0180/" target="_blank" rel="noopener noreferrer" className="text-main md:text-muted dark:text-main/70 hover:text-main transition-colors">
                                             <Linkedin size={22} />
                                         </a>
-                                        <a href="https://www.instagram.com/zeal.sheth.art/" target="_blank" rel="noopener noreferrer" className="text-main md:text-muted hover:text-primary transition-colors">
+                                        <a href="https://www.instagram.com/zeal.sheth.art/" target="_blank" rel="noopener noreferrer" className="text-main md:text-muted dark:text-main/70 hover:text-main transition-colors">
                                             <Instagram size={22} />
                                         </a>
                                     </div>

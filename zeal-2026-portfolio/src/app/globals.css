@@ -15,12 +15,14 @@
   --color-accent: var(--ds-accent);
   --color-background: var(--ds-bg-main);
   --color-foreground: var(--ds-txt-main);
+  --color-bg-inverse: var(--ds-bg-inverse);
 
   /* Clean Semantic Colors (Tailwind 4 will generate text-main, text-muted, etc.) */
   --color-main: var(--ds-txt-main);
   --color-muted: var(--ds-txt-muted);
   --color-primary-text: var(--ds-txt-primary);
   --color-inverse: var(--ds-txt-inverse);
+  --color-primary-inverse: var(--ds-txt-primary-inverse);
 
   /* Borders */
   --color-border-strong: var(--ds-border-strong);

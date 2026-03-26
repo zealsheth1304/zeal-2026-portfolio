@@ -124,12 +124,12 @@ export default function AboutPage() {
         <div className="lg:col-span-4 space-y-24">
 
           {/* Passions & Interests */}
-          <section className="sticky top-[100px] bg-main/2 rounded-3xl p-8 border border-border-subtle">
+          <section className="sticky top-[100px] bg-main/2 dark:bg-main/4 rounded-3xl p-8 border border-border-subtle">
 
             <h3 className="text-xl font-bold text-main mb-6 mt-4 md:mt-12">Special Interests</h3>
             <div className="flex flex-wrap gap-2">
               {['AI Agents', 'Sustainable AI', 'AI-Native Product Design', 'Behavioral Design', 'AI Ethics', 'Gamification'].map(interest => (
-                <span key={interest} className="px-4 py-2 rounded-full bg-white dark:bg-black border border-border-subtle text-xs font-medium">
+                <span key={interest} className="px-4 py-2 rounded-full bg-white dark:bg-black border border-border-subtle dark:border-border-strong text-xs font-medium">
                   {interest}
                 </span>
               ))}

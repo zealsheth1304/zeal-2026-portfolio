@@ -61,7 +61,7 @@ export function TestimonialCarousel({ testimonials, autoPlayMs = 6000 }: Props) 
                         transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
                         className="w-full"
                     >
-                        <div className="rounded-ds-2xl bg-main/2 border border-border-subtle px-10 py-10 md:px-16 md:py-14 flex flex-col gap-8">
+                        <div className="rounded-ds-2xl bg-main/2 dark:bg-main/4 border border-border-subtle px-10 py-10 md:px-16 md:py-14 flex flex-col gap-8">
                             {/* Quote icon */}
                             <Quote
                                 size={32}
