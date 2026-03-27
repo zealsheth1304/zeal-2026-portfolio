@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "../styles/ds/main.css";
+
+/* Tell Tailwind v4 to use the `.dark` class strategy for the dark: variant */
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Typography */
+  --font-sans: var(--ds-f-sans);
+  --font-serif: var(--ds-f-serif);
+
+  /* Colors */
+  --color-primary: var(--ds-primary);
+  --color-secondary: var(--ds-secondary);
+  --color-accent: var(--ds-accent);
+  --color-background: var(--ds-bg-main);
+  --color-foreground: var(--ds-txt-main);
+  --color-bg-inverse: var(--ds-bg-inverse);
+
+  /* Clean Semantic Colors (Tailwind 4 will generate text-main, text-muted, etc.) */
+  --color-main: var(--ds-txt-main);
+  --color-muted: var(--ds-txt-muted);
+  --color-primary-text: var(--ds-txt-primary);
+  --color-inverse: var(--ds-txt-inverse);
+  --color-primary-inverse: var(--ds-txt-primary-inverse);
+
+  /* Borders */
+  --color-border-strong: var(--ds-border-strong);
+  --color-border-subtle: var(--ds-border-subtle);
+
+  /* Spacing (4px Grid) */
+  --spacing-ds-0: var(--ds-space-0);
+  --spacing-ds-1: var(--ds-space-1);
+  --spacing-ds-2: var(--ds-space-2);
+  --spacing-ds-3: var(--ds-space-3);
+  --spacing-ds-4: var(--ds-space-4);
+  --spacing-ds-5: var(--ds-space-5);
+  --spacing-ds-6: var(--ds-space-6);
+  --spacing-ds-8: var(--ds-space-8);
+  --spacing-ds-10: var(--ds-space-10);
+  --spacing-ds-12: var(--ds-space-12);
+  --spacing-ds-16: var(--ds-space-16);
+  --spacing-ds-20: var(--ds-space-20);
+  --spacing-ds-24: var(--ds-space-24);
+  --spacing-ds-32: var(--ds-space-32);
+
+  /* Radius */
+  --radius-ds-none: var(--ds-radius-none);
+  --radius-ds-xs: var(--ds-radius-xs);
+  --radius-ds-sm: var(--ds-radius-sm);
+  --radius-ds-md: var(--ds-radius-md);
+  --radius-ds-lg: var(--ds-radius-lg);
+  --radius-ds-xl: var(--ds-radius-xl);
+  --radius-ds-2xl: var(--ds-radius-2xl);
+  --radius-ds-full: var(--ds-radius-full);
+
+  /* Font Sizes */
+  --font-size-ds-display-2xl: var(--ds-fs-h1);
+  --font-size-ds-display-xl: var(--ds-fs-h2);
+
+  /* Tracking */
+  --tracking-ds-tight: var(--ds-tr-tight);
+  --tracking-ds-normal: var(--ds-tr-normal);
+  --tracking-ds-wide: var(--ds-tr-wide);
+  --tracking-ds-widest: var(--ds-tr-widest);
+  --tracking-ds-hero: var(--ds-tr-hero);
+  --leading-ds-flat: var(--ds-lh-flat);
+
+  /* Typography Sizing (Generated text-ds-* utilities) */
+  --font-size-ds-h1: var(--ds-fs-h1);
+  --font-size-ds-h2: var(--ds-fs-h2);
+  --font-size-ds-h3: var(--ds-fs-h3);
+  --font-size-ds-h4: var(--ds-fs-h4);
+  --font-size-ds-b1: var(--ds-fs-b1);
+  --font-size-ds-b2: var(--ds-fs-b2);
+  --font-size-ds-c1: var(--ds-fs-c1);
+  --font-size-ds-c2: var(--ds-fs-c2);
+  --font-size-ds-c3: var(--ds-fs-c3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ds-bg-main) !important;
+  color: var(--ds-txt-main) !important;
+  font-family: var(--ds-f-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure headings use the high-status font */
+h1,
+h2,
+h3,
+.high-status-heading {
+  font-family: var(--ds-f-serif);
+}
+
+/* Specific class for serif-sans play */
+.font-serif {
+  font-family: var(--ds-f-serif) !important;
+}
+
+.glass {
+  background: var(--ds-bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--ds-border-subtle);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--ds-primary), var(--ds-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.high-status-heading {
+  font-family: var(--ds-f-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}

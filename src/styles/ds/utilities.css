@@ -1,0 +1,76 @@
+/* src/styles/ds/utilities.css */
+
+
+/* Custom Font Size Utilities */
+@utility text-ds-h1 {
+    font-size: var(--ds-fs-h1);
+}
+
+@utility text-ds-h2 {
+    font-size: var(--ds-fs-h2);
+}
+
+@utility text-ds-h3 {
+    font-size: var(--ds-fs-h3);
+}
+
+@utility text-ds-h4 {
+    font-size: var(--ds-fs-h4);
+}
+
+@utility text-ds-b1 {
+    font-size: var(--ds-fs-b1);
+}
+
+@utility text-ds-b2 {
+    font-size: var(--ds-fs-b2);
+}
+
+@utility text-ds-c1 {
+    font-size: var(--ds-fs-c1);
+}
+
+@utility text-ds-c2 {
+    font-size: var(--ds-fs-c2);
+}
+
+@utility text-ds-c3 {
+    font-size: var(--ds-fs-c3);
+}
+
+/* Custom Brand Style Utilities */
+@utility ds-h1 {
+    font: var(--ds-h1);
+}
+
+@utility ds-h2 {
+    font: var(--ds-h2);
+}
+
+@utility ds-h3 {
+    font: var(--ds-h3);
+}
+
+@utility ds-h4 {
+    font: var(--ds-h4);
+}
+
+@utility ds-body-1 {
+    font: var(--ds-body-1);
+}
+
+@utility ds-body-2 {
+    font: var(--ds-body-2);
+}
+
+@utility ds-caption-1 {
+    font: var(--ds-caption-1);
+}
+
+@utility ds-caption-2 {
+    font: var(--ds-caption-2);
+}
+
+@utility ds-caption-3 {
+    font: var(--ds-caption-3);
+}
