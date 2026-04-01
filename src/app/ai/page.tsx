@@ -28,28 +28,27 @@ export default function AIPage() {
           >
             <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-main/4 dark:bg-main/10 mb-ds-8">
               <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
-                {project.heroVideo ? (
+                {project.heroVideo && (
                   <video
                     src={project.heroVideo}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="hidden md:block w-full h-full object-cover"
                   />
-                ) : (
-                  <div className="absolute inset-0 p-8 md:p-12">
-                    <div className="relative w-full h-full rounded-md md:rounded-md overflow-hidden shadow-lg border border-border-strong/20 bg-white dark:bg-slate-900">
-                      <Image
-                        src={project.thumbnail || project.heroImage || "/assets/placeholder.png"}
-                        alt={project.title}
-                        fill
-                        className="object-cover"
-                        unoptimized={project.thumbnail?.endsWith('.gif')}
-                      />
-                    </div>
-                  </div>
                 )}
+                <div className={`${project.heroVideo ? 'md:hidden' : ''} absolute inset-0 p-8 md:p-12`}>
+                  <div className="relative w-full h-full rounded-md md:rounded-md overflow-hidden shadow-lg border border-border-strong/20 bg-white dark:bg-slate-900">
+                    <Image
+                      src={project.thumbnail || project.heroImage || "/assets/placeholder.png"}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      unoptimized={project.thumbnail?.endsWith('.gif')}
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="absolute bottom-ds-4 left-ds-8 right-ds-8 flex justify-between items-end opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-ds-4 group-hover:translate-y-0">

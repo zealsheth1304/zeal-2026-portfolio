@@ -90,11 +90,21 @@ export default function Home() {
 
                 {/* THE IMAGE (Contained with Padding) */}
                 <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
+                  {project.heroVideo && (
+                    <video
+                      src={project.heroVideo}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="hidden md:block w-full h-full object-cover"
+                    />
+                  )}
                   <Image
                     src={project.heroImage}
                     alt={project.title}
                     fill
-                    className="object-contain py-8" // Ensures the whole image is visible
+                    className={project.heroVideo ? "object-contain py-8 md:hidden" : "object-contain py-8"}
                   />
                 </div>
 

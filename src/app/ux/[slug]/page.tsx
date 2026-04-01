@@ -100,14 +100,26 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     </div>
                 </header>
 
-                <div className={`aspect-[21/9] rounded-3xl relative group ${metadata.duration ? "" : "mb-32"}`}>
+                <div className={`rounded-3xl relative group ${metadata.duration ? "" : "mb-32"}`}>
+                    {metadata.heroVideo && (
+                        <div className="hidden md:flex rounded-3xl overflow-hidden shadow-2xl bg-slate-100 dark:bg-slate-900 aspect-video items-center justify-center">
+                            <video
+                                src={metadata.heroVideo}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    )}
                     {metadata.heroImage ? (
                         <CaseStudyImage
                             src={metadata.heroImage}
                             label={""}
-                            className="my-16"
+                            className={`my-16 ${metadata.heroVideo ? 'md:hidden' : ''}`}
                         />
-                    ) : (
+                    ) : !metadata.heroVideo && (
                         <>
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5" />
                             <div className="w-full h-full flex items-center justify-center">

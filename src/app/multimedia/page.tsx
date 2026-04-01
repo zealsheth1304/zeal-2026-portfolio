@@ -28,24 +28,23 @@ export default function MultimediaPage() {
           >
             <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-slate-100 dark:bg-slate-900 mb-ds-8">
               <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
-                {project.heroVideo ? (
+                {project.heroVideo && (
                   <video
                     src={project.heroVideo}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <Image
-                    src={project.thumbnail || project.heroImage}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    unoptimized={project.thumbnail?.endsWith('.gif')}
+                    className="hidden md:block w-full h-full object-cover"
                   />
                 )}
+                <Image
+                  src={project.thumbnail || project.heroImage}
+                  alt={project.title}
+                  fill
+                  className={project.heroVideo ? "object-cover md:hidden" : "object-cover"}
+                  unoptimized={project.thumbnail?.endsWith('.gif')}
+                />
               </div>
 
               <div className="absolute bottom-ds-4 left-ds-8 right-ds-8 flex justify-between items-end opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-ds-4 group-hover:translate-y-0">

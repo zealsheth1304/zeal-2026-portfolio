@@ -28,23 +28,22 @@ export default function UXPage() {
           >
             <div className="relative aspect-[3/2] overflow-hidden rounded-ds-2xl bg-main/5 dark:bg-main/10 mb-ds-8 px-ds-8">
               <div className="relative w-full h-full transition-transform duration-1000 ease-out group-hover:scale-105">
-                {project.heroVideo ? (
+                {project.heroVideo && (
                   <video
                     src={project.heroVideo}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <Image
-                    src={project.heroImage}
-                    alt={project.title}
-                    fill
-                    className="object-contain py-8"
+                    className="hidden md:block w-full h-full object-cover"
                   />
                 )}
+                <Image
+                  src={project.heroImage}
+                  alt={project.title}
+                  fill
+                  className={project.heroVideo ? "object-contain py-8 md:hidden" : "object-contain py-8"}
+                />
               </div>
 
               <div className="absolute bottom-ds-4 left-ds-8 right-ds-8 flex justify-between items-end opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-ds-4 group-hover:translate-y-0">

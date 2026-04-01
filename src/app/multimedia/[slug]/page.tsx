@@ -95,8 +95,8 @@ export default async function MultimediaProjectPage({ params }: { params: Promis
                 </header>
 
                 <div className="mb-20">
-                    {metadata.heroVideo ? (
-                        <div className="rounded-3xl overflow-hidden shadow-2xl bg-slate-100 dark:bg-slate-900 aspect-video flex items-center justify-center">
+                    {metadata.heroVideo && (
+                        <div className="hidden md:flex rounded-3xl overflow-hidden shadow-2xl bg-slate-100 dark:bg-slate-900 aspect-video items-center justify-center">
                             <video
                                 src={metadata.heroVideo}
                                 autoPlay
@@ -106,11 +106,12 @@ export default async function MultimediaProjectPage({ params }: { params: Promis
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                    ) : metadata.heroImage && (
+                    )}
+                    {metadata.heroImage && (
                         <CaseStudyImage
                             src={metadata.heroImage}
                             label={metadata.title}
-                            className="rounded-3xl overflow-hidden shadow-2xl"
+                            className={`rounded-3xl overflow-hidden shadow-2xl ${metadata.heroVideo ? 'md:hidden' : ''}`}
                         />
                     )}
                 </div>
