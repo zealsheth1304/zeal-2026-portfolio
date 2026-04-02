@@ -1,5 +1,6 @@
 {
-  "/multimedia/page": "app/multimedia/page.js",
-  "/page": "app/page.js",
-  "/ux/page": "app/ux/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/ai/[slug]/page": "app/ai/[slug]/page.js",
+  "/ai/page": "app/ai/page.js",
+  "/page": "app/page.js"
 }

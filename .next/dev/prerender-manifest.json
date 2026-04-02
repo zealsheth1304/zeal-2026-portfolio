@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "ba9f66ea615b6a6b6f6c25d9a7ce6c3b",
-    "previewModeSigningKey": "6746034ad1ad7d6b1fc2132222118fb6a4050de409c8e12ca43d0deebec31d45",
-    "previewModeEncryptionKey": "880a3bd055f931dfa3c8eb22503b5237c31a9c76cf2062ea3448469ec851dff9"
-  }
-}
+{"version":4,"routes":{"/ai/figma-to-coded-ds copy":{},"/ai/figma-to-coded-ds":{},"/ai/vibe-coded-portfolio-website":{}},"dynamicRoutes":{"/ai/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/ai/[slug]","routeRegex":"^\\/ai\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"9dc4f56dd1ddf0e930ba3b4c2c3d5371","previewModeSigningKey":"cd2ef94049af5a0a57198f7601aa217979cc0aa69a99f595b3c35adde4d4da0a","previewModeEncryptionKey":"da000372d946cf6b983181ec9c3704c4207c449d9c7f37a154b3ed006473880a"}}
