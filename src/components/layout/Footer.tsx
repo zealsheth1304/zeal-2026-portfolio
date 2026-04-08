@@ -37,7 +37,7 @@ export default function Footer() {
                 {/* Signature Text */}
                 <div className="text-center">
                     <p className="text-ds-b1 font-medium text-primary-inverse dark:text-primary">
-                        Vibe-coded with ❤️ by Zeal Sheth. Spreading Good Vibes Only 😊.
+                        Vibe-coded with ❤️ by Zeal. Spreading Good Vibes Only 😊.
                     </p>
                 </div>
 

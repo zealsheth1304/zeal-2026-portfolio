@@ -1,7 +1,2098 @@
-[{"name":"hot-reloader","duration":44,"timestamp":1247619351041,"id":3,"tags":{"version":"16.1.6"},"startTime":1775082269849,"traceId":"c7af8ce6a2e9aed6"},{"name":"setup-dev-bundler","duration":144361,"timestamp":1247619293245,"id":2,"parentId":1,"tags":{},"startTime":1775082269791,"traceId":"c7af8ce6a2e9aed6"},{"name":"start-dev-server","duration":2368894,"timestamp":1247617111286,"id":1,"tags":{"cpus":"8","platform":"darwin","memory.freeMem":"1235042304","memory.totalMem":"34359738368","memory.heapSizeLimit":"17381195776","memory.rss":"303398912","memory.heapTotal":"123043840","memory.heapUsed":"73125296"},"startTime":1775082267610,"traceId":"c7af8ce6a2e9aed6"},{"name":"compile-path","duration":2573748,"timestamp":1247623883276,"id":6,"tags":{"trigger":"/"},"startTime":1775082274381,"traceId":"c7af8ce6a2e9aed6"},{"name":"ensure-page","duration":2574174,"timestamp":1247623883046,"id":5,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775082274381,"traceId":"c7af8ce6a2e9aed6"}]
-[{"name":"handle-request","duration":3943133,"timestamp":1247623879670,"id":4,"tags":{"url":"/"},"startTime":1775082274378,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":4,"timestamp":1247627822857,"id":8,"parentId":4,"tags":{"url":"/","memory.rss":"888061952","memory.heapUsed":"143143136","memory.heapTotal":"240058368"},"startTime":1775082278321,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":1015162,"timestamp":1247626906494,"id":7,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775082277404,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":6,"timestamp":1247627921708,"id":11,"parentId":7,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"981057536","memory.heapUsed":"146512792","memory.heapTotal":"242040832"},"startTime":1775082278420,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":282385,"timestamp":1247627824704,"id":9,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775082278323,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":5,"timestamp":1247628107142,"id":12,"parentId":9,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"1064386560","memory.heapUsed":"147092688","memory.heapTotal":"242450432"},"startTime":1775082278605,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":288337,"timestamp":1247627826306,"id":10,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775082278324,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":4,"timestamp":1247628114679,"id":13,"parentId":10,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"1064534016","memory.heapUsed":"147212752","memory.heapTotal":"242450432"},"startTime":1775082278613,"traceId":"c7af8ce6a2e9aed6"},{"name":"compile-path","duration":432248,"timestamp":1247629666122,"id":16,"tags":{"trigger":"/multimedia"},"startTime":1775082280164,"traceId":"c7af8ce6a2e9aed6"}]
-[{"name":"handle-request","duration":490601,"timestamp":1247629665244,"id":14,"tags":{"url":"/multimedia?_rsc=vusbg"},"startTime":1775082280163,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":6,"timestamp":1247630155893,"id":17,"parentId":14,"tags":{"url":"/multimedia?_rsc=vusbg","memory.rss":"1087602688","memory.heapUsed":"162170960","memory.heapTotal":"248512512"},"startTime":1775082280654,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":35327,"timestamp":1247636601579,"id":24,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FGestureBasedPaintTool.webp&w=1080&q=75"},"startTime":1775082287100,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":2,"timestamp":1247636636953,"id":26,"parentId":24,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FGestureBasedPaintTool.webp&w=1080&q=75","memory.rss":"1420083200","memory.heapUsed":"120310888","memory.heapTotal":"257916928"},"startTime":1775082287135,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":45233,"timestamp":1247636598327,"id":23,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FPaintMusicBox.webp&w=1080&q=75"},"startTime":1775082287096,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":3,"timestamp":1247636643592,"id":27,"parentId":23,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FPaintMusicBox.webp&w=1080&q=75","memory.rss":"1420115968","memory.heapUsed":"120404184","memory.heapTotal":"257916928"},"startTime":1775082287142,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":54233,"timestamp":1247636603775,"id":25,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FSmartTrashCan.webp&w=1080&q=75"},"startTime":1775082287102,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":1,"timestamp":1247636658041,"id":28,"parentId":25,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FSmartTrashCan.webp&w=1080&q=75","memory.rss":"1420115968","memory.heapUsed":"120494000","memory.heapTotal":"257916928"},"startTime":1775082287156,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":81773,"timestamp":1247636597865,"id":22,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FIPerceive.webp&w=1080&q=75"},"startTime":1775082287096,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":2,"timestamp":1247636679673,"id":29,"parentId":22,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FIPerceive.webp&w=1080&q=75","memory.rss":"1420115968","memory.heapUsed":"120603664","memory.heapTotal":"257916928"},"startTime":1775082287178,"traceId":"c7af8ce6a2e9aed6"},{"name":"handle-request","duration":71549,"timestamp":1247638265951,"id":30,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FVirtualProduction.webp&w=1080&q=75"},"startTime":1775082288764,"traceId":"c7af8ce6a2e9aed6"},{"name":"memory-usage","duration":5,"timestamp":1247638337549,"id":31,"parentId":30,"tags":{"url":"/_next/image?url=%2Fassets%2FMultimedia%2FVirtualProduction.webp&w=1080&q=75","memory.rss":"1420034048","memory.heapUsed":"121053928","memory.heapTotal":"257916928"},"startTime":1775082288835,"traceId":"c7af8ce6a2e9aed6"},{"name":"compile-path","duration":305969,"timestamp":1247645722043,"id":34,"tags":{"trigger":"/ux"},"startTime":1775082296220,"traceId":"c7af8ce6a2e9aed6"}]
-[{"name":"hot-reloader","duration":48,"timestamp":1332052846053,"id":3,"tags":{"version":"16.1.6"},"startTime":1775166702991,"traceId":"77a121a72cb69306"},{"name":"setup-dev-bundler","duration":262271,"timestamp":1332052756635,"id":2,"parentId":1,"tags":{},"startTime":1775166702902,"traceId":"77a121a72cb69306"},{"name":"start-dev-server","duration":1719189,"timestamp":1332051366742,"id":1,"tags":{"cpus":"8","platform":"darwin","memory.freeMem":"128008192","memory.totalMem":"34359738368","memory.heapSizeLimit":"17381195776","memory.rss":"360415232","memory.heapTotal":"123305984","memory.heapUsed":"73167704"},"startTime":1775166701512,"traceId":"77a121a72cb69306"},{"name":"compile-path","duration":699413,"timestamp":1332059125285,"id":6,"tags":{"trigger":"/"},"startTime":1775166709271,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":699863,"timestamp":1332059125047,"id":5,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775166709270,"traceId":"77a121a72cb69306"}]
-[{"name":"handle-request","duration":1124626,"timestamp":1332059121614,"id":4,"tags":{"url":"/"},"startTime":1775166709267,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":5,"timestamp":1332060246301,"id":7,"parentId":4,"tags":{"url":"/","memory.rss":"678100992","memory.heapUsed":"137287848","memory.heapTotal":"238665728"},"startTime":1775166710392,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":359439,"timestamp":1332060290197,"id":8,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75"},"startTime":1775166710436,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":7,"timestamp":1332060649694,"id":10,"parentId":8,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75","memory.rss":"784531456","memory.heapUsed":"145782976","memory.heapTotal":"240910336"},"startTime":1775166710795,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":201070,"timestamp":1332060558786,"id":9,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75"},"startTime":1775166710704,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":6,"timestamp":1332060759915,"id":11,"parentId":9,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75","memory.rss":"803176448","memory.heapUsed":"146340280","memory.heapTotal":"240910336"},"startTime":1775166710905,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":6006,"timestamp":1332063352631,"id":16,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775166713498,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":1,"timestamp":1332063358667,"id":19,"parentId":16,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"840040448","memory.heapUsed":"148693656","memory.heapTotal":"242106368"},"startTime":1775166713504,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":9216,"timestamp":1332063353162,"id":17,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775166713498,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":22,"timestamp":1332063362414,"id":20,"parentId":17,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"840368128","memory.heapUsed":"148893728","memory.heapTotal":"242106368"},"startTime":1775166713508,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":6562,"timestamp":1332063356693,"id":18,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775166713502,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":1,"timestamp":1332063363277,"id":21,"parentId":18,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"840695808","memory.heapUsed":"149423848","memory.heapTotal":"242106368"},"startTime":1775166713509,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":207282,"timestamp":1332063347422,"id":12,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75"},"startTime":1775166713493,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":4,"timestamp":1332063554739,"id":22,"parentId":12,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75","memory.rss":"901169152","memory.heapUsed":"149602048","memory.heapTotal":"242106368"},"startTime":1775166713700,"traceId":"77a121a72cb69306"},{"name":"compile-path","duration":525127,"timestamp":1332064913595,"id":25,"tags":{"trigger":"/ai"},"startTime":1775166715059,"traceId":"77a121a72cb69306"}]
-[{"name":"handle-request","duration":565638,"timestamp":1332064911880,"id":23,"tags":{"url":"/ai?_rsc=vusbg"},"startTime":1775166715057,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":2,"timestamp":1332065477553,"id":26,"parentId":23,"tags":{"url":"/ai?_rsc=vusbg","memory.rss":"1017069568","memory.heapUsed":"160441824","memory.heapTotal":"248168448"},"startTime":1775166715623,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":83709,"timestamp":1332065503623,"id":27,"tags":{"url":"/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75"},"startTime":1775166715649,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":4,"timestamp":1332065587382,"id":28,"parentId":27,"tags":{"url":"/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75","memory.rss":"1014497280","memory.heapUsed":"161405440","memory.heapTotal":"248168448"},"startTime":1775166715733,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":1343,"timestamp":1332102216882,"id":30,"parentId":3,"tags":{"inputPage":"/ai/page"},"startTime":1775166752362,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":71839,"timestamp":1332102215887,"id":29,"tags":{"url":"/ai"},"startTime":1775166752361,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":5,"timestamp":1332102287786,"id":31,"parentId":29,"tags":{"url":"/ai","memory.rss":"1030438912","memory.heapUsed":"117265768","memory.heapTotal":"127434752"},"startTime":1775166752433,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":14065,"timestamp":1332102318453,"id":32,"tags":{"url":"/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75"},"startTime":1775166752464,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":4,"timestamp":1332102332598,"id":33,"parentId":32,"tags":{"url":"/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75","memory.rss":"1030914048","memory.heapUsed":"119055552","memory.heapTotal":"127680512"},"startTime":1775166752478,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":1593,"timestamp":1332110688608,"id":34,"parentId":3,"tags":{"inputPage":"/ai/figma-to-coded-ds%20copy"},"startTime":1775166760834,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":202,"timestamp":1332110690319,"id":35,"parentId":3,"tags":{"inputPage":"/ai/figma-to-coded-ds%20copy"},"startTime":1775166760835,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":288,"timestamp":1332110691608,"id":36,"parentId":3,"tags":{"inputPage":"/ai/figma-to-coded-ds%20copy"},"startTime":1775166760837,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":193,"timestamp":1332110691963,"id":37,"parentId":3,"tags":{"inputPage":"/ai/figma-to-coded-ds%20copy"},"startTime":1775166760837,"traceId":"77a121a72cb69306"},{"name":"compile-path","duration":280813,"timestamp":1332110694744,"id":40,"tags":{"trigger":"/ai/[slug]"},"startTime":1775166760840,"traceId":"77a121a72cb69306"}]
-[{"name":"handle-request","duration":955741,"timestamp":1332110693573,"id":38,"tags":{"url":"/ai/figma-to-coded-ds%20copy?_rsc=16pk9"},"startTime":1775166760839,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":3,"timestamp":1332111649347,"id":41,"parentId":38,"tags":{"url":"/ai/figma-to-coded-ds%20copy?_rsc=16pk9","memory.rss":"1108344832","memory.heapUsed":"134698472","memory.heapTotal":"172015616"},"startTime":1775166761794,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":470,"timestamp":1332167958974,"id":42,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166818104,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":130,"timestamp":1332167959508,"id":43,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166818105,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":105,"timestamp":1332167960017,"id":44,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166818105,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":92,"timestamp":1332167960148,"id":45,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166818105,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":1745,"timestamp":1332167961640,"id":47,"parentId":3,"tags":{"inputPage":"/ai/[slug]/page"},"startTime":1775166818107,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":252421,"timestamp":1332167961072,"id":46,"tags":{"url":"/ai/vibe-coded-portfolio-website"},"startTime":1775166818106,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":5,"timestamp":1332168213550,"id":48,"parentId":46,"tags":{"url":"/ai/vibe-coded-portfolio-website","memory.rss":"1037238272","memory.heapUsed":"137485408","memory.heapTotal":"157286400"},"startTime":1775166818359,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":783,"timestamp":1332242824939,"id":49,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166892970,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":307,"timestamp":1332242825879,"id":50,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166892971,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":166,"timestamp":1332242826740,"id":51,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166892972,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":167,"timestamp":1332242826940,"id":52,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775166892972,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":1488,"timestamp":1332242828125,"id":54,"parentId":3,"tags":{"inputPage":"/ai/[slug]/page"},"startTime":1775166892973,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":185322,"timestamp":1332242827714,"id":53,"tags":{"url":"/ai/vibe-coded-portfolio-website"},"startTime":1775166892973,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":5,"timestamp":1332243013088,"id":55,"parentId":53,"tags":{"url":"/ai/vibe-coded-portfolio-website","memory.rss":"971931648","memory.heapUsed":"144548200","memory.heapTotal":"157237248"},"startTime":1775166893158,"traceId":"77a121a72cb69306"},{"name":"client-hmr-latency","duration":76000,"timestamp":1334464325695,"id":56,"parentId":3,"tags":{"updatedModules":[],"page":"/ai/vibe-coded-portfolio-website","isPageHidden":true},"startTime":1775169114564,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":1021,"timestamp":1335142617548,"id":57,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169792750,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":184,"timestamp":1335142618667,"id":58,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169792751,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":126,"timestamp":1335142619507,"id":59,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169792752,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":85,"timestamp":1335142619652,"id":60,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169792752,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":3593,"timestamp":1335142623152,"id":62,"parentId":3,"tags":{"inputPage":"/ai/[slug]/page"},"startTime":1775169792756,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":106378,"timestamp":1335142620888,"id":61,"tags":{"url":"/ai/vibe-coded-portfolio-website"},"startTime":1775169792753,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":5,"timestamp":1335142727308,"id":63,"parentId":61,"tags":{"url":"/ai/vibe-coded-portfolio-website","memory.rss":"441171968","memory.heapUsed":"141848904","memory.heapTotal":"158269440"},"startTime":1775169792860,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":310,"timestamp":1335221369180,"id":64,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169871501,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":74,"timestamp":1335221369533,"id":65,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169871502,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":174,"timestamp":1335221369987,"id":66,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169871502,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":101,"timestamp":1335221370184,"id":67,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775169871502,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":2629,"timestamp":1335221371020,"id":69,"parentId":3,"tags":{"inputPage":"/ai/[slug]/page"},"startTime":1775169871503,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":87818,"timestamp":1335221370665,"id":68,"tags":{"url":"/ai/vibe-coded-portfolio-website"},"startTime":1775169871503,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":57,"timestamp":1335221458518,"id":70,"parentId":68,"tags":{"url":"/ai/vibe-coded-portfolio-website","memory.rss":"535494656","memory.heapUsed":"141057920","memory.heapTotal":"157270016"},"startTime":1775169871591,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":3523,"timestamp":1335459334137,"id":72,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775170109466,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":267083,"timestamp":1335459333625,"id":71,"tags":{"url":"/"},"startTime":1775170109465,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":4,"timestamp":1335459600739,"id":73,"parentId":71,"tags":{"url":"/","memory.rss":"480362496","memory.heapUsed":"138036864","memory.heapTotal":"149422080"},"startTime":1775170109732,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":5344,"timestamp":1335459692806,"id":74,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75"},"startTime":1775170109824,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":1,"timestamp":1335459698177,"id":77,"parentId":74,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75","memory.rss":"480460800","memory.heapUsed":"139126872","memory.heapTotal":"149422080"},"startTime":1775170109830,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":4716,"timestamp":1335459693925,"id":75,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75"},"startTime":1775170109825,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":1,"timestamp":1335459698657,"id":78,"parentId":75,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75","memory.rss":"480477184","memory.heapUsed":"139174744","memory.heapTotal":"149422080"},"startTime":1775170109830,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":4001,"timestamp":1335459695069,"id":76,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75"},"startTime":1775170109827,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":1,"timestamp":1335459699085,"id":79,"parentId":76,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75","memory.rss":"480477184","memory.heapUsed":"139208096","memory.heapTotal":"149422080"},"startTime":1775170109831,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":189,"timestamp":1335469139788,"id":80,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170119271,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":66,"timestamp":1335469140005,"id":81,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170119271,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":70,"timestamp":1335469140270,"id":82,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170119272,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":91,"timestamp":1335469140356,"id":83,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170119272,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":1917,"timestamp":1335469141363,"id":85,"parentId":3,"tags":{"inputPage":"/ai/[slug]/page"},"startTime":1775170119273,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":372306,"timestamp":1335469140967,"id":84,"tags":{"url":"/ai/vibe-coded-portfolio-website"},"startTime":1775170119272,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":4,"timestamp":1335469513304,"id":86,"parentId":84,"tags":{"url":"/ai/vibe-coded-portfolio-website","memory.rss":"496435200","memory.heapUsed":"136396264","memory.heapTotal":"159645696"},"startTime":1775170119645,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":210,"timestamp":1335561892823,"id":87,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170212024,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":118,"timestamp":1335561893068,"id":88,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170212024,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":63,"timestamp":1335561893507,"id":89,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170212025,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":57,"timestamp":1335561893584,"id":90,"parentId":3,"tags":{"inputPage":"/ai/vibe-coded-portfolio-website"},"startTime":1775170212025,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":3781,"timestamp":1335561894618,"id":92,"parentId":3,"tags":{"inputPage":"/ai/[slug]/page"},"startTime":1775170212026,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":145,"timestamp":1335562001079,"id":93,"parentId":3,"tags":{"inputPage":"/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"},"startTime":1775170212132,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":74,"timestamp":1335562001250,"id":94,"parentId":3,"tags":{"inputPage":"/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"},"startTime":1775170212132,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":127,"timestamp":1335562003696,"id":95,"parentId":3,"tags":{"inputPage":"/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"},"startTime":1775170212135,"traceId":"77a121a72cb69306"},{"name":"ensure-page","duration":85,"timestamp":1335562003850,"id":96,"parentId":3,"tags":{"inputPage":"/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"},"startTime":1775170212135,"traceId":"77a121a72cb69306"},{"name":"handle-request","duration":145948,"timestamp":1335561894161,"id":91,"tags":{"url":"/ai/vibe-coded-portfolio-website"},"startTime":1775170212025,"traceId":"77a121a72cb69306"},{"name":"memory-usage","duration":4,"timestamp":1335562040141,"id":100,"parentId":91,"tags":{"url":"/ai/vibe-coded-portfolio-website","memory.rss":"501088256","memory.heapUsed":"146053312","memory.heapTotal":"159891456"},"startTime":1775170212171,"traceId":"77a121a72cb69306"},{"name":"compile-path","duration":625760,"timestamp":1335562005114,"id":99,"tags":{"trigger":"/_not-found/page"},"startTime":1775170212136,"traceId":"77a121a72cb69306"}]
+[
+    {
+        "name": "hot-reloader",
+        "duration": 44,
+        "timestamp": 1247619351041,
+        "id": 3,
+        "tags": {
+            "version": "16.1.6"
+        },
+        "startTime": 1775082269849,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "setup-dev-bundler",
+        "duration": 144361,
+        "timestamp": 1247619293245,
+        "id": 2,
+        "parentId": 1,
+        "tags": {},
+        "startTime": 1775082269791,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "start-dev-server",
+        "duration": 2368894,
+        "timestamp": 1247617111286,
+        "id": 1,
+        "tags": {
+            "cpus": "8",
+            "platform": "darwin",
+            "memory.freeMem": "1235042304",
+            "memory.totalMem": "34359738368",
+            "memory.heapSizeLimit": "17381195776",
+            "memory.rss": "303398912",
+            "memory.heapTotal": "123043840",
+            "memory.heapUsed": "73125296"
+        },
+        "startTime": 1775082267610,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "compile-path",
+        "duration": 2573748,
+        "timestamp": 1247623883276,
+        "id": 6,
+        "tags": {
+            "trigger": "/"
+        },
+        "startTime": 1775082274381,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 2574174,
+        "timestamp": 1247623883046,
+        "id": 5,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/page"
+        },
+        "startTime": 1775082274381,
+        "traceId": "c7af8ce6a2e9aed6"
+    }
+]
+[
+    {
+        "name": "handle-request",
+        "duration": 3943133,
+        "timestamp": 1247623879670,
+        "id": 4,
+        "tags": {
+            "url": "/"
+        },
+        "startTime": 1775082274378,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1247627822857,
+        "id": 8,
+        "parentId": 4,
+        "tags": {
+            "url": "/",
+            "memory.rss": "888061952",
+            "memory.heapUsed": "143143136",
+            "memory.heapTotal": "240058368"
+        },
+        "startTime": 1775082278321,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 1015162,
+        "timestamp": 1247626906494,
+        "id": 7,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"
+        },
+        "startTime": 1775082277404,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 6,
+        "timestamp": 1247627921708,
+        "id": 11,
+        "parentId": 7,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75",
+            "memory.rss": "981057536",
+            "memory.heapUsed": "146512792",
+            "memory.heapTotal": "242040832"
+        },
+        "startTime": 1775082278420,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 282385,
+        "timestamp": 1247627824704,
+        "id": 9,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775082278323,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1247628107142,
+        "id": 12,
+        "parentId": 9,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75",
+            "memory.rss": "1064386560",
+            "memory.heapUsed": "147092688",
+            "memory.heapTotal": "242450432"
+        },
+        "startTime": 1775082278605,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 288337,
+        "timestamp": 1247627826306,
+        "id": 10,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775082278324,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1247628114679,
+        "id": 13,
+        "parentId": 10,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75",
+            "memory.rss": "1064534016",
+            "memory.heapUsed": "147212752",
+            "memory.heapTotal": "242450432"
+        },
+        "startTime": 1775082278613,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "compile-path",
+        "duration": 432248,
+        "timestamp": 1247629666122,
+        "id": 16,
+        "tags": {
+            "trigger": "/multimedia"
+        },
+        "startTime": 1775082280164,
+        "traceId": "c7af8ce6a2e9aed6"
+    }
+]
+[
+    {
+        "name": "handle-request",
+        "duration": 490601,
+        "timestamp": 1247629665244,
+        "id": 14,
+        "tags": {
+            "url": "/multimedia?_rsc=vusbg"
+        },
+        "startTime": 1775082280163,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 6,
+        "timestamp": 1247630155893,
+        "id": 17,
+        "parentId": 14,
+        "tags": {
+            "url": "/multimedia?_rsc=vusbg",
+            "memory.rss": "1087602688",
+            "memory.heapUsed": "162170960",
+            "memory.heapTotal": "248512512"
+        },
+        "startTime": 1775082280654,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 35327,
+        "timestamp": 1247636601579,
+        "id": 24,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FGestureBasedPaintTool.webp&w=1080&q=75"
+        },
+        "startTime": 1775082287100,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 2,
+        "timestamp": 1247636636953,
+        "id": 26,
+        "parentId": 24,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FGestureBasedPaintTool.webp&w=1080&q=75",
+            "memory.rss": "1420083200",
+            "memory.heapUsed": "120310888",
+            "memory.heapTotal": "257916928"
+        },
+        "startTime": 1775082287135,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 45233,
+        "timestamp": 1247636598327,
+        "id": 23,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FPaintMusicBox.webp&w=1080&q=75"
+        },
+        "startTime": 1775082287096,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 3,
+        "timestamp": 1247636643592,
+        "id": 27,
+        "parentId": 23,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FPaintMusicBox.webp&w=1080&q=75",
+            "memory.rss": "1420115968",
+            "memory.heapUsed": "120404184",
+            "memory.heapTotal": "257916928"
+        },
+        "startTime": 1775082287142,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 54233,
+        "timestamp": 1247636603775,
+        "id": 25,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FSmartTrashCan.webp&w=1080&q=75"
+        },
+        "startTime": 1775082287102,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1247636658041,
+        "id": 28,
+        "parentId": 25,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FSmartTrashCan.webp&w=1080&q=75",
+            "memory.rss": "1420115968",
+            "memory.heapUsed": "120494000",
+            "memory.heapTotal": "257916928"
+        },
+        "startTime": 1775082287156,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 81773,
+        "timestamp": 1247636597865,
+        "id": 22,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FIPerceive.webp&w=1080&q=75"
+        },
+        "startTime": 1775082287096,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 2,
+        "timestamp": 1247636679673,
+        "id": 29,
+        "parentId": 22,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FIPerceive.webp&w=1080&q=75",
+            "memory.rss": "1420115968",
+            "memory.heapUsed": "120603664",
+            "memory.heapTotal": "257916928"
+        },
+        "startTime": 1775082287178,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "handle-request",
+        "duration": 71549,
+        "timestamp": 1247638265951,
+        "id": 30,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FVirtualProduction.webp&w=1080&q=75"
+        },
+        "startTime": 1775082288764,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1247638337549,
+        "id": 31,
+        "parentId": 30,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FMultimedia%2FVirtualProduction.webp&w=1080&q=75",
+            "memory.rss": "1420034048",
+            "memory.heapUsed": "121053928",
+            "memory.heapTotal": "257916928"
+        },
+        "startTime": 1775082288835,
+        "traceId": "c7af8ce6a2e9aed6"
+    },
+    {
+        "name": "compile-path",
+        "duration": 305969,
+        "timestamp": 1247645722043,
+        "id": 34,
+        "tags": {
+            "trigger": "/ux"
+        },
+        "startTime": 1775082296220,
+        "traceId": "c7af8ce6a2e9aed6"
+    }
+]
+[
+    {
+        "name": "hot-reloader",
+        "duration": 48,
+        "timestamp": 1332052846053,
+        "id": 3,
+        "tags": {
+            "version": "16.1.6"
+        },
+        "startTime": 1775166702991,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "setup-dev-bundler",
+        "duration": 262271,
+        "timestamp": 1332052756635,
+        "id": 2,
+        "parentId": 1,
+        "tags": {},
+        "startTime": 1775166702902,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "start-dev-server",
+        "duration": 1719189,
+        "timestamp": 1332051366742,
+        "id": 1,
+        "tags": {
+            "cpus": "8",
+            "platform": "darwin",
+            "memory.freeMem": "128008192",
+            "memory.totalMem": "34359738368",
+            "memory.heapSizeLimit": "17381195776",
+            "memory.rss": "360415232",
+            "memory.heapTotal": "123305984",
+            "memory.heapUsed": "73167704"
+        },
+        "startTime": 1775166701512,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "compile-path",
+        "duration": 699413,
+        "timestamp": 1332059125285,
+        "id": 6,
+        "tags": {
+            "trigger": "/"
+        },
+        "startTime": 1775166709271,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 699863,
+        "timestamp": 1332059125047,
+        "id": 5,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/page"
+        },
+        "startTime": 1775166709270,
+        "traceId": "77a121a72cb69306"
+    }
+]
+[
+    {
+        "name": "handle-request",
+        "duration": 1124626,
+        "timestamp": 1332059121614,
+        "id": 4,
+        "tags": {
+            "url": "/"
+        },
+        "startTime": 1775166709267,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1332060246301,
+        "id": 7,
+        "parentId": 4,
+        "tags": {
+            "url": "/",
+            "memory.rss": "678100992",
+            "memory.heapUsed": "137287848",
+            "memory.heapTotal": "238665728"
+        },
+        "startTime": 1775166710392,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 359439,
+        "timestamp": 1332060290197,
+        "id": 8,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75"
+        },
+        "startTime": 1775166710436,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 7,
+        "timestamp": 1332060649694,
+        "id": 10,
+        "parentId": 8,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75",
+            "memory.rss": "784531456",
+            "memory.heapUsed": "145782976",
+            "memory.heapTotal": "240910336"
+        },
+        "startTime": 1775166710795,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 201070,
+        "timestamp": 1332060558786,
+        "id": 9,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75"
+        },
+        "startTime": 1775166710704,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 6,
+        "timestamp": 1332060759915,
+        "id": 11,
+        "parentId": 9,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75",
+            "memory.rss": "803176448",
+            "memory.heapUsed": "146340280",
+            "memory.heapTotal": "240910336"
+        },
+        "startTime": 1775166710905,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 6006,
+        "timestamp": 1332063352631,
+        "id": 16,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"
+        },
+        "startTime": 1775166713498,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1332063358667,
+        "id": 19,
+        "parentId": 16,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75",
+            "memory.rss": "840040448",
+            "memory.heapUsed": "148693656",
+            "memory.heapTotal": "242106368"
+        },
+        "startTime": 1775166713504,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 9216,
+        "timestamp": 1332063353162,
+        "id": 17,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775166713498,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 22,
+        "timestamp": 1332063362414,
+        "id": 20,
+        "parentId": 17,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75",
+            "memory.rss": "840368128",
+            "memory.heapUsed": "148893728",
+            "memory.heapTotal": "242106368"
+        },
+        "startTime": 1775166713508,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 6562,
+        "timestamp": 1332063356693,
+        "id": 18,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775166713502,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1332063363277,
+        "id": 21,
+        "parentId": 18,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75",
+            "memory.rss": "840695808",
+            "memory.heapUsed": "149423848",
+            "memory.heapTotal": "242106368"
+        },
+        "startTime": 1775166713509,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 207282,
+        "timestamp": 1332063347422,
+        "id": 12,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75"
+        },
+        "startTime": 1775166713493,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1332063554739,
+        "id": 22,
+        "parentId": 12,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75",
+            "memory.rss": "901169152",
+            "memory.heapUsed": "149602048",
+            "memory.heapTotal": "242106368"
+        },
+        "startTime": 1775166713700,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "compile-path",
+        "duration": 525127,
+        "timestamp": 1332064913595,
+        "id": 25,
+        "tags": {
+            "trigger": "/ai"
+        },
+        "startTime": 1775166715059,
+        "traceId": "77a121a72cb69306"
+    }
+]
+[
+    {
+        "name": "handle-request",
+        "duration": 565638,
+        "timestamp": 1332064911880,
+        "id": 23,
+        "tags": {
+            "url": "/ai?_rsc=vusbg"
+        },
+        "startTime": 1775166715057,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 2,
+        "timestamp": 1332065477553,
+        "id": 26,
+        "parentId": 23,
+        "tags": {
+            "url": "/ai?_rsc=vusbg",
+            "memory.rss": "1017069568",
+            "memory.heapUsed": "160441824",
+            "memory.heapTotal": "248168448"
+        },
+        "startTime": 1775166715623,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 83709,
+        "timestamp": 1332065503623,
+        "id": 27,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75"
+        },
+        "startTime": 1775166715649,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1332065587382,
+        "id": 28,
+        "parentId": 27,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75",
+            "memory.rss": "1014497280",
+            "memory.heapUsed": "161405440",
+            "memory.heapTotal": "248168448"
+        },
+        "startTime": 1775166715733,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 1343,
+        "timestamp": 1332102216882,
+        "id": 30,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/page"
+        },
+        "startTime": 1775166752362,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 71839,
+        "timestamp": 1332102215887,
+        "id": 29,
+        "tags": {
+            "url": "/ai"
+        },
+        "startTime": 1775166752361,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1332102287786,
+        "id": 31,
+        "parentId": 29,
+        "tags": {
+            "url": "/ai",
+            "memory.rss": "1030438912",
+            "memory.heapUsed": "117265768",
+            "memory.heapTotal": "127434752"
+        },
+        "startTime": 1775166752433,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 14065,
+        "timestamp": 1332102318453,
+        "id": 32,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75"
+        },
+        "startTime": 1775166752464,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1332102332598,
+        "id": 33,
+        "parentId": 32,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FAI%2F1_FigmatoCodedDS%2FCoverpage_FigmatoCodedDS.webp&w=3840&q=75",
+            "memory.rss": "1030914048",
+            "memory.heapUsed": "119055552",
+            "memory.heapTotal": "127680512"
+        },
+        "startTime": 1775166752478,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 1593,
+        "timestamp": 1332110688608,
+        "id": 34,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/figma-to-coded-ds%20copy"
+        },
+        "startTime": 1775166760834,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 202,
+        "timestamp": 1332110690319,
+        "id": 35,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/figma-to-coded-ds%20copy"
+        },
+        "startTime": 1775166760835,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 288,
+        "timestamp": 1332110691608,
+        "id": 36,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/figma-to-coded-ds%20copy"
+        },
+        "startTime": 1775166760837,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 193,
+        "timestamp": 1332110691963,
+        "id": 37,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/figma-to-coded-ds%20copy"
+        },
+        "startTime": 1775166760837,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "compile-path",
+        "duration": 280813,
+        "timestamp": 1332110694744,
+        "id": 40,
+        "tags": {
+            "trigger": "/ai/[slug]"
+        },
+        "startTime": 1775166760840,
+        "traceId": "77a121a72cb69306"
+    }
+]
+[
+    {
+        "name": "handle-request",
+        "duration": 955741,
+        "timestamp": 1332110693573,
+        "id": 38,
+        "tags": {
+            "url": "/ai/figma-to-coded-ds%20copy?_rsc=16pk9"
+        },
+        "startTime": 1775166760839,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 3,
+        "timestamp": 1332111649347,
+        "id": 41,
+        "parentId": 38,
+        "tags": {
+            "url": "/ai/figma-to-coded-ds%20copy?_rsc=16pk9",
+            "memory.rss": "1108344832",
+            "memory.heapUsed": "134698472",
+            "memory.heapTotal": "172015616"
+        },
+        "startTime": 1775166761794,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 470,
+        "timestamp": 1332167958974,
+        "id": 42,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166818104,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 130,
+        "timestamp": 1332167959508,
+        "id": 43,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166818105,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 105,
+        "timestamp": 1332167960017,
+        "id": 44,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166818105,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 92,
+        "timestamp": 1332167960148,
+        "id": 45,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166818105,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 1745,
+        "timestamp": 1332167961640,
+        "id": 47,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/[slug]/page"
+        },
+        "startTime": 1775166818107,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 252421,
+        "timestamp": 1332167961072,
+        "id": 46,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166818106,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1332168213550,
+        "id": 48,
+        "parentId": 46,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website",
+            "memory.rss": "1037238272",
+            "memory.heapUsed": "137485408",
+            "memory.heapTotal": "157286400"
+        },
+        "startTime": 1775166818359,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 783,
+        "timestamp": 1332242824939,
+        "id": 49,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166892970,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 307,
+        "timestamp": 1332242825879,
+        "id": 50,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166892971,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 166,
+        "timestamp": 1332242826740,
+        "id": 51,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166892972,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 167,
+        "timestamp": 1332242826940,
+        "id": 52,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166892972,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 1488,
+        "timestamp": 1332242828125,
+        "id": 54,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/[slug]/page"
+        },
+        "startTime": 1775166892973,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 185322,
+        "timestamp": 1332242827714,
+        "id": 53,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775166892973,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1332243013088,
+        "id": 55,
+        "parentId": 53,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website",
+            "memory.rss": "971931648",
+            "memory.heapUsed": "144548200",
+            "memory.heapTotal": "157237248"
+        },
+        "startTime": 1775166893158,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "client-hmr-latency",
+        "duration": 76000,
+        "timestamp": 1334464325695,
+        "id": 56,
+        "parentId": 3,
+        "tags": {
+            "updatedModules": [],
+            "page": "/ai/vibe-coded-portfolio-website",
+            "isPageHidden": true
+        },
+        "startTime": 1775169114564,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 1021,
+        "timestamp": 1335142617548,
+        "id": 57,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169792750,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 184,
+        "timestamp": 1335142618667,
+        "id": 58,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169792751,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 126,
+        "timestamp": 1335142619507,
+        "id": 59,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169792752,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 85,
+        "timestamp": 1335142619652,
+        "id": 60,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169792752,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 3593,
+        "timestamp": 1335142623152,
+        "id": 62,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/[slug]/page"
+        },
+        "startTime": 1775169792756,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 106378,
+        "timestamp": 1335142620888,
+        "id": 61,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169792753,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1335142727308,
+        "id": 63,
+        "parentId": 61,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website",
+            "memory.rss": "441171968",
+            "memory.heapUsed": "141848904",
+            "memory.heapTotal": "158269440"
+        },
+        "startTime": 1775169792860,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 310,
+        "timestamp": 1335221369180,
+        "id": 64,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169871501,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 74,
+        "timestamp": 1335221369533,
+        "id": 65,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169871502,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 174,
+        "timestamp": 1335221369987,
+        "id": 66,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169871502,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 101,
+        "timestamp": 1335221370184,
+        "id": 67,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169871502,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 2629,
+        "timestamp": 1335221371020,
+        "id": 69,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/[slug]/page"
+        },
+        "startTime": 1775169871503,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 87818,
+        "timestamp": 1335221370665,
+        "id": 68,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775169871503,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 57,
+        "timestamp": 1335221458518,
+        "id": 70,
+        "parentId": 68,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website",
+            "memory.rss": "535494656",
+            "memory.heapUsed": "141057920",
+            "memory.heapTotal": "157270016"
+        },
+        "startTime": 1775169871591,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 3523,
+        "timestamp": 1335459334137,
+        "id": 72,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/page"
+        },
+        "startTime": 1775170109466,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 267083,
+        "timestamp": 1335459333625,
+        "id": 71,
+        "tags": {
+            "url": "/"
+        },
+        "startTime": 1775170109465,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1335459600739,
+        "id": 73,
+        "parentId": 71,
+        "tags": {
+            "url": "/",
+            "memory.rss": "480362496",
+            "memory.heapUsed": "138036864",
+            "memory.heapTotal": "149422080"
+        },
+        "startTime": 1775170109732,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 5344,
+        "timestamp": 1335459692806,
+        "id": 74,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75"
+        },
+        "startTime": 1775170109824,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1335459698177,
+        "id": 77,
+        "parentId": 74,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=1920&q=75",
+            "memory.rss": "480460800",
+            "memory.heapUsed": "139126872",
+            "memory.heapTotal": "149422080"
+        },
+        "startTime": 1775170109830,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 4716,
+        "timestamp": 1335459693925,
+        "id": 75,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75"
+        },
+        "startTime": 1775170109825,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1335459698657,
+        "id": 78,
+        "parentId": 75,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=1920&q=75",
+            "memory.rss": "480477184",
+            "memory.heapUsed": "139174744",
+            "memory.heapTotal": "149422080"
+        },
+        "startTime": 1775170109830,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 4001,
+        "timestamp": 1335459695069,
+        "id": 76,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75"
+        },
+        "startTime": 1775170109827,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1335459699085,
+        "id": 79,
+        "parentId": 76,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=1920&q=75",
+            "memory.rss": "480477184",
+            "memory.heapUsed": "139208096",
+            "memory.heapTotal": "149422080"
+        },
+        "startTime": 1775170109831,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 189,
+        "timestamp": 1335469139788,
+        "id": 80,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170119271,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 66,
+        "timestamp": 1335469140005,
+        "id": 81,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170119271,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 70,
+        "timestamp": 1335469140270,
+        "id": 82,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170119272,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 91,
+        "timestamp": 1335469140356,
+        "id": 83,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170119272,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 1917,
+        "timestamp": 1335469141363,
+        "id": 85,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/[slug]/page"
+        },
+        "startTime": 1775170119273,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 372306,
+        "timestamp": 1335469140967,
+        "id": 84,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170119272,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1335469513304,
+        "id": 86,
+        "parentId": 84,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website",
+            "memory.rss": "496435200",
+            "memory.heapUsed": "136396264",
+            "memory.heapTotal": "159645696"
+        },
+        "startTime": 1775170119645,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 210,
+        "timestamp": 1335561892823,
+        "id": 87,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170212024,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 118,
+        "timestamp": 1335561893068,
+        "id": 88,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170212024,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 63,
+        "timestamp": 1335561893507,
+        "id": 89,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170212025,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 57,
+        "timestamp": 1335561893584,
+        "id": 90,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170212025,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 3781,
+        "timestamp": 1335561894618,
+        "id": 92,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ai/[slug]/page"
+        },
+        "startTime": 1775170212026,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 145,
+        "timestamp": 1335562001079,
+        "id": 93,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"
+        },
+        "startTime": 1775170212132,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 74,
+        "timestamp": 1335562001250,
+        "id": 94,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"
+        },
+        "startTime": 1775170212132,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 127,
+        "timestamp": 1335562003696,
+        "id": 95,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"
+        },
+        "startTime": 1775170212135,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 85,
+        "timestamp": 1335562003850,
+        "id": 96,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/assets/AI/2_VibeCodedPortfolioWebsite/Post2_2.webp"
+        },
+        "startTime": 1775170212135,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "handle-request",
+        "duration": 145948,
+        "timestamp": 1335561894161,
+        "id": 91,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website"
+        },
+        "startTime": 1775170212025,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 4,
+        "timestamp": 1335562040141,
+        "id": 100,
+        "parentId": 91,
+        "tags": {
+            "url": "/ai/vibe-coded-portfolio-website",
+            "memory.rss": "501088256",
+            "memory.heapUsed": "146053312",
+            "memory.heapTotal": "159891456"
+        },
+        "startTime": 1775170212171,
+        "traceId": "77a121a72cb69306"
+    },
+    {
+        "name": "compile-path",
+        "duration": 625760,
+        "timestamp": 1335562005114,
+        "id": 99,
+        "tags": {
+            "trigger": "/_not-found/page"
+        },
+        "startTime": 1775170212136,
+        "traceId": "77a121a72cb69306"
+    }
+]
+[
+    {
+        "name": "hot-reloader",
+        "duration": 50,
+        "timestamp": 1827835537989,
+        "id": 3,
+        "tags": {
+            "version": "16.1.6"
+        },
+        "startTime": 1775662483601,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "setup-dev-bundler",
+        "duration": 279691,
+        "timestamp": 1827835448002,
+        "id": 2,
+        "parentId": 1,
+        "tags": {},
+        "startTime": 1775662483511,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "start-dev-server",
+        "duration": 1734179,
+        "timestamp": 1827834057243,
+        "id": 1,
+        "tags": {
+            "cpus": "8",
+            "platform": "darwin",
+            "memory.freeMem": "1259454464",
+            "memory.totalMem": "34359738368",
+            "memory.heapSizeLimit": "17381195776",
+            "memory.rss": "346046464",
+            "memory.heapTotal": "125403136",
+            "memory.heapUsed": "63603056"
+        },
+        "startTime": 1775662482121,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "compile-path",
+        "duration": 682540,
+        "timestamp": 1828028309420,
+        "id": 6,
+        "tags": {
+            "trigger": "/"
+        },
+        "startTime": 1775662676372,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 682973,
+        "timestamp": 1828028309212,
+        "id": 5,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/page"
+        },
+        "startTime": 1775662676372,
+        "traceId": "920187af849ce170"
+    }
+]
+[
+    {
+        "name": "handle-request",
+        "duration": 21808,
+        "timestamp": 1828029470365,
+        "id": 7,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"
+        },
+        "startTime": 1775662677533,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 2,
+        "timestamp": 1828029492231,
+        "id": 8,
+        "parentId": 7,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75",
+            "memory.rss": "699596800",
+            "memory.heapUsed": "112608592",
+            "memory.heapTotal": "176930816"
+        },
+        "startTime": 1775662677555,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 5680,
+        "timestamp": 1828029516463,
+        "id": 9,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662677579,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 2,
+        "timestamp": 1828029522181,
+        "id": 11,
+        "parentId": 9,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75",
+            "memory.rss": "702119936",
+            "memory.heapUsed": "115297336",
+            "memory.heapTotal": "177192960"
+        },
+        "startTime": 1775662677585,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 3986,
+        "timestamp": 1828029519068,
+        "id": 10,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662677582,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1828029523090,
+        "id": 12,
+        "parentId": 10,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75",
+            "memory.rss": "702136320",
+            "memory.heapUsed": "115412544",
+            "memory.heapTotal": "177192960"
+        },
+        "startTime": 1775662677586,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 1226260,
+        "timestamp": 1828028305222,
+        "id": 4,
+        "tags": {
+            "url": "/"
+        },
+        "startTime": 1775662676368,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 3,
+        "timestamp": 1828029531524,
+        "id": 13,
+        "parentId": 4,
+        "tags": {
+            "url": "/",
+            "memory.rss": "702709760",
+            "memory.heapUsed": "115814288",
+            "memory.heapTotal": "177192960"
+        },
+        "startTime": 1775662677594,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 1479,
+        "timestamp": 1828030606365,
+        "id": 15,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662678669,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1828030607884,
+        "id": 16,
+        "parentId": 15,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75",
+            "memory.rss": "733609984",
+            "memory.heapUsed": "119270392",
+            "memory.heapTotal": "178274304"
+        },
+        "startTime": 1775662678671,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 3710,
+        "timestamp": 1828030605419,
+        "id": 14,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662678668,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1828030609162,
+        "id": 17,
+        "parentId": 14,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75",
+            "memory.rss": "733626368",
+            "memory.heapUsed": "119219608",
+            "memory.heapTotal": "178274304"
+        },
+        "startTime": 1775662678672,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 3369,
+        "timestamp": 1828038561521,
+        "id": 19,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75"
+        },
+        "startTime": 1775662686624,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 3,
+        "timestamp": 1828038564936,
+        "id": 20,
+        "parentId": 19,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75",
+            "memory.rss": "597688320",
+            "memory.heapUsed": "105947912",
+            "memory.heapTotal": "110952448"
+        },
+        "startTime": 1775662686628,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 7518,
+        "timestamp": 1828038558593,
+        "id": 18,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75"
+        },
+        "startTime": 1775662686621,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 2,
+        "timestamp": 1828038566144,
+        "id": 21,
+        "parentId": 18,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75",
+            "memory.rss": "597704704",
+            "memory.heapUsed": "106077992",
+            "memory.heapTotal": "110952448"
+        },
+        "startTime": 1775662686629,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 1113,
+        "timestamp": 1828042622619,
+        "id": 22,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ux/multimodal-conv-ai-design"
+        },
+        "startTime": 1775662690685,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 133,
+        "timestamp": 1828042623784,
+        "id": 23,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ux/multimodal-conv-ai-design"
+        },
+        "startTime": 1775662690687,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 97,
+        "timestamp": 1828042624373,
+        "id": 24,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ux/multimodal-conv-ai-design"
+        },
+        "startTime": 1775662690687,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 87,
+        "timestamp": 1828042624499,
+        "id": 25,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/ux/multimodal-conv-ai-design"
+        },
+        "startTime": 1775662690687,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "compile-path",
+        "duration": 498874,
+        "timestamp": 1828042627010,
+        "id": 28,
+        "tags": {
+            "trigger": "/ux/[slug]"
+        },
+        "startTime": 1775662690690,
+        "traceId": "920187af849ce170"
+    }
+]
+[
+    {
+        "name": "handle-request",
+        "duration": 1224689,
+        "timestamp": 1828042625376,
+        "id": 26,
+        "tags": {
+            "url": "/ux/multimodal-conv-ai-design?_rsc=vusbg"
+        },
+        "startTime": 1775662690688,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 5,
+        "timestamp": 1828043850167,
+        "id": 29,
+        "parentId": 26,
+        "tags": {
+            "url": "/ux/multimodal-conv-ai-design?_rsc=vusbg",
+            "memory.rss": "807124992",
+            "memory.heapUsed": "129383552",
+            "memory.heapTotal": "162136064"
+        },
+        "startTime": 1775662691913,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 6172,
+        "timestamp": 1828048638543,
+        "id": 30,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662696701,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1828048644763,
+        "id": 34,
+        "parentId": 30,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75",
+            "memory.rss": "845463552",
+            "memory.heapUsed": "126519368",
+            "memory.heapTotal": "162463744"
+        },
+        "startTime": 1775662696708,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 4744,
+        "timestamp": 1828048640908,
+        "id": 31,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662696704,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 7,
+        "timestamp": 1828048645735,
+        "id": 35,
+        "parentId": 31,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75",
+            "memory.rss": "845463552",
+            "memory.heapUsed": "126566416",
+            "memory.heapTotal": "162463744"
+        },
+        "startTime": 1775662696709,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 6266,
+        "timestamp": 1828048641870,
+        "id": 32,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"
+        },
+        "startTime": 1775662696705,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 3,
+        "timestamp": 1828048648259,
+        "id": 36,
+        "parentId": 32,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75",
+            "memory.rss": "845463552",
+            "memory.heapUsed": "126611824",
+            "memory.heapTotal": "162463744"
+        },
+        "startTime": 1775662696711,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 11139,
+        "timestamp": 1828048642385,
+        "id": 33,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662696705,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1828048653556,
+        "id": 37,
+        "parentId": 33,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75",
+            "memory.rss": "845463552",
+            "memory.heapUsed": "126642048",
+            "memory.heapTotal": "162463744"
+        },
+        "startTime": 1775662696716,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 1642,
+        "timestamp": 1828048655510,
+        "id": 38,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"
+        },
+        "startTime": 1775662696718,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 1,
+        "timestamp": 1828048657178,
+        "id": 39,
+        "parentId": 38,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75",
+            "memory.rss": "845463552",
+            "memory.heapUsed": "126848448",
+            "memory.heapTotal": "162463744"
+        },
+        "startTime": 1775662696720,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 1984,
+        "timestamp": 1828048904104,
+        "id": 41,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75"
+        },
+        "startTime": 1775662696967,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 0,
+        "timestamp": 1828048906115,
+        "id": 42,
+        "parentId": 41,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75",
+            "memory.rss": "845479936",
+            "memory.heapUsed": "127222064",
+            "memory.heapTotal": "162463744"
+        },
+        "startTime": 1775662696969,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "handle-request",
+        "duration": 5177,
+        "timestamp": 1828048901183,
+        "id": 40,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75"
+        },
+        "startTime": 1775662696964,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "memory-usage",
+        "duration": 0,
+        "timestamp": 1828048906371,
+        "id": 43,
+        "parentId": 40,
+        "tags": {
+            "url": "/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75",
+            "memory.rss": "845479936",
+            "memory.heapUsed": "127257304",
+            "memory.heapTotal": "162463744"
+        },
+        "startTime": 1775662696969,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 133,
+        "timestamp": 1828069597577,
+        "id": 44,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/"
+        },
+        "startTime": 1775662717660,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "ensure-page",
+        "duration": 95,
+        "timestamp": 1828069597740,
+        "id": 45,
+        "parentId": 3,
+        "tags": {
+            "inputPage": "/"
+        },
+        "startTime": 1775662717660,
+        "traceId": "920187af849ce170"
+    },
+    {
+        "name": "compile-path",
+        "duration": 8423,
+        "timestamp": 1828069601195,
+        "id": 48,
+        "tags": {
+            "trigger": "/"
+        },
+        "startTime": 1775662717664,
+        "traceId": "920187af849ce170"
+    }
+][{"name":"client-hmr-latency","duration":36000,"timestamp":1828069557761,"id":49,"parentId":3,"tags":{"updatedModules":[],"page":"/","isPageHidden":false},"startTime":1775662717770,"traceId":"920187af849ce170"},{"name":"handle-request","duration":120298,"timestamp":1828069600758,"id":46,"tags":{"url":"/?_rsc=1ch6o"},"startTime":1775662717663,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":4,"timestamp":1828069721084,"id":50,"parentId":46,"tags":{"url":"/?_rsc=1ch6o","memory.rss":"844414976","memory.heapUsed":"131292032","memory.heapTotal":"155385856"},"startTime":1775662717784,"traceId":"920187af849ce170"},{"name":"ensure-page","duration":2257,"timestamp":1828245518478,"id":52,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775662893581,"traceId":"920187af849ce170"},{"name":"handle-request","duration":7879,"timestamp":1828245767060,"id":53,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775662893829,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1828245774968,"id":56,"parentId":53,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"779239424","memory.heapUsed":"150186552","memory.heapTotal":"173572096"},"startTime":1775662893837,"traceId":"920187af849ce170"},{"name":"handle-request","duration":6521,"timestamp":1828245769074,"id":54,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775662893831,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1828245775610,"id":57,"parentId":54,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"779255808","memory.heapUsed":"150253040","memory.heapTotal":"173572096"},"startTime":1775662893838,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3527,"timestamp":1828245772756,"id":55,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775662893835,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1828245776324,"id":58,"parentId":55,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"779255808","memory.heapUsed":"150307888","memory.heapTotal":"173572096"},"startTime":1775662893839,"traceId":"920187af849ce170"},{"name":"handle-request","duration":263045,"timestamp":1828245517940,"id":51,"tags":{"url":"/"},"startTime":1775662893580,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":3,"timestamp":1828245781011,"id":59,"parentId":51,"tags":{"url":"/","memory.rss":"779321344","memory.heapUsed":"150915072","memory.heapTotal":"173572096"},"startTime":1775662893843,"traceId":"920187af849ce170"},{"name":"handle-request","duration":6783,"timestamp":1828246316688,"id":60,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"},"startTime":1775662894379,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":21,"timestamp":1828246323559,"id":62,"parentId":60,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75","memory.rss":"779927552","memory.heapUsed":"152258752","memory.heapTotal":"173572096"},"startTime":1775662894386,"traceId":"920187af849ce170"},{"name":"handle-request","duration":8138,"timestamp":1828246318770,"id":61,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"},"startTime":1775662894381,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":5,"timestamp":1828246327078,"id":63,"parentId":61,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75","memory.rss":"779943936","memory.heapUsed":"152542376","memory.heapTotal":"173572096"},"startTime":1775662894389,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3344,"timestamp":1828255501752,"id":65,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75"},"startTime":1775662903564,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1828255505123,"id":66,"parentId":65,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75","memory.rss":"764313600","memory.heapUsed":"141069496","memory.heapTotal":"146374656"},"startTime":1775662903567,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4797,"timestamp":1828255500847,"id":64,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75"},"startTime":1775662903563,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1828255505670,"id":67,"parentId":64,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75","memory.rss":"764346368","memory.heapUsed":"141106656","memory.heapTotal":"146374656"},"startTime":1775662903568,"traceId":"920187af849ce170"},{"name":"ensure-page","duration":4195,"timestamp":1829230571777,"id":69,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775663878632,"traceId":"920187af849ce170"},{"name":"handle-request","duration":12547,"timestamp":1829230801131,"id":70,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775663878861,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1829230813715,"id":73,"parentId":70,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"337756160","memory.heapUsed":"150320800","memory.heapTotal":"158105600"},"startTime":1775663878874,"traceId":"920187af849ce170"},{"name":"handle-request","duration":7325,"timestamp":1829230811837,"id":72,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775663878872,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829230819194,"id":74,"parentId":72,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"344588288","memory.heapUsed":"150436480","memory.heapTotal":"158105600"},"startTime":1775663878880,"traceId":"920187af849ce170"},{"name":"handle-request","duration":9813,"timestamp":1829230810653,"id":71,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775663878871,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829230820496,"id":75,"parentId":71,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"344883200","memory.heapUsed":"150588080","memory.heapTotal":"158105600"},"startTime":1775663878881,"traceId":"920187af849ce170"},{"name":"handle-request","duration":266569,"timestamp":1829230570555,"id":68,"tags":{"url":"/"},"startTime":1775663878631,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":5,"timestamp":1829230837160,"id":76,"parentId":68,"tags":{"url":"/","memory.rss":"350224384","memory.heapUsed":"145021040","memory.heapTotal":"165953536"},"startTime":1775663878897,"traceId":"920187af849ce170"},{"name":"ensure-page","duration":2505,"timestamp":1829233501763,"id":78,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775663881562,"traceId":"920187af849ce170"},{"name":"handle-request","duration":170217,"timestamp":1829233501068,"id":77,"tags":{"url":"/"},"startTime":1775663881562,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":6,"timestamp":1829233671321,"id":79,"parentId":77,"tags":{"url":"/","memory.rss":"377208832","memory.heapUsed":"150614992","memory.heapTotal":"168525824"},"startTime":1775663881732,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4636,"timestamp":1829233688310,"id":80,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775663881749,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829233692972,"id":83,"parentId":80,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"377454592","memory.heapUsed":"151859560","memory.heapTotal":"168525824"},"startTime":1775663881753,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3389,"timestamp":1829233690985,"id":81,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775663881752,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":4,"timestamp":1829233694400,"id":84,"parentId":81,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"377470976","memory.heapUsed":"151941656","memory.heapTotal":"168525824"},"startTime":1775663881755,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3010,"timestamp":1829233692030,"id":82,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775663881753,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829233695062,"id":85,"parentId":82,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"377487360","memory.heapUsed":"151972384","memory.heapTotal":"168525824"},"startTime":1775663881756,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4686,"timestamp":1829234664712,"id":87,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"},"startTime":1775663882725,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":5,"timestamp":1829234669454,"id":88,"parentId":87,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75","memory.rss":"380256256","memory.heapUsed":"153034992","memory.heapTotal":"168525824"},"startTime":1775663882730,"traceId":"920187af849ce170"},{"name":"handle-request","duration":11486,"timestamp":1829234658378,"id":86,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"},"startTime":1775663882719,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829234669878,"id":89,"parentId":86,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75","memory.rss":"380272640","memory.heapUsed":"153060880","memory.heapTotal":"168525824"},"startTime":1775663882730,"traceId":"920187af849ce170"},{"name":"handle-request","duration":2432,"timestamp":1829234749115,"id":91,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75"},"startTime":1775663882810,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829234751582,"id":92,"parentId":91,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75","memory.rss":"380338176","memory.heapUsed":"153412648","memory.heapTotal":"168525824"},"startTime":1775663882812,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4761,"timestamp":1829234747135,"id":90,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75"},"startTime":1775663882808,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829234751913,"id":93,"parentId":90,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75","memory.rss":"380338176","memory.heapUsed":"153439208","memory.heapTotal":"168525824"},"startTime":1775663882813,"traceId":"920187af849ce170"},{"name":"ensure-page","duration":4098,"timestamp":1829240000531,"id":95,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775663888061,"traceId":"920187af849ce170"},{"name":"handle-request","duration":2681,"timestamp":1829240152438,"id":96,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775663888213,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1829240155152,"id":97,"parentId":96,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"388956160","memory.heapUsed":"149584776","memory.heapTotal":"187990016"},"startTime":1775663888216,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3469,"timestamp":1829240181228,"id":98,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775663888242,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829240184722,"id":100,"parentId":98,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"390578176","memory.heapUsed":"152554432","memory.heapTotal":"188465152"},"startTime":1775663888246,"traceId":"920187af849ce170"},{"name":"handle-request","duration":6073,"timestamp":1829240184144,"id":99,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775663888245,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829240190242,"id":104,"parentId":99,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"390889472","memory.heapUsed":"153178424","memory.heapTotal":"188465152"},"startTime":1775663888251,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4370,"timestamp":1829240186032,"id":101,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"},"startTime":1775663888247,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829240190410,"id":105,"parentId":101,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75","memory.rss":"390889472","memory.heapUsed":"153203896","memory.heapTotal":"188465152"},"startTime":1775663888251,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3067,"timestamp":1829240187546,"id":102,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"},"startTime":1775663888248,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829240190629,"id":106,"parentId":102,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75","memory.rss":"390889472","memory.heapUsed":"153233520","memory.heapTotal":"188465152"},"startTime":1775663888251,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3085,"timestamp":1829240188332,"id":103,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75"},"startTime":1775663888249,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829240191432,"id":107,"parentId":103,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75","memory.rss":"390889472","memory.heapUsed":"153280160","memory.heapTotal":"188465152"},"startTime":1775663888252,"traceId":"920187af849ce170"},{"name":"handle-request","duration":195651,"timestamp":1829240000014,"id":94,"tags":{"url":"/"},"startTime":1775663888061,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":3,"timestamp":1829240195689,"id":109,"parentId":94,"tags":{"url":"/","memory.rss":"390905856","memory.heapUsed":"153681480","memory.heapTotal":"188465152"},"startTime":1775663888257,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3829,"timestamp":1829240192562,"id":108,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75"},"startTime":1775663888253,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829240196406,"id":110,"parentId":108,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75","memory.rss":"390905856","memory.heapUsed":"153749072","memory.heapTotal":"188465152"},"startTime":1775663888257,"traceId":"920187af849ce170"},{"name":"ensure-page","duration":1397,"timestamp":1829313380427,"id":112,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775663961442,"traceId":"920187af849ce170"},{"name":"handle-request","duration":89523,"timestamp":1829313379414,"id":111,"tags":{"url":"/"},"startTime":1775663961441,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":6,"timestamp":1829313469085,"id":113,"parentId":111,"tags":{"url":"/","memory.rss":"406552576","memory.heapUsed":"161041888","memory.heapTotal":"178765824"},"startTime":1775663961530,"traceId":"920187af849ce170"},{"name":"handle-request","duration":13885,"timestamp":1829313528331,"id":114,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775663961590,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1829313542275,"id":115,"parentId":114,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"406634496","memory.heapUsed":"155531456","memory.heapTotal":"178765824"},"startTime":1775663961604,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4066,"timestamp":1829313588234,"id":116,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775663961650,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1829313592333,"id":117,"parentId":116,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"408256512","memory.heapUsed":"148756968","memory.heapTotal":"180224000"},"startTime":1775663961654,"traceId":"920187af849ce170"},{"name":"handle-request","duration":5495,"timestamp":1829313593383,"id":118,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775663961655,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829313598908,"id":123,"parentId":118,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"408256512","memory.heapUsed":"149726432","memory.heapTotal":"180486144"},"startTime":1775663961660,"traceId":"920187af849ce170"},{"name":"handle-request","duration":5334,"timestamp":1829313593980,"id":119,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"},"startTime":1775663961655,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829313599338,"id":124,"parentId":119,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75","memory.rss":"408256512","memory.heapUsed":"149751904","memory.heapTotal":"180486144"},"startTime":1775663961661,"traceId":"920187af849ce170"},{"name":"handle-request","duration":5617,"timestamp":1829313594367,"id":120,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"},"startTime":1775663961656,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":17,"timestamp":1829313600028,"id":125,"parentId":120,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75","memory.rss":"408256512","memory.heapUsed":"149781720","memory.heapTotal":"180486144"},"startTime":1775663961661,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4672,"timestamp":1829313595958,"id":121,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75"},"startTime":1775663961657,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829313600648,"id":126,"parentId":121,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHiredOnboardingRedesign%2FHiFi.webp&w=3840&q=75","memory.rss":"408256512","memory.heapUsed":"149828608","memory.heapTotal":"180486144"},"startTime":1775663961662,"traceId":"920187af849ce170"},{"name":"handle-request","duration":3125,"timestamp":1829313597785,"id":122,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75"},"startTime":1775663961659,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829313600928,"id":127,"parentId":122,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FUserhub%2FUserhubContent.webp&w=3840&q=75","memory.rss":"408256512","memory.heapUsed":"149855976","memory.heapTotal":"180486144"},"startTime":1775663961662,"traceId":"920187af849ce170"},{"name":"compile-path","duration":6366,"timestamp":1829350294265,"id":130,"tags":{"trigger":"/"},"startTime":1775663998356,"traceId":"920187af849ce170"}]
+[{"name":"client-hmr-latency","duration":76000,"timestamp":1829350217641,"id":131,"parentId":3,"tags":{"updatedModules":[],"page":"/","isPageHidden":false},"startTime":1775663998465,"traceId":"920187af849ce170"},{"name":"handle-request","duration":131628,"timestamp":1829350293358,"id":128,"tags":{"url":"/?_rsc=1ch6o"},"startTime":1775663998355,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":4,"timestamp":1829350425018,"id":132,"parentId":128,"tags":{"url":"/?_rsc=1ch6o","memory.rss":"462110720","memory.heapUsed":"164448416","memory.heapTotal":"189775872"},"startTime":1775663998486,"traceId":"920187af849ce170"},{"name":"ensure-page","duration":5491,"timestamp":1829370381522,"id":134,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775664018443,"traceId":"920187af849ce170"},{"name":"handle-request","duration":10709,"timestamp":1829370635292,"id":135,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775664018697,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829370646026,"id":138,"parentId":135,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"482017280","memory.heapUsed":"167892056","memory.heapTotal":"202309632"},"startTime":1775664018707,"traceId":"920187af849ce170"},{"name":"handle-request","duration":8611,"timestamp":1829370639392,"id":136,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775664018701,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829370648029,"id":141,"parentId":136,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"482050048","memory.heapUsed":"168264944","memory.heapTotal":"202309632"},"startTime":1775664018709,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4003,"timestamp":1829370645195,"id":137,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775664018706,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1829370649220,"id":142,"parentId":137,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"482066432","memory.heapUsed":"168350744","memory.heapTotal":"202309632"},"startTime":1775664018711,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4586,"timestamp":1829370646459,"id":139,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"},"startTime":1775664018708,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":2,"timestamp":1829370651067,"id":143,"parentId":139,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75","memory.rss":"482148352","memory.heapUsed":"168877712","memory.heapTotal":"202309632"},"startTime":1775664018712,"traceId":"920187af849ce170"},{"name":"handle-request","duration":4397,"timestamp":1829370647233,"id":140,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"},"startTime":1775664018709,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":6,"timestamp":1829370651690,"id":144,"parentId":140,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75","memory.rss":"482148352","memory.heapUsed":"168909784","memory.heapTotal":"202309632"},"startTime":1775664018713,"traceId":"920187af849ce170"},{"name":"handle-request","duration":273958,"timestamp":1829370381174,"id":133,"tags":{"url":"/"},"startTime":1775664018442,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":3,"timestamp":1829370655159,"id":145,"parentId":133,"tags":{"url":"/","memory.rss":"482164736","memory.heapUsed":"169355192","memory.heapTotal":"202309632"},"startTime":1775664018716,"traceId":"920187af849ce170"},{"name":"ensure-page","duration":1667,"timestamp":1829405314998,"id":147,"parentId":3,"tags":{"inputPage":"/page"},"startTime":1775664053376,"traceId":"920187af849ce170"},{"name":"handle-request","duration":162589,"timestamp":1829405314297,"id":146,"tags":{"url":"/"},"startTime":1775664053376,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":3,"timestamp":1829405476914,"id":148,"parentId":146,"tags":{"url":"/","memory.rss":"481214464","memory.heapUsed":"167560360","memory.heapTotal":"176144384"},"startTime":1775664053538,"traceId":"920187af849ce170"},{"name":"handle-request","duration":18096,"timestamp":1829405528452,"id":149,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75"},"startTime":1775664053590,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829405546577,"id":154,"parentId":149,"tags":{"url":"/_next/image?url=%2Fassets%2FLandingPage%2FZealShethDP.jpg&w=3840&q=75","memory.rss":"483360768","memory.heapUsed":"163737264","memory.heapTotal":"185778176"},"startTime":1775664053608,"traceId":"920187af849ce170"},{"name":"handle-request","duration":15917,"timestamp":1829405533706,"id":150,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75"},"startTime":1775664053595,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829405549652,"id":155,"parentId":150,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_ConversationalAIAssistant%2FCoverPage.webp&w=3840&q=75","memory.rss":"483475456","memory.heapUsed":"163940672","memory.heapTotal":"185778176"},"startTime":1775664053611,"traceId":"920187af849ce170"},{"name":"handle-request","duration":14587,"timestamp":1829405536902,"id":151,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75"},"startTime":1775664053598,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":1,"timestamp":1829405551511,"id":156,"parentId":151,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FXiPhi_DesignSystem%2FDSCoverPage.webp&w=3840&q=75","memory.rss":"483475456","memory.heapUsed":"164051288","memory.heapTotal":"185778176"},"startTime":1775664053613,"traceId":"920187af849ce170"},{"name":"handle-request","duration":10142,"timestamp":1829405543957,"id":152,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75"},"startTime":1775664053605,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":5,"timestamp":1829405554152,"id":157,"parentId":152,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FFluxStackupEditor%2FStackupHeroImage.webp&w=3840&q=75","memory.rss":"483475456","memory.heapUsed":"164172272","memory.heapTotal":"185778176"},"startTime":1775664053615,"traceId":"920187af849ce170"},{"name":"handle-request","duration":9695,"timestamp":1829405545941,"id":153,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75"},"startTime":1775664053607,"traceId":"920187af849ce170"},{"name":"memory-usage","duration":0,"timestamp":1829405555660,"id":158,"parentId":153,"tags":{"url":"/_next/image?url=%2Fassets%2FUX%2FHabitsForBetterWorld%2FHBWShortCoverPage.webp&w=3840&q=75","memory.rss":"483475456","memory.heapUsed":"164263336","memory.heapTotal":"185778176"},"startTime":1775664053617,"traceId":"920187af849ce170"},{"name":"compile-path","duration":6026,"timestamp":1829430848925,"id":161,"tags":{"trigger":"/"},"startTime":1775664078910,"traceId":"920187af849ce170"}]

@@ -1,1 +1,30 @@
-{"version":4,"routes":{"/ai/figma-to-coded-ds copy":{},"/ai/figma-to-coded-ds":{},"/ai/vibe-coded-portfolio-website":{}},"dynamicRoutes":{"/ai/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/ai/[slug]","routeRegex":"^\\/ai\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"9dc4f56dd1ddf0e930ba3b4c2c3d5371","previewModeSigningKey":"cd2ef94049af5a0a57198f7601aa217979cc0aa69a99f595b3c35adde4d4da0a","previewModeEncryptionKey":"da000372d946cf6b983181ec9c3704c4207c449d9c7f37a154b3ed006473880a"}}
+{
+    "version": 4,
+    "routes": {
+        "/ux/design-system": {},
+        "/ux/flux-stackup-editor": {},
+        "/ux/foodconscious": {},
+        "/ux/habits-for-better-world-project": {},
+        "/ux/hired-onboarding-redesign": {},
+        "/ux/instacart-website-redesign": {},
+        "/ux/multimodal-conv-ai-design": {},
+        "/ux/userhub-dev-tools-design": {}
+    },
+    "dynamicRoutes": {
+        "/ux/[slug]": {
+            "dataRoute": null,
+            "dataRouteRegex": null,
+            "fallback": null,
+            "fallbackRevalidate": false,
+            "fallbackSourceRoute": "/ux/[slug]",
+            "routeRegex": "^\\/ux\\/([^/]+?)(?:\\/)?$",
+            "allowHeader": []
+        }
+    },
+    "notFoundRoutes": [],
+    "preview": {
+        "previewModeId": "c7a25ebb02ca5aa5823e1307eccf61ed",
+        "previewModeSigningKey": "51f3b4cae6f2d97acdbdf445876e8ecf430290154e80c397e069e6f4fced9c21",
+        "previewModeEncryptionKey": "4ae7ecd66e7301957c61a8a1030158b82bf442372b17c64eaf0125b48d6c80c1"
+    }
+}

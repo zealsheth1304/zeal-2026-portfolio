@@ -14,9 +14,9 @@ export default function Home() {
 
     <div className="relative">
 
-      <div className="relative min-h-screen pt-24 md:pt-36 pb-16 px-12 md:px-20 max-w-7xl mx-auto">
+      <div className="relative pt-24 md:pt-36 pb-8 md:pb-12 px-12 md:px-20 max-w-7xl mx-auto">
         {/* Hero Section */}
-        <section className="mt-32 mb-16">
+        <section className="mt-16 md:mt-24 mb-8 md:mb-32">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
             <div className="relative w-64 h-64 md:w-80 md:h-80 shrink-0">
               <div className="absolute inset-0 rounded-2xl border border-primary/20 -rotate-6 scale-105" />
