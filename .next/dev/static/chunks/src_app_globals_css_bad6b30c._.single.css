@@ -643,10 +643,6 @@
     margin-top: calc(var(--spacing) * 16);
   }
 
-  .mt-32 {
-    margin-top: calc(var(--spacing) * 32);
-  }
-
   .mt-40 {
     margin-top: calc(var(--spacing) * 40);
   }
@@ -1126,6 +1122,12 @@
 
   .gap-ds-8 {
     gap: var(--spacing-ds-8);
+  }
+
+  :where(.space-y-1 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
   }
 
   :where(.space-y-2 > :not(:last-child)) {
@@ -2574,12 +2576,6 @@
   }
 
   @media (min-width: 48rem) {
-    .md\:mb-12 {
-      margin-bottom: calc(var(--spacing) * 12);
-    }
-  }
-
-  @media (min-width: 48rem) {
     .md\:mb-32 {
       margin-bottom: calc(var(--spacing) * 32);
     }
@@ -2820,12 +2816,6 @@
   @media (min-width: 64rem) {
     .lg\:grid-cols-12 {
       grid-template-columns: repeat(12, minmax(0, 1fr));
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .xl\:mt-4 {
-      margin-top: calc(var(--spacing) * 4);
     }
   }
 
