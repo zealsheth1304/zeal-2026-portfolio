@@ -48,8 +48,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/file-text.js [app-client] (ecmascript) <export default as FileText>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/external-link.js [app-client] (ecmascript) <export default as ExternalLink>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-client] (ecmascript) <export default as ChevronLeft>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-client] (ecmascript) <export default as ChevronRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/utils.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
@@ -628,89 +626,69 @@ function PDFLink({ url, label, description, className }) {
     }, this);
 }
 _c8 = PDFLink;
-function PDFEmbed({ url, label, aspectRatio = "16/9", totalPages = 10, width }) {
+function PDFEmbed({ url, label, aspectRatio = "1/1", width }) {
     _s1();
-    const [currentPage, setCurrentPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
-    const total = typeof totalPages === "string" ? parseInt(totalPages, 10) : totalPages;
+    // Generate absolute URL for Google Docs Viewer compatibility
+    const [absoluteUrl, setAbsoluteUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [isLocal, setIsLocal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "PDFEmbed.useEffect": ()=>{
+            const hostname = window.location.hostname;
+            const local = hostname === "localhost" || hostname === "127.0.0.1" || hostname.startsWith("192.168.") || hostname.startsWith("10.");
+            setIsLocal(local);
+            if (url.startsWith("http")) {
+                setAbsoluteUrl(url);
+            } else {
+                setAbsoluteUrl(`${window.location.origin}${url}`);
+            }
+        }
+    }["PDFEmbed.useEffect"], [
+        url
+    ]);
+    // Google Docs viewer handles PDF scrolling organically on Mobile and Desktop,
+    // but it CANNOT access localhost URLs. Fallback to native iframe for local testing.
+    const embedSrc = absoluteUrl ? isLocal ? `${url}#toolbar=0` : `https://docs.google.com/gview?url=${encodeURIComponent(absoluteUrl)}&embedded=true` : "";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("my-12 tracking-normal group/pdf mx-auto", !width && "w-full"),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("my-12 tracking-normal mx-auto", !width && "w-full"),
         style: {
             width
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative w-full overflow-hidden rounded-none border border-border-strong/50 shadow-sm bg-slate-50 dark:bg-slate-900/50"),
+                className: "relative w-full overflow-hidden rounded-none border border-border-strong/50 shadow-sm bg-slate-50 dark:bg-slate-900/50",
                 style: {
                     aspectRatio
                 },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                        src: `${url}#page=${currentPage}&view=FitH&toolbar=0&navpanes=0`,
-                        title: label || "PDF Document",
-                        className: "absolute inset-0 w-full h-full",
-                        allowFullScreen: true
-                    }, currentPage, false, {
+                children: embedSrc ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                    src: embedSrc,
+                    title: label || "PDF Document",
+                    className: "absolute inset-0 w-full h-full",
+                    style: {
+                        border: "none"
+                    },
+                    allowFullScreen: true
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
+                    lineNumber: 347,
+                    columnNumber: 21
+                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "absolute inset-0 flex items-center justify-center",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "text-muted text-sm",
+                        children: "Loading PDF..."
+                    }, void 0, false, {
                         fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                        lineNumber: 321,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-background/80 backdrop-blur-md border border-border-strong/50 px-4 py-2 rounded-full shadow-xl opacity-0 group-hover/pdf:opacity-100 transition-opacity duration-300",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setCurrentPage((prev)=>Math.max(prev - 1, 1)),
-                                disabled: currentPage === 1,
-                                className: "p-1 hover:text-primary disabled:text-muted/30 transition-colors",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
-                                    size: 24
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                                    lineNumber: 335,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                                lineNumber: 330,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-sm font-bold min-w-[3rem] text-center select-none",
-                                children: [
-                                    currentPage,
-                                    " / ",
-                                    total
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                                lineNumber: 337,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setCurrentPage((prev)=>Math.min(prev + 1, total)),
-                                disabled: currentPage === total,
-                                className: "p-1 hover:text-primary disabled:text-muted/30 transition-colors",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                    size: 24
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                                    lineNumber: 345,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                                lineNumber: 340,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                        lineNumber: 329,
-                        columnNumber: 17
+                        lineNumber: 356,
+                        columnNumber: 25
                     }, this)
-                ]
-            }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
+                    lineNumber: 355,
+                    columnNumber: 21
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                lineNumber: 320,
+                lineNumber: 342,
                 columnNumber: 13
             }, this),
             label && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -718,17 +696,17 @@ function PDFEmbed({ url, label, aspectRatio = "16/9", totalPages = 10, width }) 
                 children: label
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-                lineNumber: 350,
+                lineNumber: 362,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/MediaPlaceholders.tsx",
-        lineNumber: 319,
+        lineNumber: 340,
         columnNumber: 9
     }, this);
 }
-_s1(PDFEmbed, "6xAUoJ2motYJ38x4zeUWisA+X/4=");
+_s1(PDFEmbed, "Ckz1Ns80k6nLbvdPNYaF7hsGUVw=");
 _c9 = PDFEmbed;
 var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9;
 __turbopack_context__.k.register(_c, "MediaPlaceholder");

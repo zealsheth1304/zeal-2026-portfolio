@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { FileText, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface MediaPlaceholderProps {
@@ -311,41 +311,53 @@ export function PDFLink({ url, label, description, className }: { url: string; l
     );
 }
 
-export function PDFEmbed({ url, label, aspectRatio = "16/9", totalPages = 10, width }: { url: string; label?: string; aspectRatio?: string; totalPages?: number | string; width?: string }) {
-    const [currentPage, setCurrentPage] = useState(1);
-    const total = typeof totalPages === "string" ? parseInt(totalPages, 10) : totalPages;
+export function PDFEmbed({ url, label, aspectRatio = "1/1", width }: { url: string; label?: string; aspectRatio?: string; totalPages?: number | string; width?: string }) {
+    // Generate absolute URL for Google Docs Viewer compatibility
+    const [absoluteUrl, setAbsoluteUrl] = useState<string>("");
+    const [isLocal, setIsLocal] = useState<boolean>(true);
+
+    useEffect(() => {
+        const hostname = window.location.hostname;
+        const local = hostname === "localhost" || hostname === "127.0.0.1" || hostname.startsWith("192.168.") || hostname.startsWith("10.");
+        setIsLocal(local);
+
+        if (url.startsWith("http")) {
+            setAbsoluteUrl(url);
+        } else {
+            setAbsoluteUrl(`${window.location.origin}${url}`);
+        }
+    }, [url]);
+
+    // Google Docs viewer handles PDF scrolling organically on Mobile and Desktop,
+    // but it CANNOT access localhost URLs. Fallback to native iframe for local testing.
+    const embedSrc = absoluteUrl
+        ? (isLocal
+            ? `${url}#toolbar=0`
+            : `https://docs.google.com/gview?url=${encodeURIComponent(absoluteUrl)}&embedded=true`)
+        : "";
 
     return (
-        <div className={cn("my-12 tracking-normal group/pdf mx-auto", !width && "w-full")} style={{ width }}>
-            <div className={cn("relative w-full overflow-hidden rounded-none border border-border-strong/50 shadow-sm bg-slate-50 dark:bg-slate-900/50")} style={{ aspectRatio }}>
-                <iframe
-                    key={currentPage}
-                    src={`${url}#page=${currentPage}&view=FitH&toolbar=0&navpanes=0`}
-                    title={label || "PDF Document"}
-                    className="absolute inset-0 w-full h-full"
-                    allowFullScreen
-                />
-
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-background/80 backdrop-blur-md border border-border-strong/50 px-4 py-2 rounded-full shadow-xl opacity-0 group-hover/pdf:opacity-100 transition-opacity duration-300">
-                    <button
-                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                        disabled={currentPage === 1}
-                        className="p-1 hover:text-primary disabled:text-muted/30 transition-colors"
-                    >
-                        <ChevronLeft size={24} />
-                    </button>
-                    <span className="text-sm font-bold min-w-[3rem] text-center select-none">
-                        {currentPage} / {total}
-                    </span>
-                    <button
-                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, total))}
-                        disabled={currentPage === total}
-                        className="p-1 hover:text-primary disabled:text-muted/30 transition-colors"
-                    >
-                        <ChevronRight size={24} />
-                    </button>
-                </div>
+        <div className={cn("my-12 tracking-normal mx-auto", !width && "w-full")} style={{ width }}>
+            {/* Scrollable PDF frame */}
+            <div
+                className="relative w-full overflow-hidden rounded-none border border-border-strong/50 shadow-sm bg-slate-50 dark:bg-slate-900/50"
+                style={{ aspectRatio }}
+            >
+                {embedSrc ? (
+                    <iframe
+                        src={embedSrc}
+                        title={label || "PDF Document"}
+                        className="absolute inset-0 w-full h-full"
+                        style={{ border: "none" }}
+                        allowFullScreen
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-muted text-sm">Loading PDF...</span>
+                    </div>
+                )}
             </div>
+
             {label && (
                 <p className="mt-4 text-ds-c1 text-muted opacity-60 font-medium italic text-center">
                     {label}
