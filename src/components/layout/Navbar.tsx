@@ -164,7 +164,7 @@ export default function Navbar() {
                                                         <Linkedin size={18} />
                                                     </a>
                                                     <a
-                                                        href="https://www.instagram.com/zealsheth.design/"
+                                                        href="https://www.instagram.com/zeal.design/"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="text-muted dark:text-main/70 hover:text-main transition-colors p-1"
