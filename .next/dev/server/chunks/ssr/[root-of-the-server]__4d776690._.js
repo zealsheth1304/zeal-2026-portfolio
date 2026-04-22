@@ -172,7 +172,7 @@ function getAllAI() {
     const slugs = getAISlugs();
     const results = slugs.map((slug)=>getAIBySlug(slug).metadata).sort((a, b)=>{
         if (a.order !== undefined && b.order !== undefined) {
-            return a.order - b.order;
+            return b.order - a.order;
         }
         if (a.order !== undefined) return -1;
         if (b.order !== undefined) return 1;
